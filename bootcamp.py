@@ -21,7 +21,7 @@ class Course(BaseModel):
 class Bootcamp(BaseModel):
     courses: List[Course]
 
-    def save(self, filename: str):
+    def save_json(self, filename: str):
         json_obj = self.json(indent=4)
         pathlib.Path(filename).write_text(json_obj)
 

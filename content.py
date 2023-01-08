@@ -1,6 +1,6 @@
 from bootcamp import Course, Bootcamp
 
-courses = [
+COURSES = [
     Course(
         label="P1",
         title="Jump into programming",
@@ -11,7 +11,7 @@ courses = [
             "Asking questions right (MVCE)",
             "Code practice at Leetcode, Codewars, etc",
         ],
-        tagline="Similar to an entry level MOOC or edtech course in Python that introduces programming language syntax.",
+        tagline="Start with Python sytax and usage, similar to an entry level MOOC or edtech course.",
     ),
     Course(
         label="P2",
@@ -24,12 +24,12 @@ courses = [
             "Functions",
             "OOP and classes",
         ],
-        tagline="Introduction to programming, very simplified, has functional flavor and based on Python.",
+        tagline="Introduction to programming concepts using Python.",
     ),
 ]
 
 # TODO: extend list above using data below
- 
+
 """ P3  Advanced Python: installing Python locally, using package manager, refactoring, project packaging, CI and documentation. Using battle-tested and trending Python libraries.
 Inspiration: hypermodern project packaging, “Beyond PEP8” by Raymond Herringer.
 
@@ -53,4 +53,6 @@ Inspiration: just an idea SE is different from CS + industrial code practices + 
  Ex  Special topics: data structures and algorithms, tech interviews, systems design, databases/Hadoop/Spark, UI/UX, product management, information security and cryptography, web frameworks, history and comparison of programming languages.
 """
 
-Bootcamp(courses=courses).save("bootcamp.json")
+
+def update():
+    Bootcamp(courses=COURSES).save_json("bootcamp.json")

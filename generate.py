@@ -1,8 +1,16 @@
+from pathlib import Path
 from bootcamp import Bootcamp
+from content import update
 
-header = """# bootcamp
-Accessible learning about IT, programming and data analysis for non-tech students.
-"""
+update()
 
-bootcamp = Bootcamp.from_file("bootcamp.json")
-print(header, "\n", bootcamp.to_markdown(3), sep="")
+README = """# bootcamp
+Accessible curriculum in programming and data analysis for non-tech students.
+
+""" + Bootcamp.from_file(
+    "bootcamp.json"
+).to_markdown(
+    3
+)
+
+Path("README.md").write_text(README)

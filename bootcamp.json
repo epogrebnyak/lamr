@@ -10,7 +10,7 @@
                 "Asking questions right (MVCE)",
                 "Code practice at Leetcode, Codewars, etc"
             ],
-            "tagline": "Similar to an entry level MOOC or edtech course in Python that introduces programming language syntax."
+            "tagline": "Start with Python sytax and usage, similar to an entry level MOOC or edtech course."
         },
         {
             "label": "P2",
@@ -23,7 +23,7 @@
                 "Functions",
                 "OOP and classes"
             ],
-            "tagline": "Introduction to programming, very simplified, has functional flavor and based on Python."
+            "tagline": "Introduction to programming concepts using Python."
         }
     ]
 }
