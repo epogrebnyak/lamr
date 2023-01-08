@@ -3,7 +3,7 @@ Accessible learning about IT, programming and data analysis for non-tech student
 
 ### P1. Jump into programming.
 
-> Similar to an entry level MOOC or edtech course in Python, that introduces syntax first.
+> Similar to an entry level MOOC or edtech course in Python that introduces programming language syntax.
 
 Topics: Where to run a Python program – Language syntax – Exercises – Asking questions right (MVCE) – Code practice at Leetcode, Codewars, etc.
 
