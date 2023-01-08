@@ -11,7 +11,7 @@ COURSES = [
             "Asking questions right (MVCE)",
             "Code practice at Leetcode, Codewars, etc",
         ],
-        tagline="Start with Python sytax and usage, similar to an entry level MOOC or edtech course.",
+        tagline="Start learning with Python syntax and usage.",
     ),
     Course(
         label="P2",
@@ -24,7 +24,7 @@ COURSES = [
             "Functions",
             "OOP and classes",
         ],
-        tagline="Introduction to programming concepts using Python.",
+        tagline="Introduction to programming concepts.",
     ),
 ]
 
