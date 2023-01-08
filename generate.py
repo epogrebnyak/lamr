@@ -40,19 +40,19 @@ Topics: {' – '.join(course.topics)}"""
 
 def to_markdown(course, header="##"):
     return f"""{header} {course.label}. {course.title}.
-{course.tagline}  
+{course.tagline}
+
 Topics: {' – '.join(course.topics)}."""
 
 
 
 def read_course(filename):
-    return Course(**json.loads(pathlib.Path(filename, encoding="utf-8").read_text()))
+    return Course(**json.loads(pathlib.Path(filename).read_text(encoding="utf-8")))
 
 import json
 import pathlib 
 
-header = """
-# bootcamp
+header = """# bootcamp
 Accessible learning about IT, programming and data analysis for non-tech students.
 """
 
