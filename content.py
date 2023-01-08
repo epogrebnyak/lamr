@@ -11,7 +11,7 @@ COURSES = [
             "Asking questions right (MVCE)",
             "Code practice at Leetcode, Codewars, etc",
         ],
-        tagline="Start learning with Python syntax and usage.",
+        tagline="Start learning Python syntax and usage.",
     ),
     Course(
         label="P2",

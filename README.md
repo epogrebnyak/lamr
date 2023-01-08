@@ -3,7 +3,7 @@ Accessible curriculum in programming and data analysis for non-tech students.
 
 ### P1. Jump Into Programming.
 
-> Start learning with Python syntax and usage.
+> Start learning Python syntax and usage.
 
 Where to run a Python program – Language syntax – Exercises – Asking questions right (MVCE) – Code practice at Leetcode, Codewars, etc.
 
