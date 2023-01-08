@@ -38,8 +38,9 @@ class Bootcamp(BaseModel):
 
 
 def to_markdown(course: Course, header_level: int = 3):
-    return f"""{'#'*header_level} {course.label}. {course.title}.
+    title = course.title.title()
+    return f"""{'#'*header_level} {course.label}. {title}.
 
 > {course.tagline}
 
-Topics: {' – '.join(course.topics)}."""
+{' – '.join(course.topics)}."""
