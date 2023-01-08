@@ -11,7 +11,7 @@ courses = [
             "Asking questions right (MVCE)",
             "Code practice at Leetcode, Codewars, etc",
         ],
-        tagline="Similar to a typical entry level MOOC or edtech course in Python, that introduces syntax first.",
+        tagline="Similar to an entry level MOOC or edtech course in Python, that introduces syntax first.",
     ),
     Course(
         label="P2",
@@ -24,7 +24,7 @@ courses = [
             "Functions",
             "OOP and classes",
         ],
-        tagline="Introduction to programming, very simplified (with functional flavor and based on Python).",
+        tagline="Introduction to programming, very simplified, has functional flavor and based on Python.",
     ),
 ]
 
