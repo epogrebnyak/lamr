@@ -8,7 +8,7 @@
                 "Language syntax",
                 "Exercises",
                 "Jupyter notebooks vs plain code",
-                "Asking questions right (MVCE)",
+                "Asking questions right (MWE)",
                 "Code practice at Leetcode, Codewars, and similar"
             ],
             "tagline": "Start learning Python syntax and usage."
@@ -34,11 +34,13 @@
                 "Package managers and virtual environments",
                 "Project packaging and utilities",
                 "Testing and continious integration (CI)",
-                "Code refactoring",
-                "Battle-tested and trending Python libraries",
-                "Advanced language features (ABC, async/await, regex)"
+                "Code quality and refactoring",
+                "Battle-tested and trending libraries",
+                "Contributing to open-source projects",
+                "Enhancements in Python since 3.6",
+                "Overview of metaprogramming/ABC, async/await, and performance tuning"
             ],
-            "tagline": "Inspired by Hypermodern Project Packaging by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer."
+            "tagline": "Inspired by 'Hypermodern Project Packaging' by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer."
         }
     ]
 }

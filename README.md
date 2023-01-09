@@ -5,7 +5,7 @@ Accessible curriculum in programming and data analysis for non-tech students.
 
 > Start learning Python syntax and usage.
 
-Where to run a Python program – Language syntax – Exercises – Jupyter notebooks vs plain code – Asking questions right (MVCE) – Code practice at Leetcode, Codewars, and similar.
+Where to run a Python program – Language syntax – Exercises – Jupyter notebooks vs plain code – Asking questions right (MWE) – Code practice at Leetcode, Codewars, and similar.
 
 ### P2. Designing Programs.
 
@@ -15,6 +15,10 @@ Values and types – Data structures, primitive and compound types – Variables
 
 ### P3. Advanced Python.
 
-> Inspired by Hypermodern Project Packaging by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer.
+> Inspired by 'Hypermodern Project Packaging' by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer.
 
-Installing Python locally – Package managers and virtual environments – Project packaging and utilities – Testing and continious integration (CI) – Code refactoring – Battle-tested and trending Python libraries – Advanced language features (ABC, async/await, regex).
+Installing Python locally – Package managers and virtual environments – Project packaging and utilities – Testing and continious integration (CI) – Code quality and refactoring – Battle-tested and trending libraries – Contributing to open-source projects – Enhancements in Python since 3.6 – Overview of metaprogramming/ABC, async/await, and performance tuning.
+
+### Glossary
+
+**MWE.** Minimal, workable example. A lost art of asking questions with and about code with just enough specific information. [[link](https://stackoverflow.com/help/minimal-reproducible-example)]

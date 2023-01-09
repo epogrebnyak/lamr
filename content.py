@@ -1,5 +1,14 @@
 """This a programmatic source of content. Change values here and use update() function to save to JSON file."""
-from bootcamp import Course, Bootcamp
+
+from bootcamp import Course, Bootcamp, Term
+
+GLOSSARY = [
+    Term(
+        word="MWE",
+        meaning="Minimal, workable example. A lost art of asking questions with and about code with just enough specific information.",
+        url="https://stackoverflow.com/help/minimal-reproducible-example",
+    )
+]
 
 COURSES = [
     Course(
@@ -10,7 +19,7 @@ COURSES = [
             "Language syntax",
             "Exercises",
             "Jupyter notebooks vs plain code",
-            "Asking questions right (MVCE)",
+            "Asking questions right (MWE)",
             "Code practice at Leetcode, Codewars, and similar",
         ],
         tagline="Start learning Python syntax and usage.",
@@ -33,16 +42,17 @@ COURSES = [
         title="Advanced Python",
         topics=[
             "Installing Python locally",
-            "Package managers and virtual environments",            
+            "Package managers and virtual environments",
             "Project packaging and utilities",
             "Testing and continious integration (CI)",
-            "Code refactoring",
-            "Battle-tested and trending Python libraries",
-            "Advanced language features (ABC, async/await, regex)"
+            "Code quality and refactoring",
+            "Battle-tested and trending libraries",
+            "Contributing to open-source projects",
+            "Enhancements in Python since 3.6",
+            "Overview of metaprogramming/ABC, async/await, and performance tuning",
         ],
-        tagline="Inspired by Hypermodern Project Packaging by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer.",
+        tagline="Inspired by 'Hypermodern Project Packaging' by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer.",
     ),
-
 ]
 
 # TODO: extend list above using data below
@@ -56,6 +66,8 @@ Inspiration: various what-I-wish-I-knew posts and https://missing.csail.mit.edu,
 
 DM  Working with data: local files and serialization (CSV/JSON/XML+pydantic), pandas and speedups (vaex, polars), mito and Excel, requests and httpx for querying APIs, web scraping (eg Beautifulsoup), visualization (matplotlib and js-based libraries), dashboards (Streamlit), databases and SQL (sqlite), overview of machine learning (scikit-learn), data workflows for advanced analytics and automated decisions.
 Inspiration: data preparation for further analysis, exploratory data analysis (EDA), data charting, working databases, converting between formats (~data engineering).
+Regex.
+
 
 ML  Mathy stuff: statistics and regressions (statmodels), “classic” machine learning (scikit-learn), deep learning (PyTorch and TensorFlow), optimisations (PuLP), causal inference, bayesian statistics (PyMC, JAX), working with text (spaCy, hugging face), AutoML.
 Inspiration: “machine learning” at large.
