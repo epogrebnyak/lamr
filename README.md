@@ -1,5 +1,5 @@
 # bootcamp
-Accessible curriculum in programming and data analysis for non-tech students.
+Accessible curriculum in programming, data analysis and the business side of information technology for non-tech students.
 
 ### P1. Jump Into Programming.
 

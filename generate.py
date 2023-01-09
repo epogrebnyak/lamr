@@ -5,17 +5,17 @@ from bootcamp import Bootcamp
 from content import update, GLOSSARY
 
 update()
+courses = Bootcamp.from_file("bootcamp.json").to_markdown(3)
+glossary = "\n\n".join([term.to_markdown() for term in GLOSSARY])
 
-# fmt: off
-README = """# bootcamp
-Accessible curriculum in programming and data analysis for non-tech students.
+README = f"""# bootcamp
+Accessible curriculum in programming, data analysis and the business side of information technology for non-tech students.
 
-""" + Bootcamp.from_file("bootcamp.json").to_markdown(3) + \
-"""
+{courses}
 
 ### Glossary
 
-""" + "\n\n".join([term.to_markdown() for term in GLOSSARY])
-# fmt: on
+{glossary}
+""" 
 
 Path("README.md").write_text(README)
