@@ -7,8 +7,9 @@
                 "Where to run a Python program",
                 "Language syntax",
                 "Exercises",
+                "Jupyter notebooks vs plain code",
                 "Asking questions right (MVCE)",
-                "Code practice at Leetcode, Codewars, etc"
+                "Code practice at Leetcode, Codewars, and similar"
             ],
             "tagline": "Start learning Python syntax and usage."
         },
@@ -24,6 +25,20 @@
                 "OOP and classes"
             ],
             "tagline": "Introduction to programming concepts."
+        },
+        {
+            "label": "P3",
+            "title": "Advanced Python",
+            "topics": [
+                "Installing Python locally",
+                "Package managers and virtual environments",
+                "Project packaging and utilities",
+                "Testing and continious integration (CI)",
+                "Code refactoring",
+                "Battle-tested and trending Python libraries",
+                "Advanced language features (ABC, async/await, regex)"
+            ],
+            "tagline": "Inspired by Hypermodern Project Packaging by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer."
         }
     ]
 }
