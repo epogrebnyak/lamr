@@ -5,6 +5,8 @@ from typing import List
 
 from pydantic import BaseModel
 
+class Term(BaseModel):
+    pass
 
 class Course(BaseModel):
     label: str
