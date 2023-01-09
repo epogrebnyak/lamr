@@ -20,6 +20,7 @@ COURSES = [
                     "Where to run a Python program",
                     "Language syntax",
                     "Exercises",
+                    "Standard library and popular packages",
                     "Jupyter notebooks vs plain code",
                     "Asking questions right (MWE)",
                     "Code practice at Leetcode, Codewars, and similar",
@@ -75,12 +76,12 @@ COURSES = [
                     "Iterators (`yield`)",
                 ]
             ),
-            Module(
-                topics=[
-                    "Popular libraries",
-                    "Contributing to open-source projects",
-                ]
-            ),
+           # Module(
+           #     topics=[
+           #
+           #         "Contributing to open-source projects",
+           #     ]
+           # ),
             Module(
                 topics=[
                     "Asynchronous programming (`async`/`await`) and multithreading",
