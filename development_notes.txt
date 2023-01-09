@@ -1,1 +1,4 @@
-https://docs.google.com/document/d/1WP7J31_EisyVtqTQ8fPDzRpqr29EWrY2datGpiUo8cs/edit
+- https://docs.google.com/document/d/1WP7J31_EisyVtqTQ8fPDzRpqr29EWrY2datGpiUo8cs/edit
+
+Todo:
+- add license
