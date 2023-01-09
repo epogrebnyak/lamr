@@ -63,7 +63,6 @@ COURSES = [
                 topics=[
                     "Programming style and patterns"
                     " (see ['Beyond PEP8' by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M))",
-                    "Code quality", 
                     "Refactoring (see [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero]))",
                     "Testing and continious integration (CI)",
                     "Documentation",
