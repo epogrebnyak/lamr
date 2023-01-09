@@ -52,32 +52,39 @@ COURSES = [
             Module(
                 topics=[
                     "Installing Python locally",
-                    "Package managers",
+                    "Package managers (pip and alternatives)",
                     "Virtual environments",
-                    "Project packaging and utilities",
+                    "Project packaging and utilities "
+                    "(see ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/))",
                 ]
             ),
             Module(
                 topics=[
+                    "Programming style and patterns"
+                    " (see ['Beyond PEP8' by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M))",
+                    "Code quality and refactoring (see [Refactor Like A Superhero by  Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero])",
                     "Testing and continious integration (CI)",
-                    "Code quality and refactoring",
+                    "Documentation",
                 ]
             ),
             Module(
                 topics=[
-                    "Battle-tested and trending libraries",
+                    "Type annotations",
+                    "Decorators",
+                    "Iterators (`yield`)",
+                    "Asyncrinous programming (`async`/`await`) and multithreading",
+                    "Metaprogramming (ABC)",
+                    "Performance tuning",
+                ]
+            ),
+            Module(
+                topics=[
+                    "Foundational and trending libraries",
                     "Contributing to open-source projects",
                 ]
             ),
-            Module(
-                topics=[
-                    "Enhancements in Python since 3.6",
-                    "Overview of metaprogramming/ABC, async/await, and performance tuning",
-                ]
-            ),
         ],
-        tagline="Inspired by ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)" + \
-            "and ['Beyond PEP8' by Raymond Herringer.](https://www.youtube.com/watch?v=wf-BqAjZb8M)",
+        tagline="Learn how to distribute your code as a package, write better code and use specific Python features.",
     ),
 ]
 

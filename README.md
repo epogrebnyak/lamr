@@ -15,12 +15,12 @@ Values and types – Data structures, primitive and compound types – Variables
 
 ### P3. Advanced Python.
 
-> Inspired by ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)and ['Beyond PEP8' by Raymond Herringer.](https://www.youtube.com/watch?v=wf-BqAjZb8M)
+> Learn how to distribute your code as a package, write better code and use specific Python features.
 
-* Installing Python locally – Package managers – Virtual environments – Project packaging and utilities
-* Testing and continious integration (CI) – Code quality and refactoring
-* Battle-tested and trending libraries – Contributing to open-source projects
-* Enhancements in Python since 3.6 – Overview of metaprogramming/ABC, async/await, and performance tuning.
+* Installing Python locally – Package managers (pip and alternatives) – Virtual environments – Project packaging and utilities (see ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/))
+* Programming style and patterns (see ['Beyond PEP8' by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M)) – Code quality and refactoring (see [Refactor Like A Superhero by  Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero]) – Testing and continious integration (CI) – Documentation
+* Type annotations – Decorators – Iterators (`yield`) – Asyncrinous programming (`async`/`await`) and multithreading – Metaprogramming (ABC) – Performance tuning
+* Foundational and trending libraries – Contributing to open-source projects.
 
 ### Glossary
 
