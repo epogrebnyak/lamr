@@ -3,9 +3,10 @@
 import json
 import pathlib
 from typing import List
-from dataclasses import dataclass
 
 from pydantic import BaseModel
+from pydantic.dataclasses import dataclass
+
 
 @dataclass
 class Link:
@@ -14,6 +15,7 @@ class Link:
 
     def __str__(self):
         return f"[[{self.text}]({self.url})]"
+
 
 class Term(BaseModel):
     word: str
@@ -33,16 +35,20 @@ class Glossary(BaseModel):
     # TODO - replicate Bootcamp methods
 
 
+@dataclass
+class Module:
+    topics: List[str]
+    title: str = ""
+
+    def to_markdown(self):
+        return " – ".join(self.topics)
+
+
 class Course(BaseModel):
     label: str
     title: str
-    topics: List[str]
+    modules: List[Module]
     tagline: str
-
-    def __str__(self) -> str:
-        return (
-            f"{self.label}. {self.title} ({self.tagline}): {' – '.join(self.topics)}."
-        )
 
 
 class Bootcamp(BaseModel):
@@ -58,16 +64,16 @@ class Bootcamp(BaseModel):
         return Bootcamp(**json.loads(content))
 
     def to_markdown(self, header_level=2):
-        return "\n\n".join(to_markdown(c, header_level) for c in self.courses)
+        return "\n\n".join(to_markdown(course, header_level) for course in self.courses)
 
     def __str__(self):
         return "\n\n".join(map(str, self.courses))
 
 
-def to_markdown(course: Course, header_level: int = 3):
+def to_markdown(course: Course, header_level: int):
     title = course.title.title()
     return f"""{'#'*header_level} {course.label}. {title}.
 
 > {course.tagline}
 
-{' – '.join(course.topics)}."""
+{". ".join(m.to_markdown() for m in course.modules)}."""

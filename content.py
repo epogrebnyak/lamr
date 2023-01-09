@@ -1,6 +1,6 @@
 """This a programmatic source of content. Change values here and use update() function to save to JSON file."""
 
-from bootcamp import Course, Bootcamp, Term
+from bootcamp import Course, Module, Bootcamp, Term
 
 GLOSSARY = [
     Term(
@@ -14,43 +14,67 @@ COURSES = [
     Course(
         label="P1",
         title="Jump into programming",
-        topics=[
-            "Where to run a Python program",
-            "Language syntax",
-            "Exercises",
-            "Jupyter notebooks vs plain code",
-            "Asking questions right (MWE)",
-            "Code practice at Leetcode, Codewars, and similar",
+        modules=[
+            Module(
+                topics=[
+                    "Where to run a Python program",
+                    "Language syntax",
+                    "Exercises",
+                    "Jupyter notebooks vs plain code",
+                    "Asking questions right (MWE)",
+                    "Code practice at Leetcode, Codewars, and similar",
+                ]
+            )
         ],
         tagline="Start learning Python syntax and usage.",
     ),
     Course(
         label="P2",
         title="Designing programs",
-        topics=[
-            "Values and types",
-            "Data structures, primitive and compound types",
-            "Variables",
-            "Expressions and statements",
-            "Functions",
-            "OOP and classes",
+        modules=[
+            Module(
+                topics=[
+                    "Values and types",
+                    "Data structures, primitive and compound types",
+                    "Variables",
+                    "Expressions and statements",
+                    "Functions",
+                    "OOP and classes",
+                ]
+            )
         ],
         tagline="Introduction to programming concepts.",
     ),
     Course(
         label="P3",
         title="Advanced Python",
-        topics=[
-            "Installing Python locally",
-            "Package managers",
-            "Virtual environments",
-            "Project packaging and utilities",
-            "Testing and continious integration (CI)",
-            "Code quality and refactoring",
-            "Battle-tested and trending libraries",
-            "Contributing to open-source projects",
-            "Enhancements in Python since 3.6",
-            "Overview of metaprogramming/ABC, async/await, and performance tuning",
+        modules=[
+            Module(
+                topics=[
+                    "Installing Python locally",
+                    "Package managers",
+                    "Virtual environments",
+                    "Project packaging and utilities",
+                ]
+            ),
+            Module(
+                topics=[
+                    "Testing and continious integration (CI)",
+                    "Code quality and refactoring",
+                ]
+            ),
+            Module(
+                topics=[
+                    "Battle-tested and trending libraries",
+                    "Contributing to open-source projects",
+                ]
+            ),
+            Module(
+                topics=[
+                    "Enhancements in Python since 3.6",
+                    "Overview of metaprogramming/ABC, async/await, and performance tuning",
+                ]
+            ),
         ],
         tagline="Inspired by 'Hypermodern Project Packaging' by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer.",
     ),

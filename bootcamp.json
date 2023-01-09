@@ -3,43 +3,73 @@
         {
             "label": "P1",
             "title": "Jump into programming",
-            "topics": [
-                "Where to run a Python program",
-                "Language syntax",
-                "Exercises",
-                "Jupyter notebooks vs plain code",
-                "Asking questions right (MWE)",
-                "Code practice at Leetcode, Codewars, and similar"
+            "modules": [
+                {
+                    "topics": [
+                        "Where to run a Python program",
+                        "Language syntax",
+                        "Exercises",
+                        "Jupyter notebooks vs plain code",
+                        "Asking questions right (MWE)",
+                        "Code practice at Leetcode, Codewars, and similar"
+                    ],
+                    "title": ""
+                }
             ],
             "tagline": "Start learning Python syntax and usage."
         },
         {
             "label": "P2",
             "title": "Designing programs",
-            "topics": [
-                "Values and types",
-                "Data structures, primitive and compound types",
-                "Variables",
-                "Expressions and statements",
-                "Functions",
-                "OOP and classes"
+            "modules": [
+                {
+                    "topics": [
+                        "Values and types",
+                        "Data structures, primitive and compound types",
+                        "Variables",
+                        "Expressions and statements",
+                        "Functions",
+                        "OOP and classes"
+                    ],
+                    "title": ""
+                }
             ],
             "tagline": "Introduction to programming concepts."
         },
         {
             "label": "P3",
             "title": "Advanced Python",
-            "topics": [
-                "Installing Python locally",
-                "Package managers",
-                "Virtual environments",
-                "Project packaging and utilities",
-                "Testing and continious integration (CI)",
-                "Code quality and refactoring",
-                "Battle-tested and trending libraries",
-                "Contributing to open-source projects",
-                "Enhancements in Python since 3.6",
-                "Overview of metaprogramming/ABC, async/await, and performance tuning"
+            "modules": [
+                {
+                    "topics": [
+                        "Installing Python locally",
+                        "Package managers",
+                        "Virtual environments",
+                        "Project packaging and utilities"
+                    ],
+                    "title": ""
+                },
+                {
+                    "topics": [
+                        "Testing and continious integration (CI)",
+                        "Code quality and refactoring"
+                    ],
+                    "title": ""
+                },
+                {
+                    "topics": [
+                        "Battle-tested and trending libraries",
+                        "Contributing to open-source projects"
+                    ],
+                    "title": ""
+                },
+                {
+                    "topics": [
+                        "Enhancements in Python since 3.6",
+                        "Overview of metaprogramming/ABC, async/await, and performance tuning"
+                    ],
+                    "title": ""
+                }
             ],
             "tagline": "Inspired by 'Hypermodern Project Packaging' by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer."
         }

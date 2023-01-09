@@ -16,6 +16,6 @@ Accessible curriculum in programming, data analysis and the business side of inf
 ### Glossary
 
 {glossary}
-""" 
+"""
 
 Path("README.md").write_text(README)
