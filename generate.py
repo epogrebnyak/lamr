@@ -11,9 +11,11 @@ glossary = "\n\n".join([term.to_markdown() for term in GLOSSARY])
 README = f"""# bootcamp
 Accessible curriculum in programming, data analysis and the business side of information technology for non-tech students.
 
+## Programming
+
 {courses}
 
-### Glossary
+## Glossary
 
 {glossary}
 """
