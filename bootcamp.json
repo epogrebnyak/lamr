@@ -71,7 +71,7 @@
                     "title": ""
                 }
             ],
-            "tagline": "Inspired by 'Hypermodern Project Packaging' by Claudio Jolowicz and 'Beyond PEP8' by Raymond Herringer."
+            "tagline": "Inspired by ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)and ['Beyond PEP8' by Raymond Herringer.](https://www.youtube.com/watch?v=wf-BqAjZb8M)"
         }
     ]
 }
