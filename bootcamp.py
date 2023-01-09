@@ -77,4 +77,13 @@ def to_markdown(course: Course, header_level: int):
 
 > {course.tagline}
 
-{sep.join(m.to_markdown() for m in course.modules)}."""
+{as_list(course.modules)}."""
+
+# sep.join(m.to_markdown() for m in course.modules)
+
+def as_list(modules: List[Module]) -> str:
+    if len(modules) == 1:
+        return modules[0].to_markdown()
+    else:
+        return "\n".join([("* " + m.to_markdown()) for m in modules]) 
+

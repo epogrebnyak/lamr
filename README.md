@@ -17,10 +17,10 @@ Values and types – Data structures, primitive and compound types – Variables
 
 > Inspired by ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)and ['Beyond PEP8' by Raymond Herringer.](https://www.youtube.com/watch?v=wf-BqAjZb8M)
 
-Installing Python locally – Package managers – Virtual environments – Project packaging and utilities.  
-Testing and continious integration (CI) – Code quality and refactoring.  
-Battle-tested and trending libraries – Contributing to open-source projects.  
-Enhancements in Python since 3.6 – Overview of metaprogramming/ABC, async/await, and performance tuning.
+* Installing Python locally – Package managers – Virtual environments – Project packaging and utilities
+* Testing and continious integration (CI) – Code quality and refactoring
+* Battle-tested and trending libraries – Contributing to open-source projects
+* Enhancements in Python since 3.6 – Overview of metaprogramming/ABC, async/await, and performance tuning.
 
 ### Glossary
 
