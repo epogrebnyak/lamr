@@ -1,11 +1,11 @@
 """This a programmatic source of content. Change values here and use update() function to save to JSON file."""
 
-from bootcamp import Course, Module, Bootcamp, Term
+from bootcamp import Course, Module, Bootcamp, Term, T
 
 GLOSSARY = [
     Term(
         word="MWE",
-        meaning="Minimal, workable example. A lost art of asking questions with and about code with just enough specific information.",
+        meaning="Minimal, workable example. A perished art of asking questions about code with just enough specific information.",
         url="https://stackoverflow.com/help/minimal-reproducible-example",
     )
 ]
@@ -13,7 +13,7 @@ GLOSSARY = [
 COURSES = [
     Course(
         label="P1",
-        title="Jump into programming",
+        title=T("Jump into programming"),
         modules=[
             Module(
                 topics=[
@@ -30,7 +30,7 @@ COURSES = [
     ),
     Course(
         label="P2",
-        title="Designing programs",
+        title=T("Designing programs"),
         modules=[
             Module(
                 topics=[
@@ -47,7 +47,7 @@ COURSES = [
     ),
     Course(
         label="P3",
-        title="Advanced Python",
+        title=T("Advanced Python"),
         modules=[
             Module(
                 topics=[
@@ -62,7 +62,8 @@ COURSES = [
                 topics=[
                     "Programming style and patterns"
                     " (see ['Beyond PEP8' by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M))",
-                    "Code quality and refactoring (see [Refactor Like A Superhero by  Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero])",
+                    "Code quality", 
+                    "Refactoring (see [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero]))",
                     "Testing and continious integration (CI)",
                     "Documentation",
                 ]
@@ -72,17 +73,21 @@ COURSES = [
                     "Type annotations",
                     "Decorators",
                     "Iterators (`yield`)",
-                    "Asyncrinous programming (`async`/`await`) and multithreading",
-                    "Metaprogramming (ABC)",
-                    "Performance tuning",
                 ]
             ),
             Module(
                 topics=[
-                    "Foundational and trending libraries",
+                    "Pupular libraries",
                     "Contributing to open-source projects",
                 ]
             ),
+            Module(
+                topics=[
+                    "Asynchronous programming (`async`/`await`) and multithreading",
+                    "Metaprogramming (ABC)",
+                    "Performance tuning",
+                ],
+                title = "Extra topics")
         ],
         tagline="Learn how to distribute your code as a package, write better code and use specific Python features.",
     ),

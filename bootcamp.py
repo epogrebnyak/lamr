@@ -1,12 +1,16 @@
-"""Bootcamp course listing primitives."""
+"""Bootcamp course primitives."""
 
 import json
 import pathlib
-from typing import List
+from typing import Dict, List, Optional
 
 from pydantic import BaseModel
 from pydantic.dataclasses import dataclass
 
+@dataclass
+class T:
+    text: str
+    translation: Optional[Dict[str, str]] = None
 
 @dataclass
 class Link:
@@ -41,12 +45,13 @@ class Module:
     title: str = ""
 
     def to_markdown(self):
-        return " – ".join(self.topics)
+        prefix = f"{self.title}: " if self.title else ""
+        return  prefix +  " – ".join(self.topics)
 
 
 class Course(BaseModel):
     label: str
-    title: str
+    title: T
     modules: List[Module]
     tagline: str
 
@@ -71,20 +76,18 @@ class Bootcamp(BaseModel):
 
 
 def to_markdown(course: Course, header_level: int):
-    title = course.title.title()
-    sep = ".  \n"
+    title = course.title.text.title()
     return f"""{'#'*header_level} {course.label}. {title}.
 
 > {course.tagline}
 
-{as_list(course.modules)}."""
+{as_list(course.modules)}"""
 
-
-# sep.join(m.to_markdown() for m in course.modules)
 
 
 def as_list(modules: List[Module]) -> str:
     if len(modules) == 1:
-        return modules[0].to_markdown()
+        return modules[0].to_markdown() + "."
     else:
-        return "\n".join([("* " + m.to_markdown()) for m in modules])
+        lines = [("* " + m.to_markdown() + ".") for m in modules]
+        return "\n".join(lines)

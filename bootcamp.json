@@ -2,7 +2,10 @@
     "courses": [
         {
             "label": "P1",
-            "title": "Jump into programming",
+            "title": {
+                "text": "Jump into programming",
+                "translation": null
+            },
             "modules": [
                 {
                     "topics": [
@@ -20,7 +23,10 @@
         },
         {
             "label": "P2",
-            "title": "Designing programs",
+            "title": {
+                "text": "Designing programs",
+                "translation": null
+            },
             "modules": [
                 {
                     "topics": [
@@ -38,7 +44,10 @@
         },
         {
             "label": "P3",
-            "title": "Advanced Python",
+            "title": {
+                "text": "Advanced Python",
+                "translation": null
+            },
             "modules": [
                 {
                     "topics": [
@@ -52,7 +61,8 @@
                 {
                     "topics": [
                         "Programming style and patterns (see ['Beyond PEP8' by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M))",
-                        "Code quality and refactoring (see [Refactor Like A Superhero by  Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero])",
+                        "Code quality",
+                        "Refactoring (see [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero]))",
                         "Testing and continious integration (CI)",
                         "Documentation"
                     ],
@@ -62,19 +72,24 @@
                     "topics": [
                         "Type annotations",
                         "Decorators",
-                        "Iterators (`yield`)",
-                        "Asyncrinous programming (`async`/`await`) and multithreading",
-                        "Metaprogramming (ABC)",
-                        "Performance tuning"
+                        "Iterators (`yield`)"
                     ],
                     "title": ""
                 },
                 {
                     "topics": [
-                        "Foundational and trending libraries",
+                        "Pupular libraries",
                         "Contributing to open-source projects"
                     ],
                     "title": ""
+                },
+                {
+                    "topics": [
+                        "Asynchronous programming (`async`/`await`) and multithreading",
+                        "Metaprogramming (ABC)",
+                        "Performance tuning"
+                    ],
+                    "title": "Extra topics"
                 }
             ],
             "tagline": "Learn how to distribute your code as a package, write better code and use specific Python features."
