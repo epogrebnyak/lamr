@@ -72,7 +72,7 @@ COURSES = [
                 topics=[
                     "Type annotations",
                     "Decorators",
-                    "Iterators (`yield`)",
+                    "Iterators",
                 ]
             ),
            # Module(
@@ -83,7 +83,7 @@ COURSES = [
            # ),
             Module(
                 topics=[
-                    "Asynchronous programming (`async`/`await`) and multithreading",
+                    "Asynchronous programming and multithreading",
                     "Metaprogramming (ABC)",
                     "Performance tuning",
                 ],
