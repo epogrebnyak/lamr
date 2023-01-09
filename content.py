@@ -53,7 +53,7 @@ COURSES = [
             Module(
                 topics=[
                     "Installing Python locally",
-                    "Package managers (pip and alternatives)",
+                    "Package managers (pip, poetry and alternatives)",
                     "Virtual environments",
                     "Project packaging and utilities "
                     "(see ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/))",
@@ -64,8 +64,12 @@ COURSES = [
                     "Programming style and patterns"
                     " (see ['Beyond PEP8' by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M))",
                     "Refactoring (see [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero]))",
-                    "Testing and continious integration (CI)",
-                    "Documentation",
+                    "Unit-testing and continious integration (CI)",
+                ]
+            ),
+            Module(
+                topics=[
+                    "Writing and building documentation (sphinx, mkdocs-material, jupyterbook)",
                 ]
             ),
             Module(

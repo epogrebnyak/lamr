@@ -19,8 +19,9 @@ Values and types – Data structures, primitive and compound types – Variables
 
 > Learn how to distribute your code as a package, write better code and use specific Python features.
 
-* Installing Python locally – Package managers (pip and alternatives) – Virtual environments – Project packaging and utilities (see ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)).
-* Programming style and patterns (see ['Beyond PEP8' by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M)) – Refactoring (see [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero])) – Testing and continious integration (CI) – Documentation.
+* Installing Python locally – Package managers (pip, poetry and alternatives) – Virtual environments – Project packaging and utilities (see ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)).
+* Programming style and patterns (see ['Beyond PEP8' by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M)) – Refactoring (see [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero])) – Unit-testing and continious integration (CI).
+* Writing and building documentation (sphinx, mkdocs-material, jupyterbook).
 * Type annotations – Decorators – Iterators.
 * Extra topics: Asynchronous programming and multithreading – Metaprogramming (ABC) – Performance tuning.
 
