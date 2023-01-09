@@ -77,7 +77,7 @@ COURSES = [
             ),
             Module(
                 topics=[
-                    "Pupular libraries",
+                    "Popular libraries",
                     "Contributing to open-source projects",
                 ]
             ),
