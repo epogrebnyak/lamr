@@ -42,7 +42,8 @@ COURSES = [
         title="Advanced Python",
         topics=[
             "Installing Python locally",
-            "Package managers and virtual environments",
+            "Package managers",
+            "Virtual environments",
             "Project packaging and utilities",
             "Testing and continious integration (CI)",
             "Code quality and refactoring",
