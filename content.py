@@ -1,6 +1,18 @@
-"""This a programmatic source of content. Change values here and use update() function to save to JSON file."""
+"""This a programmatic source of content. Change values here and use update() function to save to a JSON file."""
 
-from bootcamp import Course, Module, Bootcamp, Term, T
+from bootcamp import (
+    Course,
+    Module,
+    Bootcamp,
+    Term,
+    T,
+    Article,
+    Video,
+    OpenBook,
+    PrintBook,
+    Manual,
+    Blog,
+)
 
 GLOSSARY = [
     Term(
@@ -22,10 +34,23 @@ COURSES = [
                     "Exercises",
                     "Standard library and popular packages",
                     "Jupyter notebooks vs plain code",
-                    "Asking questions right (MWE)",
-                    "Code practice at Leetcode, Codewars, and similar",
                 ]
-            )
+            ),
+            Module(
+                topics=["Asking questions right (MWE)"],
+                references=[
+                    Manual(
+                        "How to create a Minimal, Reproducible Example",
+                        "https://stackoverflow.com/help/minimal-reproducible-example",
+                    ),
+                    Blog(
+                        "How to debug small programs",
+                        "Eric Lippert",
+                        "https://ericlippert.com/2014/03/05/how-to-debug-small-programs/",
+                    ),
+                ],
+            ),
+            Module(topics=["Code practice at Leetcode, Codewars, and similar"]),
         ],
         tagline="Start learning Python syntax and usage.",
     ),
@@ -48,52 +73,101 @@ COURSES = [
     ),
     Course(
         label="P3",
-        title=T("Advanced Python"),
+        title=T("Packaging"),
         modules=[
             Module(
                 topics=[
                     "Installing Python locally",
                     "Package managers (pip, poetry and alternatives)",
                     "Virtual environments",
-                    "Project packaging and utilities "
-                    "(see ['Hypermodern Project Packaging' by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/))",
                 ]
             ),
             Module(
                 topics=[
-                    "Programming style and patterns"
-                    " (see ['Beyond PEP8' by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M))",
-                    "Refactoring (see [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero]))",
+                    "Project packaging and utilities",
+                ],
+                references=[
+                    Article(
+                        "Hypermodern Project Packaging",
+                        "Claudio Jolowicz",
+                        "https://cjolowicz.github.io/posts/hypermodern-python-01-setup/",
+                    )
+                ],
+            ),
+        ],
+        tagline="Learn how to distribute your code as a package with modern tools.",
+    ),
+    Course(
+        label="P4",
+        title=T("Write better code"),
+        tagline="Patterns, refactoring, tests, documentation.",
+        modules=[
+            Module(
+                topics=[
+                    "Programming style and patterns",
+                ],
+                references=[
+                    Video(
+                        "Beyond PEP8",
+                        "Raymond Herringer",
+                        "https://www.youtube.com/watch?v=wf-BqAjZb8M",
+                    )
+                ],
+            ),
+            Module(
+                topics=["Refactoring"],
+                references=[
+                    OpenBook(
+                        "Refactor Like A Superhero",
+                        "Alex Bespoyasov",
+                        "https://github.com/bespoyasov/refactor-like-a-superhero",
+                    ),
+                    PrintBook(
+                        "Refactoring. Improving the Design of Existing Code.",
+                        "Martin Fowler, with Kent Beck",
+                        "https://martinfowler.com/books/refactoring.html",
+                    ),
+                ],
+            ),
+            Module(
+                topics=[
                     "Unit-testing and continious integration (CI)",
-                ]
+                ],
+                references=[
+                    Video(
+                        "TDD, Where Did It All Go Wrong",
+                        "Ian Cooper",
+                        "https://www.youtube.com/watch?v=EZ05e7EMOLM",
+                    )
+                ],
             ),
             Module(
                 topics=[
                     "Writing and building documentation (sphinx, mkdocs-material, jupyterbook)",
                 ]
             ),
+        ],
+    ),
+    Course(
+        label="P5",
+        title=T("More Python Features"),
+        tagline="Not the first things to learn.",
+        modules=[
             Module(
                 topics=[
                     "Type annotations",
                     "Decorators",
                     "Iterators",
-                ]
+                ],
             ),
-           # Module(
-           #     topics=[
-           #
-           #         "Contributing to open-source projects",
-           #     ]
-           # ),
             Module(
                 topics=[
                     "Asynchronous programming and multithreading",
                     "Metaprogramming (ABC)",
                     "Performance tuning",
                 ],
-                title = "Extra topics")
+            ),
         ],
-        tagline="Learn how to distribute your code as a package, write better code and use specific Python features.",
     ),
 ]
 
