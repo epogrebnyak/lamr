@@ -48,98 +48,79 @@ programming = [
                 "https://www.youtube.com/watch?v=EZ05e7EMOLM",
             )
         ],
-    ]
+    ],
+    Topic("Writing and building documentation (Docs-as-Code).")
+    <= [
+        LearningPoint("Writing a function docstring."),
+        LearningPoint("Markdown and lightweight markup languages.")
+        <= [
+            Link(
+                "Start writing on GitHub / Basic formatting syntax.",
+                "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
+            )
+        ],
+        LearningPoint("Writing a README.md."),
+        LearningPoint("Documentation and website builders")
+        <= [
+            Link("sphinx-doc", "https://www.sphinx-doc.org/en/master/"),
+            Link("mkdocs-material", "https://squidfunk.github.io/mkdocs-material/"),
+            Link("jupyterbook", "https://jupyterbook.org/en/stable/intro.html"),
+        ],
+        LearningPoint("Genres of documentation prose.")
+        <= [
+            Video(
+                "The four kinds of documentation, and why you need to understand what they are",
+                "Daniele Procida",
+                "https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/",
+            ),
+            Manual(
+                "The documentation system",
+                "https://documentation.divio.com/",
+            ),
+        ],
+    ],
+    Topic("More Python Features")
+    <= [
+        LearningPoint("Type annotations"),
+        LearningPoint("Context managers"),
+        LearningPoint("Decorators"),
+        LearningPoint("Iterators and generators"),
+        LearningPoint("Pattern matching"),
+        LearningPoint("Walrus operator"),
+        LearningPoint("Dataclasses"),
+        LearningPoint("Enumerations"),
+    ],
+    Topic("Advanced Capabilities")
+    <= [
+        LearningPoint("Asynchronous programming and multithreading"),
+        LearningPoint("Metaprogramming (ABC)"),
+        LearningPoint("Performance tuning"),
+    ],
 ]
-programming_topics = [
-    Topic(
-        "Testing",
-        [
-            LearningPoint(
-                "Unit tests and types of testing",
-                [
-                    Link(
-                        "State of Developper Ecosystem (2021). Testing.",
-                        "https://www.jetbrains.com/lp/devecosystem-2021/testing/",
-                    )
-                ],
-            ),
-            LearningPoint(
-                "Testing frameworks (pytest, unittest)",
-                references=[
-                    Link(
-                        "State of Developper Ecosystem (2021). Python Frameworks and Libraries.",
-                        "https://lp.jetbrains.com/python-developers-survey-2021/#FrameworksLibraries",
-                    ),
-                    Manual(
-                        "pytest",
-                        "https://docs.pytest.org/en/7.1.x/getting-started.html#create-your-first-test",
-                    ),
-                    Manual(
-                        "unittest", "https://docs.python.org/3/library/unittest.html"
-                    ),
-                ],
-            ),
-            LearningPoint("Continious integration (CI)"),
-            LearningPoint(
-                "Test Driven Developent (TDD)",
-                references=[
-                    Video(
-                        "TDD, Where Did It All Go Wrong",
-                        "Ian Cooper",
-                        "https://www.youtube.com/watch?v=EZ05e7EMOLM",
-                    )
-                ],
-            ),
-        ],
-    ),
-    Topic(
-        "Writing and building documentation (Docs-as-Code).",
-        [
-            LearningPoint("Writing a function docstring."),
-            LearningPoint(
-                "Markdown and lightweight markup languages. Writing a README.md."
-            ),
-            LearningPoint(
-                "Documentation and website builders (sphinx-doc, mkdocs-material, jupyterbook)."
-            ),
-            LearningPoint(
-                "Genres of documentation prose.",
-                [
-                    Video(
-                        "The four kinds of documentation, and why you need to understand what they are",
-                        "Daniele Procida",
-                        "https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/",
-                    ),
-                    Manual(
-                        "The documentation system",
-                        "https://documentation.divio.com/",
-                    ),
-                ],
-            ),
-        ],
-    ),
-    Topic(
-        "More Python Features",
-        [
-            LearningPoint("Type annotations"),
-            LearningPoint("Context managers"),
-            LearningPoint("Decorators"),
-            LearningPoint("Iterators and generators"),
-            LearningPoint("Pattern matching"),
-            LearningPoint("Walrus operator"),
-            LearningPoint("Dataclasses"),
-            LearningPoint("Enumerations"),
-        ],
-    ),
-    Topic(
-        "Advanced Capabilities",
-        [
-            LearningPoint("Asynchronous programming and multithreading"),
-            LearningPoint("Metaprogramming (ABC)"),
-            LearningPoint("Performance tuning"),
-        ],
-    ),
-]
+
+
+#     Topic(
+#         "More Python Features",
+#         [
+#             LearningPoint("Type annotations"),
+#             LearningPoint("Context managers"),
+#             LearningPoint("Decorators"),
+#             LearningPoint("Iterators and generators"),
+#             LearningPoint("Pattern matching"),
+#             LearningPoint("Walrus operator"),
+#             LearningPoint("Dataclasses"),
+#             LearningPoint("Enumerations"),
+#         ],
+#     ),
+#     Topic(
+#         "Advanced Capabilities",
+#         [
+#             LearningPoint("Asynchronous programming and multithreading"),
+#             LearningPoint("Metaprogramming (ABC)"),
+#             LearningPoint("Performance tuning"),
+#         ],
+#     ),
+# ]
 
 GLOSSARY = [
     Term(
