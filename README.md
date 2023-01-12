@@ -49,4 +49,4 @@ Values and types – Data structures, primitive and compound types – Variables
 
 ## Glossary
 
-**MWE.** Minimal, workable example. A perished art of asking questions about code with just enough specific information. [link](https://stackoverflow.com/help/minimal-reproducible-example)
+**MWE.** Minimal, workable example. A perished art of asking questions about code with just enough specific information. [[link](https://stackoverflow.com/help/minimal-reproducible-example)]

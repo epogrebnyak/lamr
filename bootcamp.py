@@ -49,7 +49,7 @@ class OpenBook(Book):
 
 
 class PrintBook(Book):
-    """Book with ISBN, usually dead-tree (paper)."""
+    """Book with ISBN, usually paper."""
 
     pass
 
@@ -66,40 +66,29 @@ class Blog(Publication):
     pass
 
 
-libraries = [
-    Repo(
-        "Build your own X",
-        "https://github.com/codecrafters-io/build-your-own-x",
-    ),
-]
+Reference = Union[Publication, Link]
 
-references_dict = dict(
-    boring_stuff=OpenBook(
-        "Automate the Boring Stuff with Python",
-        "Al Sweigart",
-        "https://automatetheboringstuff.com/#toc",
-    ),
-    hypermodern=Article(
-        "Hypermodern Project Packaging",
-        "Claudio Jolowicz",
-        "https://cjolowicz.github.io/posts/hypermodern-python-01-setup/",
-    ),
-    beyond_pep_8=Video(
-        "Beyond PEP8",
-        "Raymond Herringer",
-        "https://www.youtube.com/watch?v=wf-BqAjZb8M",
-    ),
-    refactor_superhero=OpenBook(
-        "Refactor Like A Superhero",
-        "Alex Bespoyasov",
-        "https://github.com/bespoyasov/refactor-like-a-superhero",
-    ),
-    missing_semester=OpenBook(
-        "The Missing Semester of Your CS Education",
-        "Anish Athalye and Jon Gjengset and Jose Javier Gonzalez Ortiz",
-        "https://missing.csail.mit.edu",
-    ),
-)
+
+@dataclass
+class LearningPoint:
+    name: str
+    references: Optional[List[Reference]] = None
+    comment: Optional[str] = None
+
+
+LP = LearningPoint
+
+
+@dataclass
+class Topic:
+    title: str
+    learning_points: List[LearningPoint]
+
+
+@dataclass
+class TopicList:
+    title: str
+    topics: List[Topic]
 
 
 @dataclass
@@ -110,12 +99,12 @@ class T:
 
 class Term(BaseModel):
     word: str
-    meaning: str = ""
-    url: str = ""
+    meaning: str
+    reference: Optional[Reference] = None
 
     def to_markdown(self):
-        if self.url:
-            postfix = " " + str(Link("link", self.url))
+        if self.reference:
+            postfix = " [" + Link("link", self.reference.url).to_markdown() + "]"
         else:
             postfix = ""
         return f"**{self.word}.** {self.meaning}" + postfix

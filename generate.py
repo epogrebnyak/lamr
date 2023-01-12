@@ -21,3 +21,14 @@ Accessible curriculum in programming, data analysis and the business side of inf
 """
 
 Path("README.md").write_text(README)
+
+from content import programming_topics
+
+for i, topic in enumerate(programming_topics):
+    print()
+    print(f"### P{i}. " + topic.title)
+    for lp in topic.learning_points:
+        print("* " + lp.name)
+        if lp.references:
+            for ref in lp.references:
+                print("- ", ref.to_markdown())

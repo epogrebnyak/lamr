@@ -12,13 +12,91 @@ from bootcamp import (
     PrintBook,
     Manual,
     Blog,
+    Topic,
+    LearningPoint,
+    Link,
 )
+
+
+programming_topics = [
+    Topic(
+        "Testing",
+        [
+            LearningPoint(
+                "Unit tests and types of testing",
+                [
+                    Link(
+                        "State of Developper Ecosystem (2021). Testing.",
+                        "https://www.jetbrains.com/lp/devecosystem-2021/testing/",
+                    )
+                ],
+            ),
+            LearningPoint(
+                "Testing frameworks (pytest, unittest)",
+                references=[
+                    Link(
+                        "State of Developper Ecosystem (2021). Python Frameworks and Libraries.",
+                        "https://lp.jetbrains.com/python-developers-survey-2021/#FrameworksLibraries",
+                    ),
+                    Manual(
+                        "pytest",
+                        "https://docs.pytest.org/en/7.1.x/getting-started.html#create-your-first-test",
+                    ),
+                    Manual(
+                        "unittest", "https://docs.python.org/3/library/unittest.html"
+                    ),
+                ],
+            ),
+            LearningPoint("Continious integration (CI)"),
+            LearningPoint(
+                "Test Driven Developent (TDD)",
+                references=[
+                    Video(
+                        "TDD, Where Did It All Go Wrong",
+                        "Ian Cooper",
+                        "https://www.youtube.com/watch?v=EZ05e7EMOLM",
+                    )
+                ],
+            ),
+        ],
+    ),
+    Topic(
+        "Writing and building documentation (Docs-as-Code)",
+        [
+            LearningPoint("Writing a function docstring"),
+            LearningPoint("Markdown and lightweight markup. Writing a README.md"),
+            LearningPoint(
+                "Documentation and website builders (sphinx-doc, mkdocs-material, jupyterbook)"
+            ),
+        ],
+    ),
+    Topic(
+        "More Python Features",
+        [
+            LearningPoint("Type annotations"),
+            LearningPoint("Context managers"),
+            LearningPoint("Decorators"),
+            LearningPoint("Iterators and generators"),
+        ],
+    ),
+    Topic(
+        "Advanced Capabilities",
+        [
+            LearningPoint("Asynchronous programming and multithreading"),
+            LearningPoint("Metaprogramming (ABC)"),
+            LearningPoint("Performance tuning"),
+        ],
+    ),
+]
 
 GLOSSARY = [
     Term(
         word="MWE",
         meaning="Minimal, workable example. A perished art of asking questions about code with just enough specific information.",
-        url="https://stackoverflow.com/help/minimal-reproducible-example",
+        reference=Manual(
+            "How to create a Minimal, Reproducible Example",
+            "https://stackoverflow.com/help/minimal-reproducible-example",
+        ),
     )
 ]
 

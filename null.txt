@@ -1,0 +1,37 @@
+# may delete
+
+libraries = [
+    Repo(
+        "Build your own X",
+        "https://github.com/codecrafters-io/build-your-own-x",
+    ),
+]
+
+references_dict = dict(
+    boring_stuff=OpenBook(
+        "Automate the Boring Stuff with Python",
+        "Al Sweigart",
+        "https://automatetheboringstuff.com/#toc",
+    ),
+    hypermodern=Article(
+        "Hypermodern Project Packaging",
+        "Claudio Jolowicz",
+        "https://cjolowicz.github.io/posts/hypermodern-python-01-setup/",
+    ),
+    beyond_pep_8=Video(
+        "Beyond PEP8",
+        "Raymond Herringer",
+        "https://www.youtube.com/watch?v=wf-BqAjZb8M",
+    ),
+    refactor_superhero=OpenBook(
+        "Refactor Like A Superhero",
+        "Alex Bespoyasov",
+        "https://github.com/bespoyasov/refactor-like-a-superhero",
+    ),
+    missing_semester=OpenBook(
+        "The Missing Semester of Your CS Education",
+        "Anish Athalye and Jon Gjengset and Jose Javier Gonzalez Ortiz",
+        "https://missing.csail.mit.edu",
+    ),
+)
+
