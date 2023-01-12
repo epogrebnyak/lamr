@@ -4,7 +4,7 @@ import json
 import pathlib
 from typing import Dict, List, Optional, Union
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from pydantic.dataclasses import dataclass
 
 
@@ -71,9 +71,11 @@ Reference = Union[Publication, Link]
 
 @dataclass
 class LearningPoint:
-    name: str
-    references: Optional[List[Reference]] = None
-    comment: Optional[str] = None
+    text: str
+    references: List[Reference] = Field(default_factory=list)
+
+    def __le__(self, refs: List[Reference]):
+        return LearningPoint(self.text, self.references + refs)
 
 
 LP = LearningPoint
@@ -82,12 +84,34 @@ LP = LearningPoint
 @dataclass
 class Topic:
     title: str
-    learning_points: List[LearningPoint]
+    learning_points: List[LearningPoint] = Field(default_factory=list)
+
+    def __le__(self, lps: List[LearningPoint]):
+        return Topic(self.title, self.learning_points + lps)
 
 
-@dataclass
-class TopicList:
-    title: str
+x = Topic("Statefulness") <= [
+    LP(
+        text="Cache invalidation",
+        references=[Link("Wiki", "https://en.wikipedia.org/wiki/Cache_invalidation")],
+    )
+]
+assert x == Topic(
+    title="Statefulness",
+    learning_points=[
+        LearningPoint(
+            text="Cache invalidation",
+            references=[
+                Link(
+                    text="Wiki", url="https://en.wikipedia.org/wiki/Cache_invalidation"
+                )
+            ],
+        )
+    ],
+)
+
+
+class TopicList(BaseModel):
     topics: List[Topic]
 
 

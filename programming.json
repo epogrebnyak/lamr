@@ -1,0 +1,153 @@
+{
+    "topics": [
+        {
+            "title": "Testing",
+            "learning_points": [
+                {
+                    "name": "Unit tests and types of testing",
+                    "references": [
+                        {
+                            "text": "State of Developper Ecosystem (2021). Testing.",
+                            "url": "https://www.jetbrains.com/lp/devecosystem-2021/testing/"
+                        }
+                    ],
+                    "comment": null
+                },
+                {
+                    "name": "Testing frameworks (pytest, unittest)",
+                    "references": [
+                        {
+                            "text": "State of Developper Ecosystem (2021). Python Frameworks and Libraries.",
+                            "url": "https://lp.jetbrains.com/python-developers-survey-2021/#FrameworksLibraries"
+                        },
+                        {
+                            "text": "pytest",
+                            "url": "https://docs.pytest.org/en/7.1.x/getting-started.html#create-your-first-test"
+                        },
+                        {
+                            "text": "unittest",
+                            "url": "https://docs.python.org/3/library/unittest.html"
+                        }
+                    ],
+                    "comment": null
+                },
+                {
+                    "name": "Continious integration (CI)",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Test Driven Developent (TDD)",
+                    "references": [
+                        {
+                            "title": "TDD, Where Did It All Go Wrong",
+                            "author": "Ian Cooper",
+                            "url": "https://www.youtube.com/watch?v=EZ05e7EMOLM"
+                        }
+                    ],
+                    "comment": null
+                }
+            ]
+        },
+        {
+            "title": "Writing and building documentation (Docs-as-Code).",
+            "learning_points": [
+                {
+                    "name": "Writing a function docstring.",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Markdown and lightweight markup languages. Writing a README.md.",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Documentation and website builders (sphinx-doc, mkdocs-material, jupyterbook).",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Genres of documentation prose.",
+                    "references": [
+                        {
+                            "title": "The four kinds of documentation, and why you need to understand what they are",
+                            "author": "Daniele Procida",
+                            "url": "https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/"
+                        },
+                        {
+                            "text": "The documentation system",
+                            "url": "https://documentation.divio.com/"
+                        }
+                    ],
+                    "comment": null
+                }
+            ]
+        },
+        {
+            "title": "More Python Features",
+            "learning_points": [
+                {
+                    "name": "Type annotations",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Context managers",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Decorators",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Iterators and generators",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Pattern matching",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Walrus operator",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Dataclasses",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Enumerations",
+                    "references": null,
+                    "comment": null
+                }
+            ]
+        },
+        {
+            "title": "Advanced Capabilities",
+            "learning_points": [
+                {
+                    "name": "Asynchronous programming and multithreading",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Metaprogramming (ABC)",
+                    "references": null,
+                    "comment": null
+                },
+                {
+                    "name": "Performance tuning",
+                    "references": null,
+                    "comment": null
+                }
+            ]
+        }
+    ]
+}

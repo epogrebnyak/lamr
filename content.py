@@ -17,7 +17,39 @@ from bootcamp import (
     Link,
 )
 
-
+programming = [
+    Topic("Testing")
+    <= [
+        LearningPoint("Unit tests and types of testing.")
+        <= [
+            Link(
+                "State of Developper Ecosystem (2021). Testing.",
+                "https://www.jetbrains.com/lp/devecosystem-2021/testing/",
+            )
+        ],
+        LearningPoint("Unit-testing frameworks (pytest, unittest).")
+        <= [
+            Link(
+                "State of Developper Ecosystem (2021). Python Frameworks and Libraries.",
+                "https://lp.jetbrains.com/python-developers-survey-2021/#FrameworksLibraries",
+            ),
+            Manual(
+                "pytest",
+                "https://docs.pytest.org/en/7.1.x/getting-started.html#create-your-first-test",
+            ),
+            Manual("unittest", "https://docs.python.org/3/library/unittest.html"),
+        ],
+        LearningPoint("Continious integration (CI)."),
+        LearningPoint("Test Driven Developent (TDD).")
+        <= [
+            Video(
+                "TDD, Where Did It All Go Wrong",
+                "Ian Cooper",
+                "https://www.youtube.com/watch?v=EZ05e7EMOLM",
+            )
+        ],
+    ]
+]
 programming_topics = [
     Topic(
         "Testing",
@@ -61,12 +93,28 @@ programming_topics = [
         ],
     ),
     Topic(
-        "Writing and building documentation (Docs-as-Code)",
+        "Writing and building documentation (Docs-as-Code).",
         [
-            LearningPoint("Writing a function docstring"),
-            LearningPoint("Markdown and lightweight markup. Writing a README.md"),
+            LearningPoint("Writing a function docstring."),
             LearningPoint(
-                "Documentation and website builders (sphinx-doc, mkdocs-material, jupyterbook)"
+                "Markdown and lightweight markup languages. Writing a README.md."
+            ),
+            LearningPoint(
+                "Documentation and website builders (sphinx-doc, mkdocs-material, jupyterbook)."
+            ),
+            LearningPoint(
+                "Genres of documentation prose.",
+                [
+                    Video(
+                        "The four kinds of documentation, and why you need to understand what they are",
+                        "Daniele Procida",
+                        "https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/",
+                    ),
+                    Manual(
+                        "The documentation system",
+                        "https://documentation.divio.com/",
+                    ),
+                ],
             ),
         ],
     ),
@@ -77,6 +125,10 @@ programming_topics = [
             LearningPoint("Context managers"),
             LearningPoint("Decorators"),
             LearningPoint("Iterators and generators"),
+            LearningPoint("Pattern matching"),
+            LearningPoint("Walrus operator"),
+            LearningPoint("Dataclasses"),
+            LearningPoint("Enumerations"),
         ],
     ),
     Topic(

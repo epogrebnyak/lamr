@@ -1,7 +1,7 @@
 """Create README.md"""
 
 from pathlib import Path
-from bootcamp import Bootcamp
+from bootcamp import Bootcamp, TopicList
 from content import update, GLOSSARY
 
 update()
@@ -32,3 +32,9 @@ for i, topic in enumerate(programming_topics):
         if lp.references:
             for ref in lp.references:
                 print("- ", ref.to_markdown())
+
+Path("programming.json").write_text(TopicList(topics=programming_topics).json(indent=4))
+
+print()
+glossary = "\n\n".join([term.to_markdown() for term in GLOSSARY])
+print(glossary)
