@@ -6,7 +6,7 @@ When writing about code, shouldn't this be code as well?
 
 Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
 ![](https://poll.fizzy.wtf/count?epogrebnyak.bootcamp.like=yes) if you like the idea,
-otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell what may be wrong with it.
+otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell why not.
 
 
 ## Programming
