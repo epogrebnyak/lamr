@@ -18,3 +18,5 @@ Bigger changes:
 - version + badge
 - counter from https://github.com/vberlier/poll#poll (reset)
 - incorporate previous code
+- subsections in learning learning_points
+- generate extra a href tags

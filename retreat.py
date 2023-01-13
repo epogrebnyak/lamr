@@ -77,17 +77,46 @@ class Article(Publication):
 class Blog(Publication):
     pass
 
+
 @dataclass
 class URL:
-   url: str
+    url: str
+
 
 Reference = Union[Publication, Link, URL]
 
 
 @dataclass
+class LearningPoint:
+    title: str
+    subpoints: List[str] = Field(default_factory=list)
+
+    def add_subpoints(self, *subpoints):
+        return LearningPoint(self.title, self.subpoints + list(subpoints))
+
+
+def bullet(string: str, char="*", offset="") -> str:
+    return offset + char + " " + string
+
+
+def to_markdown(item, ref_dict):
+    if isinstance(item, str):
+        s = substitute(item, ref_dict)
+        return bullet(s)
+    if isinstance(item, LearningPoint):
+
+        def fmt(s):
+            return bullet(substitute(s, ref_dict), "-", "  ")
+
+        a = to_markdown(item.title, ref_dict)
+        b = "\n".join([fmt(s) for s in item.subpoints])
+        return a + "\n" + b
+
+
+@dataclass
 class Theme:
     title: str
-    learning_points: List[str] = Field(default_factory=list)
+    learning_points: List[Union[str, LearningPoint]] = Field(default_factory=list)
     references: Dict[str, Reference] = Field(default_factory=dict)
     tagline: str = ""
 
@@ -117,10 +146,7 @@ class Theme:
         return title + "\n"
 
     def _make_body_md(self) -> List[str]:
-        def bullet(string: str) -> str:
-            return "* " + string
-
-        return [bullet(substitute(lp, self.references)) for lp in self.learning_points]
+        return [to_markdown(lp, self.references) for lp in self.learning_points]
 
     def to_markdown(self, header_level: int = 0, prefix=""):
         lines = [self._make_title_md(header_level, prefix)] + self._make_body_md()
@@ -137,7 +163,10 @@ class ThemeList(BaseModel):
         def with_prefix(i: int) -> str:
             return prefix + str(i) if prefix else ""
 
-        lines = [t.to_markdown(header_level, with_prefix(i)) for i, t in enumerate(self.themes)]
+        lines = [
+            t.to_markdown(header_level, with_prefix(i))
+            for i, t in enumerate(self.themes)
+        ]
         return "\n\n\n".join(lines)
 
 
@@ -200,8 +229,8 @@ class Glossary(BaseModel):
 
 terms = [
     Term(
-        "MWE",
-        "Minimal, workable example. A perished art of asking questions about code with just enough specific information. See [more here](^mre).",
+        "MRE",
+        "Minimal, reproducable example. A perished art of asking questions about code with just enough specific information. See [more here](^mre).",
         dict(
             mre=Manual(
                 "How to create a Minimal, Reproducible Example",
@@ -214,22 +243,27 @@ GLOSSARY = Glossary(terms=terms)
 
 # %%
 programming_themes = [
-    Theme(
-        "Jump Into Programming", tagline="Start learning Python syntax and usage."
-    ).add_learning_points(
+    Theme("Jump Into Programming", tagline="Start learning Python syntax and usage.")
+    .add_learning_points(
         "Where to run a Python program. Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation. Jupyter notebooks vs plain code.",
         "Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, "
-        "`for` loop, `if`/`else`, functions and methods.",
-        "Sample toy projects (TBA)",
-        "Reading documentation. Python standard library and popular packages.",
-        "Effective search: what to expect on your first Google page?",
-        "Asking questions right: 'this code doesn't work' vs an MWE.",
-        "Using code generation assistants (Copilot, ChatGPT, and similar)",
+        "`for` loop, `if`/`else`, functions and methods. Sample toy projects.",
+        LearningPoint("Read and ask:").add_subpoints(
+            "Reading documentation: Python standard library and popular packages.",
+            "Search and evaluate: what to expect on first Google page?",
+            "Asking help right: 'the code doesn't work' vs an [MRE](^mre).",
+            "Using code generation assistants (Copilot, ChatGPT, and similar)",
+        ),
         "Discussion: Is learning Python a good bet (looking from survey data)?",
         "Common pitfalls and workarounds in programming start.",
-        "What are code practice sites (Leetcode, Codewars, and similar)."
-    ).add_references(colab=URL("https://colab.research.google.com/"),
-                     replit=URL("https://replit.com/")
+        "Code practice sites ([Leetcode](^leet), [Codewars](^codewars), and similar).",
+    )
+    .add_references(
+        colab=URL("https://colab.research.google.com/"),
+        replit=URL("https://replit.com/"),
+        mre=URL("https://replit.com/"),
+        leet=URL("https://leetcode.com/"),
+        codewars=URL("https://www.codewars.com")
     ),
     Theme(
         "Designing Programs", tagline="Learn programming concepts."
@@ -316,9 +350,11 @@ programming_themes = [
         "Genres of documentation ([text](^divio), [video](^kinds4)).",
     )
     .add_references(
-        iam_readme = Link("Hi, my name is README", "https://raphael.codes/talks/"),
-        how = Link("Awesome README - Articles",
-        "https://github.com/matiassingers/awesome-readme#articles"),
+        iam_readme=Link("Hi, my name is README", "https://raphael.codes/talks/"),
+        how=Link(
+            "Awesome README - Articles",
+            "https://github.com/matiassingers/awesome-readme#articles",
+        ),
         gh_markdown=Link(
             "Start writing on GitHub / Basic formatting syntax.",
             "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
@@ -373,15 +409,13 @@ EXTRA_REFERENCES = dict(
 
 PROGRAMMING = ThemeList(themes=programming_themes)
 
-README = f"""# bootcamp
+README = f"""## bootcamp ![](https://poll.fizzy.wtf/count?epogrebnyak.bootcamp.like=yes)
 Accessible curriculum in programming and data analysis for non-tech students.
 
-This text is generated at [retreat.py](retreat.py) and can be downloaded as a [JSON file](programming.json) too.
-When writing about code, shouldn't this be code as well?  
-
-Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
-![](https://poll.fizzy.wtf/count?epogrebnyak.bootcamp.like=yes) if you like the idea,
-otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell what may be wrong with it.
+> This text is generated at [retreat.py](retreat.py) and can be downloaded as a [JSON file](programming.json). 
+> When writing about code, shouldn't this be code as well?  
+> Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
+if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell why not.
 
 
 ## Programming

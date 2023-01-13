@@ -1,12 +1,10 @@
-# bootcamp
+## bootcamp ![](https://poll.fizzy.wtf/count?epogrebnyak.bootcamp.like=yes)
 Accessible curriculum in programming and data analysis for non-tech students.
 
-This text is generated at [retreat.py](retreat.py) and can be downloaded as a [JSON file](programming.json) too.
-When writing about code, shouldn't this be code as well?  
-
-Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
-![](https://poll.fizzy.wtf/count?epogrebnyak.bootcamp.like=yes) if you like the idea,
-otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell why not.
+> This text is generated at [retreat.py](retreat.py) and can be downloaded as a [JSON file](programming.json). 
+> When writing about code, shouldn't this be code as well?  
+> Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
+if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell why not.
 
 
 ## Programming
@@ -15,15 +13,15 @@ otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to te
 > Start learning Python syntax and usage.
 
 * Where to run a Python program. Local vs online ([Google Colab](https://colab.research.google.com/), [repl.it](https://replit.com/)) installation. Jupyter notebooks vs plain code.
-* Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, `for` loop, `if`/`else`, functions and methods.
-* Sample toy projects (TBA)
-* Reading documentation. Python standard library and popular packages.
-* Effective search: what to expect on your first Google page?
-* Asking questions right: 'this code doesn't work' vs an MWE.
-* Using code generation assistants (Copilot, ChatGPT, and similar)
+* Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, `for` loop, `if`/`else`, functions and methods. Sample toy projects.
+* Read and ask:
+  - Reading documentation: Python standard library and popular packages.
+  - Search and evaluate: what to expect on first Google page?
+  - Asking help right: 'the code doesn't work' vs an [MRE](https://replit.com/).
+  - Using code generation assistants (Copilot, ChatGPT, and similar)
 * Discussion: Is learning Python a good bet (looking from survey data)?
 * Common pitfalls and workarounds in programming start.
-* What are code practice sites (Leetcode, Codewars, and similar).
+* Code practice sites ([Leetcode](https://leetcode.com/), [Codewars](https://www.codewars.com), and similar).
 
 
 ### P1. Designing Programs
@@ -91,4 +89,4 @@ otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to te
 
 ## Glossary
 
-**MWE.** Minimal, workable example. A perished art of asking questions about code with just enough specific information. See [more here](https://stackoverflow.com/help/minimal-reproducible-example).
+**MRE.** Minimal, reproducable example. A perished art of asking questions about code with just enough specific information. See [more here](https://stackoverflow.com/help/minimal-reproducible-example).

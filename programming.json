@@ -4,15 +4,19 @@
             "title": "Jump Into Programming",
             "learning_points": [
                 "Where to run a Python program. Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation. Jupyter notebooks vs plain code.",
-                "Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, `for` loop, `if`/`else`, functions and methods.",
-                "Sample toy projects (TBA)",
-                "Reading documentation. Python standard library and popular packages.",
-                "Effective search: what to expect on your first Google page?",
-                "Asking questions right: 'this code doesn't work' vs an MWE.",
-                "Using code generation assistants (Copilot, ChatGPT, and similar)",
+                "Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, `for` loop, `if`/`else`, functions and methods. Sample toy projects.",
+                {
+                    "title": "Read and ask:",
+                    "subpoints": [
+                        "Reading documentation: Python standard library and popular packages.",
+                        "Search and evaluate: what to expect on first Google page?",
+                        "Asking help right: 'the code doesn't work' vs an [MRE](^mre).",
+                        "Using code generation assistants (Copilot, ChatGPT, and similar)"
+                    ]
+                },
                 "Discussion: Is learning Python a good bet (looking from survey data)?",
                 "Common pitfalls and workarounds in programming start.",
-                "What are code practice sites (Leetcode, Codewars, and similar)."
+                "Code practice sites ([Leetcode](^leet), [Codewars](^codewars), and similar)."
             ],
             "references": {
                 "colab": {
@@ -20,6 +24,15 @@
                 },
                 "replit": {
                     "url": "https://replit.com/"
+                },
+                "mre": {
+                    "url": "https://replit.com/"
+                },
+                "leet": {
+                    "url": "https://leetcode.com/"
+                },
+                "codewars": {
+                    "url": "https://www.codewars.com"
                 }
             },
             "tagline": "Start learning Python syntax and usage."
