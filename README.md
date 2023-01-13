@@ -1,52 +1,81 @@
 # bootcamp
-Accessible curriculum in programming, data analysis and the business side of information technology for non-tech students.
+Accessible curriculum in programming and data analysis for non-tech students.
 
 ## Programming
 
-### P1. Jump Into Programming.
-
+### P0. Jump Into Programming
 > Start learning Python syntax and usage.
 
-* Where to run a Python program – Language syntax – Exercises – Standard library and popular packages – Jupyter notebooks vs plain code.
-* Asking questions right (MWE):
-  - [How to create a Minimal, Reproducible Example](https://stackoverflow.com/help/minimal-reproducible-example)
-  - [How to debug small programs by Eric Lippert](https://ericlippert.com/2014/03/05/how-to-debug-small-programs/).
+* Where to run a Python program. Local vs online (Colab, repl.it) installation. Jupyter notebooks vs plain code.
+* Language syntax.
+* Exercises.
+* Standard library and popular packages.
+* Asking questions right (MWE).
 * Code practice at Leetcode, Codewars, and similar.
 
-### P2. Designing Programs.
 
-> Introduction to programming concepts.
+### P1. Designing Programs
+> Learn programming concepts.
 
-Values and types – Data structures, primitive and compound types – Variables – Expressions and statements – Functions – OOP and classes.
+* Values and types
+* Data structures, primitive and compound types
+* Variables
+* Expressions and statements
+* Functions
+* OOP and classes
 
-### P3. Packaging.
 
+### P2. Project as a Package
 > Learn how to distribute your code as a package with modern tools.
 
-* Installing Python locally – Package managers (pip, poetry and alternatives) – Virtual environments.
-* Project packaging and utilities:
-  - [Hypermodern Project Packaging by Claudio Jolowicz](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/).
+* Package managers (pip, poetry and alternatives).
+* Virtual environments.
+* [Project packaging and utilities](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/).
 
-### P4. Write Better Code.
 
-> Patterns, refactoring, tests, documentation.
+### P3. Write better code
 
-* Programming style and patterns:
-  - [Beyond PEP8 by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M).
-* Refactoring:
-  - [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero)
-  - [Refactoring. Improving the Design of Existing Code. by Martin Fowler, with Kent Beck](https://martinfowler.com/books/refactoring.html).
-* Unit-testing and continious integration (CI):
-  - [TDD, Where Did It All Go Wrong by Ian Cooper](https://www.youtube.com/watch?v=EZ05e7EMOLM).
-* Writing and building documentation (sphinx, mkdocs-material, jupyterbook).
+* Programming style, patterns and best practices.
+* Refactoring: [Beyond PEP8 by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M), [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero), and [Refactoring: Improving the Design of Existing Code by Martin Fowler (with Kent Beck)](https://martinfowler.com/books/refactoring.html).
 
-### P5. More Python Features.
 
-> Not the first things to learn.
+### P4. Testing
 
-* Type annotations – Decorators – Iterators.
-* Asynchronous programming and multithreading – Metaprogramming (ABC) – Performance tuning.
+* Excercise: `assert` statement with a function call.
+* Aims and types of testing. Unit tests. [JetBrains survey (2021) on testing](https://www.jetbrains.com/lp/devecosystem-2021/testing/).
+* Unit-testing frameworks ([pytest](https://docs.pytest.org/en/7.1.x/getting-started.html#create-your-first-test), [unittest](https://docs.python.org/3/library/unittest.html)) and their [popularity](https://lp.jetbrains.com/python-developers-survey-2021/#FrameworksLibraries).
+* Continious integration (CI).
+* Test-driven development (TDD) and ['Where Did It All Go Wrong'](https://www.youtube.com/watch?v=EZ05e7EMOLM).
+
+
+### P5. Docs-as-Code
+> Writing and building documentation.
+
+* Excercise: Writing a function docstring.
+* [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) and lightweight markup languages.
+* Excercise: Writing a README.md.
+* Documentation and website builders: [sphinx-doc](https://www.sphinx-doc.org/en/master/), [mkdocs-material](https://squidfunk.github.io/mkdocs-material/), [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)
+* Genres of documentation ([text](https://documentation.divio.com/), [video](https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/)).
+
+
+### P6. More Python Features
+
+* Type annotations
+* Context managers
+* Decorators
+* Iterators and generators
+* Pattern matching
+* Walrus operator
+* Dataclasses
+* Enumerations
+
+
+### P7. Advanced Capabilities
+
+* Asynchronous programming and multithreading
+* Metaprogramming (ABC)
+* Performance tuning
 
 ## Glossary
 
-**MWE.** Minimal, workable example. A perished art of asking questions about code with just enough specific information. [[link](https://stackoverflow.com/help/minimal-reproducible-example)]
+**MWE.** Minimal, workable example. A perished art of asking questions about code with just enough specific information. See [StackOverflow recommendations](https://stackoverflow.com/help/minimal-reproducible-example).

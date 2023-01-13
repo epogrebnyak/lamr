@@ -1,5 +1,5 @@
 - https://docs.google.com/document/d/1WP7J31_EisyVtqTQ8fPDzRpqr29EWrY2datGpiUo8cs/edit
 
 Todo:
-- State of Developper Ecosystem (2021) -> JetBrains SDE (2021)
 - add license
+- prefix and enumerations
