@@ -289,7 +289,7 @@ programming_Topics = [
         ),
         colab=URL("https://colab.research.google.com/"),
         replit=URL("https://replit.com/"),
-        mre=URL("https://replit.com/"),
+        mre=URL("https://replit.com/"), #FIXME
         leet=URL("https://leetcode.com/"),
         codewars=URL("https://www.codewars.com"),
     ),
