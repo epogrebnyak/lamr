@@ -2,8 +2,8 @@
 Accessible curriculum in programming and data analysis for non-tech students.
 
 > This text is generated at [retreat.py](retreat.py) and can be downloaded as a [JSON file](programming.json). 
-> When writing about code, shouldn't this be code as well?  
-> Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
+When writing about code, shouldn't this be code as well?
+Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
 if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell why not.
 
 
@@ -12,16 +12,32 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
 ### P0. Jump Into Programming
 > Start learning Python syntax and usage.
 
-* Where to run a Python program. Local vs online ([Google Colab](https://colab.research.google.com/), [repl.it](https://replit.com/)) installation. Jupyter notebooks vs plain code.
-* Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, `for` loop, `if`/`else`, functions and methods. Sample toy projects.
-* Read and ask:
-  - Reading documentation: Python standard library and popular packages.
+* Developper survey: Is learning Python a good bet?
+* Python ecosystem: language, libraries, tools.Where to run a Python program. Local vs online ([Google Colab](https://colab.research.google.com/), [repl.it](https://replit.com/)) installation. Jupyter notebooks vs plain code.
+* Minimal Python syntax
+  - Numbers, strings, booleans, None.
+  - Operators (assignment, arithmetic, comparison, membership).
+  - Variables.
+  - Lists, tuples, dictionaries.
+  - Iteration with `for` loops and comprehensions.
+  - `if`/`else`
+  - Functions and methods.
+  - Importing modules and packages.
+  - Input and output (console, command line, files and web requests).
+* Read, talk and ask:
+  - Describing what your program does as input, steps and output. Writing pseudocode.
+  - Reading documentation: core Python, standard library and popular packages.
   - Search and evaluate: what to expect on first Google page?
-  - Asking help right: 'the code doesn't work' vs an [MRE](https://replit.com/).
-  - Using code generation assistants (Copilot, ChatGPT, and similar)
-* Common pitfalls and workarounds in programming start.
-* Code practice sites ([Leetcode](https://leetcode.com/), [Codewars](https://www.codewars.com), and similar).
-* Discussion: looking from survey data is learning Python a good bet?
+  - Asking help right: 'my code doesn't work' vs an [MRE](https://replit.com/).
+  - Code generation assistants (Copilot, ChatGPT, and similar).
+* Common pitfalls and workarounds at programming start.
+* What can you do next
+  - Tutorials (and '[tutorial hell](https://www.reddit.com/r/learnprogramming/comments/qrlx5m/what_exactly_is_tutorial_hell/?utm_source=share&utm_medium=web2x&context=3)').
+  - Toy projects and excercises.
+  - Finding your itch (a problem to solve).
+  - Code practice sites ([Leetcode](https://leetcode.com/), [Codewars](https://www.codewars.com), and similar).
+  - Contributing to open source projects.
+  - Answering other people's questions.
 
 
 ### P1. Designing Programs
@@ -43,8 +59,9 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
 * [Project packaging and utilities](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/).
 
 
-### P3. Write better code
+### P3. Write Better Code
 
+* Can code quality be measured?
 * Programming style, patterns and best practices.
 * Refactoring: [Beyond PEP8 by Raymond Herringer](https://www.youtube.com/watch?v=wf-BqAjZb8M), [Refactor Like A Superhero by Alex Bespoyasov](https://github.com/bespoyasov/refactor-like-a-superhero), and [Refactoring: Improving the Design of Existing Code by Martin Fowler (with Kent Beck)](https://martinfowler.com/books/refactoring.html).
 

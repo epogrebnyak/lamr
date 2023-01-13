@@ -1,4 +1,4 @@
-"""Theme and references primitives for creating curricula from code."""
+"""Topic and references primitives for creating curricula from code."""
 
 # pylint: disable=missing-class-docstring, missing-function-docstring
 
@@ -87,12 +87,12 @@ Reference = Union[Publication, Link, URL]
 
 
 @dataclass
-class LearningPoint:
+class Subtopic:
     title: str
-    subpoints: List[str] = Field(default_factory=list)
+    learning_points: List[str] = Field(default_factory=list)
 
-    def add_subpoints(self, *subpoints):
-        return LearningPoint(self.title, self.subpoints + list(subpoints))
+    def add_learning_points(self, *learning_points):
+        return Subtopic(self.title, self.learning_points + list(learning_points))
 
 
 def bullet(string: str, char="*", offset="") -> str:
@@ -101,27 +101,27 @@ def bullet(string: str, char="*", offset="") -> str:
 
 def to_markdown(item, ref_dict):
     if isinstance(item, str):
-        s = substitute(item, ref_dict)
-        return bullet(s)
-    if isinstance(item, LearningPoint):
+        s_ = substitute(item, ref_dict)
+        return bullet(s_, "*", "")
+    if isinstance(item, Subtopic):
 
         def fmt(s):
-            return bullet(substitute(s, ref_dict), "-", "  ")
+            s = substitute(s, ref_dict)
+            return bullet(s, "-", "  ")
 
-        a = to_markdown(item.title, ref_dict)
-        b = "\n".join([fmt(s) for s in item.subpoints])
-        return a + "\n" + b
+        title_str = to_markdown(item.title, ref_dict)
+        return "\n".join([title_str] + [fmt(s) for s in item.learning_points])
 
 
 @dataclass
-class Theme:
+class Topic:
     title: str
-    learning_points: List[Union[str, LearningPoint]] = Field(default_factory=list)
+    learning_points: List[Union[str, Subtopic]] = Field(default_factory=list)
     references: Dict[str, Reference] = Field(default_factory=dict)
     tagline: str = ""
 
     def add_learning_points(self, *learning_points: List[str]):
-        return Theme(
+        return Topic(
             self.title,
             self.learning_points + list(learning_points),
             self.references,
@@ -129,7 +129,7 @@ class Theme:
         )
 
     def add_references(self, **ref_dict: Dict[str, Reference]):
-        return Theme(
+        return Topic(
             self.title,
             self.learning_points,
             {**self.references, **ref_dict},
@@ -153,8 +153,8 @@ class Theme:
         return "\n".join(lines)
 
 
-class ThemeList(BaseModel):
-    themes: List[Theme]
+class TopicList(BaseModel):
+    Topics: List[Topic]
 
     def save(self, filename: str):
         pathlib.Path(filename).write_text(self.json(indent=4), encoding="utf-8")
@@ -165,7 +165,7 @@ class ThemeList(BaseModel):
 
         lines = [
             t.to_markdown(header_level, with_prefix(i))
-            for i, t in enumerate(self.themes)
+            for i, t in enumerate(self.Topics)
         ]
         return "\n\n\n".join(lines)
 
@@ -242,30 +242,52 @@ terms = [
 GLOSSARY = Glossary(terms=terms)
 
 # %%
-programming_themes = [
-    Theme("Jump Into Programming", tagline="Start learning Python syntax and usage.")
+programming_Topics = [
+    Topic("Jump Into Programming", tagline="Start learning Python syntax and usage.")
     .add_learning_points(
+        "Developper survey: Is learning Python a good bet?",
+        "Python ecosystem: language, libraries, tools."
         "Where to run a Python program. Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation. Jupyter notebooks vs plain code.",
-        "Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, "
-        "`for` loop, `if`/`else`, functions and methods. Sample toy projects.",
-        LearningPoint("Read and ask:").add_subpoints(
-            "Reading documentation: Python standard library and popular packages.",
-            "Search and evaluate: what to expect on first Google page?",
-            "Asking help right: 'the code doesn't work' vs an [MRE](^mre).",
-            "Using code generation assistants (Copilot, ChatGPT, and similar)",
+        Subtopic("Minimal Python syntax").add_learning_points(
+            "Numbers, strings, booleans, None.",
+            "Operators (assignment, arithmetic, comparison, membership).",
+            "Variables.",
+            "Lists, tuples, dictionaries.",
+            "Iteration with `for` loops and comprehensions.",
+            "`if`/`else`",
+            "Functions and methods.",
+            "Importing modules and packages.",
+            "Input and output (console, command line, files and web requests).",
         ),
-        "Common pitfalls and workarounds in programming start.",
-        "Code practice sites ([Leetcode](^leet), [Codewars](^codewars), and similar).",
-        "Discussion: looking from survey data is learning Python a good bet?",
+        Subtopic("Read, talk and ask:").add_learning_points(
+            "Describing what your program does as input, steps and output. "
+            "Writing pseudocode.",
+            "Reading documentation: core Python, standard library and popular packages.",
+            "Search and evaluate: what to expect on first Google page?",
+            "Asking help right: 'my code doesn't work' vs an [MRE](^mre).",
+            "Code generation assistants (Copilot, ChatGPT, and similar).",
+        ),
+        "Common pitfalls and workarounds at programming start.",
+        Subtopic("What can you do next").add_learning_points(
+            "Tutorials (and '[tutorial hell](^th)').",
+            "Toy projects and excercises.",
+            "Finding your itch (a problem to solve).",
+            "Code practice sites ([Leetcode](^leet), [Codewars](^codewars), and similar).",
+            "Contributing to open source projects.",
+            "Answering other people's questions.",
+        ),
     )
     .add_references(
+        th=URL(
+            "https://www.reddit.com/r/learnprogramming/comments/qrlx5m/what_exactly_is_tutorial_hell/?utm_source=share&utm_medium=web2x&context=3"
+        ),
         colab=URL("https://colab.research.google.com/"),
         replit=URL("https://replit.com/"),
         mre=URL("https://replit.com/"),
         leet=URL("https://leetcode.com/"),
-        codewars=URL("https://www.codewars.com")
+        codewars=URL("https://www.codewars.com"),
     ),
-    Theme(
+    Topic(
         "Designing Programs", tagline="Learn programming concepts."
     ).add_learning_points(
         "Values and types",
@@ -275,7 +297,7 @@ programming_themes = [
         "Functions",
         "OOP and classes",
     ),
-    Theme(
+    Topic(
         "Project as a Package",
         tagline="Learn how to distribute your code as a package with modern tools.",
     )
@@ -291,8 +313,9 @@ programming_themes = [
             "https://cjolowicz.github.io/posts/hypermodern-python-01-setup/",
         )
     ),
-    Theme("Write better code")
+    Topic("Write Better Code")
     .add_learning_points(
+        "Can code quality be measured?",
         "Programming style, patterns and best practices.",
         "Refactoring: @beyond_pep8, @refactor_superhero, and @fowler.",
     )
@@ -313,7 +336,7 @@ programming_themes = [
             "https://martinfowler.com/books/refactoring.html",
         ),
     ),
-    Theme("Testing")
+    Topic("Testing")
     .add_learning_points(
         "Excercise: `assert` statement with a function call.",
         "Aims and types of testing. Unit tests. [JetBrains survey (2021) on testing](^sde_testing).",
@@ -341,7 +364,7 @@ programming_themes = [
             "https://www.youtube.com/watch?v=EZ05e7EMOLM",
         ),
     ),
-    Theme("Docs-as-Code", tagline="Writing and building documentation.")
+    Topic("Docs-as-Code", tagline="Writing and building documentation.")
     .add_learning_points(
         "Excercise: Writing a function docstring.",
         "[Markdown](^gh_markdown) and lightweight markup languages (rst, asciidoc).",
@@ -372,7 +395,7 @@ programming_themes = [
             "https://documentation.divio.com/",
         ),
     ),
-    Theme("More Python Features").add_learning_points(
+    Topic("More Python Features").add_learning_points(
         "Type annotations",
         "Context managers",
         "Decorators",
@@ -382,7 +405,7 @@ programming_themes = [
         "Dataclasses",
         "Enumerations",
     ),
-    Theme("Advanced Capabilities").add_learning_points(
+    Topic("Advanced Capabilities").add_learning_points(
         "Asynchronous programming and multithreading",
         "Metaprogramming (ABC)",
         "Performance tuning",
@@ -407,14 +430,14 @@ EXTRA_REFERENCES = dict(
 )
 
 
-PROGRAMMING = ThemeList(themes=programming_themes)
+PROGRAMMING = TopicList(Topics=programming_Topics)
 
 README = f"""## bootcamp ![](https://poll.fizzy.wtf/count?epogrebnyak.bootcamp.like=yes)
 Accessible curriculum in programming and data analysis for non-tech students.
 
 > This text is generated at [retreat.py](retreat.py) and can be downloaded as a [JSON file](programming.json). 
-> When writing about code, shouldn't this be code as well?  
-> Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
+When writing about code, shouldn't this be code as well?
+Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
 if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell why not.
 
 
