@@ -55,7 +55,7 @@ Accessible curriculum in programming and data analysis for non-tech students.
 
 * Excercise: Writing a function docstring.
 * [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) and lightweight markup languages.
-* Excercise: Writing a README.md.
+* Excercise: Writing a good README.md - [but how?](https://github.com/matiassingers/awesome-readme#articles)
 * Documentation and website builders: [sphinx-doc](https://www.sphinx-doc.org/en/master/), [mkdocs-material](https://squidfunk.github.io/mkdocs-material/), [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)
 * Genres of documentation ([text](https://documentation.divio.com/), [video](https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/)).
 

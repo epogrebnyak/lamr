@@ -303,11 +303,13 @@ programming_themes = [
     .add_learning_points(
         "Excercise: Writing a function docstring.",
         "[Markdown](^gh_markdown) and lightweight markup languages.",
-        "Excercise: Writing a README.md.",
+        "Excercise: Writing a good README.md - [but how?](^how)",
         "Documentation and website builders: @sphinx, [mkdocs-material](^mkdocs), [Jupyter Book](^jb)",
         "Genres of documentation ([text](^divio), [video](^kinds4)).",
     )
     .add_references(
+        how = Link("Awesome Readme - Articles",
+        "https://github.com/matiassingers/awesome-readme#articles"),
         gh_markdown=Link(
             "Start writing on GitHub / Basic formatting syntax.",
             "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
