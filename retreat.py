@@ -128,10 +128,6 @@ class ThemeList(BaseModel):
     def save(self, filename: str):
         pathlib.Path(filename).write_text(self.json(indent=4), encoding="utf-8")
 
-    def items(self, header_level, prefix):
-        for i, t in enumerate(self.themes):
-            yield
-
     def to_markdown(self, header_level: int = 0, prefix="") -> str:
         def p(i: int) -> str:
             return prefix + str(i) if prefix else ""
@@ -143,9 +139,11 @@ class ThemeList(BaseModel):
 REGEX_UPTICK = r"\(\^(\w+)\)"
 REGEX_AT = r"@([\w]+)"
 
-# Standalone line @pytest evaluates to str(reference)
-# (^sde_libraries) evaluates to (reference.url)
+
 def substitute(text: str, ref_dict: Dict[str, Reference]) -> str:
+    """In *text* evaluate standalone line @pytest to str(ref_dict["pytest"])
+    (^sde_libraries) evaluates to "(" + reference.url + ")"
+    """
     _s = substitute_upticks(text, ref_dict)
     return substitute_at(_s, ref_dict)
 
@@ -198,7 +196,7 @@ class Glossary(BaseModel):
 terms = [
     Term(
         "MWE",
-        "Minimal, workable example. A perished art of asking questions about code with just enough specific information. See [StackOverflow recommendations](^mre).",
+        "Minimal, workable example. A perished art of asking questions about code with just enough specific information. See [more here](^mre).",
         dict(
             mre=Manual(
                 "How to create a Minimal, Reproducible Example",
@@ -367,13 +365,14 @@ Accessible curriculum in programming and data analysis for non-tech students.
 
 {PROGRAMMING.to_markdown(3, "P")}
 
+
 ## Glossary
 
 {GLOSSARY.to_markdown()}
 """
 
 print(README)
-PROGRAMMING.save("retreat.json")
+PROGRAMMING.save("programming.json")
 pathlib.Path("README.md").write_text(README, encoding="utf-8")
 
 # %%

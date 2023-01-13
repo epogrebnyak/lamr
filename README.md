@@ -76,6 +76,7 @@ Accessible curriculum in programming and data analysis for non-tech students.
 * Metaprogramming (ABC)
 * Performance tuning
 
+
 ## Glossary
 
-**MWE.** Minimal, workable example. A perished art of asking questions about code with just enough specific information. See [StackOverflow recommendations](https://stackoverflow.com/help/minimal-reproducible-example).
+**MWE.** Minimal, workable example. A perished art of asking questions about code with just enough specific information. See [more here](https://stackoverflow.com/help/minimal-reproducible-example).
