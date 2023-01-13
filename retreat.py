@@ -251,19 +251,23 @@ programming_Topics = [
             "Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation.", 
             "Jupyter notebooks vs plain code.",
             "Codespaces and Gitpod for Github repositories.",
-            #"PyDiode - https://pyodide.org/en/stable/console.html"
             ),
         Subtopic("Minimal Python syntax").add_learning_points(
             "Numbers, strings, booleans, None.",
             "Operators (assignment, arithmetic, comparison, membership).",
             "Variables.",
-            "Lists, tuples, dictionaries.",
-            "Iteration with `for` loops and comprehensions.",
-            "`if`/`else`",
+            "Lists and tuples.",
+            "Iteration with `for` loops.",
+            "Conditional execution with `if`/`else`",
             "Functions and methods.",
             "Importing modules and packages.",
             "Input and output (console, command line, files and web requests).",
         ),
+        Subtopic("More Python syntax").add_learning_points(
+            "Dictionaries.",
+            "List comprehensions.",
+            "`while` loops.",
+            "Exceptions and `try`/`except` statement."),
         Subtopic("Read, talk and ask:").add_learning_points(
             "Describing what your program does as input, steps and output. "
             "Writing pseudocode.",
