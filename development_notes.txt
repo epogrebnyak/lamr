@@ -3,8 +3,10 @@ Source:
 
 Todo:
 - add license
-- prefix and enumerations
 - sort glossary
+- more programming themes (eg projects)
 
-Big changes:
+Bigger changes:
 - Vue frontend
+- check if any references are not listed in learning learning_points
+- list all references

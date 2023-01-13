@@ -105,9 +105,13 @@ class Theme:
         )
 
     def _make_title_md(self, header_level: int, prefix: str) -> str:
-        prefix = prefix + "." if prefix else ""
-        header = "#" * header_level if header_level else ""
-        return " ".join([s for s in (header, prefix, self.title) if s])
+        prefix = prefix + ". " if prefix else ""
+        header = "#" * header_level + " " if header_level else ""
+        title = header + prefix + self.title
+        if self.tagline:
+            subtitle = "> " + self.tagline
+            title = title + "\n" + subtitle
+        return title + "\n"
 
     def _make_body_md(self) -> List[str]:
         def bullet(string: str) -> str:
@@ -116,9 +120,7 @@ class Theme:
         return [bullet(substitute(lp, self.references)) for lp in self.learning_points]
 
     def to_markdown(self, header_level: int = 0, prefix=""):
-        lines = [self._make_title_md(header_level, prefix)]
-        lines += [("> " + self.tagline + "\n" if self.tagline else "")]
-        lines += self._make_body_md()
+        lines = [self._make_title_md(header_level, prefix)] + self._make_body_md()
         return "\n".join(lines)
 
 
@@ -129,10 +131,10 @@ class ThemeList(BaseModel):
         pathlib.Path(filename).write_text(self.json(indent=4), encoding="utf-8")
 
     def to_markdown(self, header_level: int = 0, prefix="") -> str:
-        def p(i: int) -> str:
+        def with_prefix(i: int) -> str:
             return prefix + str(i) if prefix else ""
 
-        lines = [t.to_markdown(header_level, p(i)) for i, t in enumerate(self.themes)]
+        lines = [t.to_markdown(header_level, with_prefix(i)) for i, t in enumerate(self.themes)]
         return "\n\n\n".join(lines)
 
 
@@ -215,8 +217,10 @@ programming_themes = [
         "Where to run a Python program. Local vs online (Colab, repl.it) installation. Jupyter notebooks vs plain code.",
         "Language syntax.",
         "Exercises.",
-        "Standard library and popular packages.",
-        "Asking questions right (MWE).",
+        "Python standard library and popular packages.",
+        "Reading documentation. Effective search.",
+        "Asking questions: 'this code doesn't work' vs an MRE.",
+        "New: code generation assistant (Copilot, ChatGPT, and similar)",
         "Code practice at Leetcode, Codewars, and similar.",
     ),
     Theme(

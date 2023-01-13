@@ -9,8 +9,10 @@ Accessible curriculum in programming and data analysis for non-tech students.
 * Where to run a Python program. Local vs online (Colab, repl.it) installation. Jupyter notebooks vs plain code.
 * Language syntax.
 * Exercises.
-* Standard library and popular packages.
-* Asking questions right (MWE).
+* Python standard library and popular packages.
+* Reading documentation. Effective search.
+* Asking questions: 'this code doesn't work' vs an MRE.
+* New: code generation assistant (Copilot, ChatGPT, and similar)
 * Code practice at Leetcode, Codewars, and similar.
 
 
