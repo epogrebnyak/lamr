@@ -1,19 +1,29 @@
 # bootcamp
 Accessible curriculum in programming and data analysis for non-tech students.
 
+This text is generated at [retreat.py](retreat.py) and can be downloaded as a [JSON file](programming.json) too.
+When writing about code, shouldn't this be code as well?  
+
+Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
+![](https://poll.fizzy.wtf/count?epogrebnyak.bootcamp.like=yes) if you like the idea,
+otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell what may be wrong with it.
+
+
 ## Programming
 
 ### P0. Jump Into Programming
 > Start learning Python syntax and usage.
 
-* Where to run a Python program. Local vs online (Colab, repl.it) installation. Jupyter notebooks vs plain code.
-* Language syntax.
-* Exercises.
-* Python standard library and popular packages.
-* Reading documentation. Effective search.
-* Asking questions: 'this code doesn't work' vs an MRE.
-* New: code generation assistant (Copilot, ChatGPT, and similar)
-* Code practice at Leetcode, Codewars, and similar.
+* Where to run a Python program. Local vs online ([Google Colab](https://colab.research.google.com/), [repl.it](https://replit.com/)) installation. Jupyter notebooks vs plain code.
+* Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, `for` loop, `if`/`else`, functions and methods.
+* Sample toy projects (TBA)
+* Reading documentation. Python standard library and popular packages.
+* Effective search: what to expect on your first Google page?
+* Asking questions right: 'this code doesn't work' vs an MWE.
+* Using code generation assistants (Copilot, ChatGPT, and similar)
+* Discussion: Is learning Python a good bet (looking from survey data)?
+* Common pitfalls and workarounds in programming start.
+* What are code practice sites (Leetcode, Codewars, and similar).
 
 
 ### P1. Designing Programs
@@ -54,7 +64,7 @@ Accessible curriculum in programming and data analysis for non-tech students.
 > Writing and building documentation.
 
 * Excercise: Writing a function docstring.
-* [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) and lightweight markup languages.
+* [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) and lightweight markup languages (rst, asciidoc).
 * Excercise: Writing a good README.md - [but how?](https://github.com/matiassingers/awesome-readme#articles)
 * Documentation and website builders: [sphinx-doc](https://www.sphinx-doc.org/en/master/), [mkdocs-material](https://squidfunk.github.io/mkdocs-material/), [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)
 * Genres of documentation ([text](https://documentation.divio.com/), [video](https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/)).

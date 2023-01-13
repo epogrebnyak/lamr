@@ -1,4 +1,4 @@
-"""Theme and references primitives."""
+"""Theme and references primitives for creating curricula from code."""
 
 # pylint: disable=missing-class-docstring, missing-function-docstring
 
@@ -77,8 +77,11 @@ class Article(Publication):
 class Blog(Publication):
     pass
 
+@dataclass
+class URL:
+   url: str
 
-Reference = Union[Publication, Link]
+Reference = Union[Publication, Link, URL]
 
 
 @dataclass
@@ -88,7 +91,7 @@ class Theme:
     references: Dict[str, Reference] = Field(default_factory=dict)
     tagline: str = ""
 
-    def add_learning_points(self, *learning_points):
+    def add_learning_points(self, *learning_points: List[str]):
         return Theme(
             self.title,
             self.learning_points + list(learning_points),
@@ -96,7 +99,7 @@ class Theme:
             self.tagline,
         )
 
-    def add_references(self, **ref_dict):
+    def add_references(self, **ref_dict: Dict[str, Reference]):
         return Theme(
             self.title,
             self.learning_points,
@@ -214,14 +217,19 @@ programming_themes = [
     Theme(
         "Jump Into Programming", tagline="Start learning Python syntax and usage."
     ).add_learning_points(
-        "Where to run a Python program. Local vs online (Colab, repl.it) installation. Jupyter notebooks vs plain code.",
-        "Language syntax.",
-        "Exercises.",
-        "Python standard library and popular packages.",
-        "Reading documentation. Effective search.",
-        "Asking questions: 'this code doesn't work' vs an MRE.",
-        "New: code generation assistant (Copilot, ChatGPT, and similar)",
-        "Code practice at Leetcode, Codewars, and similar.",
+        "Where to run a Python program. Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation. Jupyter notebooks vs plain code.",
+        "Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, "
+        "`for` loop, `if`/`else`, functions and methods.",
+        "Sample toy projects (TBA)",
+        "Reading documentation. Python standard library and popular packages.",
+        "Effective search: what to expect on your first Google page?",
+        "Asking questions right: 'this code doesn't work' vs an MWE.",
+        "Using code generation assistants (Copilot, ChatGPT, and similar)",
+        "Discussion: Is learning Python a good bet (looking from survey data)?",
+        "Common pitfalls and workarounds in programming start.",
+        "What are code practice sites (Leetcode, Codewars, and similar)."
+    ).add_references(colab=URL("https://colab.research.google.com/"),
+                     replit=URL("https://replit.com/")
     ),
     Theme(
         "Designing Programs", tagline="Learn programming concepts."
@@ -302,13 +310,14 @@ programming_themes = [
     Theme("Docs-as-Code", tagline="Writing and building documentation.")
     .add_learning_points(
         "Excercise: Writing a function docstring.",
-        "[Markdown](^gh_markdown) and lightweight markup languages.",
+        "[Markdown](^gh_markdown) and lightweight markup languages (rst, asciidoc).",
         "Excercise: Writing a good README.md - [but how?](^how)",
         "Documentation and website builders: @sphinx, [mkdocs-material](^mkdocs), [Jupyter Book](^jb)",
         "Genres of documentation ([text](^divio), [video](^kinds4)).",
     )
     .add_references(
-        how = Link("Awesome Readme - Articles",
+        iam_readme = Link("Hi, my name is README", "https://raphael.codes/talks/"),
+        how = Link("Awesome README - Articles",
         "https://github.com/matiassingers/awesome-readme#articles"),
         gh_markdown=Link(
             "Start writing on GitHub / Basic formatting syntax.",
@@ -367,6 +376,14 @@ PROGRAMMING = ThemeList(themes=programming_themes)
 README = f"""# bootcamp
 Accessible curriculum in programming and data analysis for non-tech students.
 
+This text is generated at [retreat.py](retreat.py) and can be downloaded as a [JSON file](programming.json) too.
+When writing about code, shouldn't this be code as well?  
+
+Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
+![](https://poll.fizzy.wtf/count?epogrebnyak.bootcamp.like=yes) if you like the idea,
+otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell what may be wrong with it.
+
+
 ## Programming
 
 {PROGRAMMING.to_markdown(3, "P")}
@@ -380,5 +397,3 @@ Accessible curriculum in programming and data analysis for non-tech students.
 print(README)
 PROGRAMMING.save("programming.json")
 pathlib.Path("README.md").write_text(README, encoding="utf-8")
-
-# %%

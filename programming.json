@@ -3,16 +3,25 @@
         {
             "title": "Jump Into Programming",
             "learning_points": [
-                "Where to run a Python program. Local vs online (Colab, repl.it) installation. Jupyter notebooks vs plain code.",
-                "Language syntax.",
-                "Exercises.",
-                "Python standard library and popular packages.",
-                "Reading documentation. Effective search.",
-                "Asking questions: 'this code doesn't work' vs an MRE.",
-                "New: code generation assistant (Copilot, ChatGPT, and similar)",
-                "Code practice at Leetcode, Codewars, and similar."
+                "Where to run a Python program. Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation. Jupyter notebooks vs plain code.",
+                "Language syntax. A very minimal set of 10 things to learn to program: numbers, strings, lists, tuples, variables, operators, `for` loop, `if`/`else`, functions and methods.",
+                "Sample toy projects (TBA)",
+                "Reading documentation. Python standard library and popular packages.",
+                "Effective search: what to expect on your first Google page?",
+                "Asking questions right: 'this code doesn't work' vs an MWE.",
+                "Using code generation assistants (Copilot, ChatGPT, and similar)",
+                "Discussion: Is learning Python a good bet (looking from survey data)?",
+                "Common pitfalls and workarounds in programming start.",
+                "What are code practice sites (Leetcode, Codewars, and similar)."
             ],
-            "references": {},
+            "references": {
+                "colab": {
+                    "url": "https://colab.research.google.com/"
+                },
+                "replit": {
+                    "url": "https://replit.com/"
+                }
+            },
             "tagline": "Start learning Python syntax and usage."
         },
         {
@@ -107,14 +116,18 @@
             "title": "Docs-as-Code",
             "learning_points": [
                 "Excercise: Writing a function docstring.",
-                "[Markdown](^gh_markdown) and lightweight markup languages.",
+                "[Markdown](^gh_markdown) and lightweight markup languages (rst, asciidoc).",
                 "Excercise: Writing a good README.md - [but how?](^how)",
                 "Documentation and website builders: @sphinx, [mkdocs-material](^mkdocs), [Jupyter Book](^jb)",
                 "Genres of documentation ([text](^divio), [video](^kinds4))."
             ],
             "references": {
+                "iam_readme": {
+                    "text": "Hi, my name is README",
+                    "url": "https://raphael.codes/talks/"
+                },
                 "how": {
-                    "text": "Awesome Readme - Articles",
+                    "text": "Awesome README - Articles",
                     "url": "https://github.com/matiassingers/awesome-readme#articles"
                 },
                 "gh_markdown": {

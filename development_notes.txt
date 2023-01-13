@@ -6,7 +6,15 @@ Todo:
 - sort glossary
 - more programming themes (eg projects)
 
+Interactivity:
+- newsletter
+- version policy
+- language translations
+
 Bigger changes:
 - Vue frontend
 - check if any references are not listed in learning learning_points
 - list all references
+- version + badge
+- counter from https://github.com/vberlier/poll#poll (reset)
+- incorporate previous code
