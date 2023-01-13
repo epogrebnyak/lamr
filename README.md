@@ -12,8 +12,12 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
 ### P0. Jump Into Programming
 > Start learning Python syntax and usage.
 
-* Developper survey: Is learning Python a good bet?
-* Python ecosystem: language, libraries, tools.Where to run a Python program. Local vs online ([Google Colab](https://colab.research.google.com/), [repl.it](https://replit.com/)) installation. Jupyter notebooks vs plain code.
+* Python Developper Survey: Is learning Python a good bet?
+* Python ecosystem: language, libraries, tools.
+* Where to run a Python program.
+  - Local vs online ([Google Colab](https://colab.research.google.com/), [repl.it](https://replit.com/)) installation.
+  - Jupyter notebooks vs plain code.
+  - Codespaces and Gitpod for Github repositories.
 * Minimal Python syntax
   - Numbers, strings, booleans, None.
   - Operators (assignment, arithmetic, comparison, membership).
@@ -32,12 +36,13 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
   - Code generation assistants (Copilot, ChatGPT, and similar).
 * Common pitfalls and workarounds at programming start.
 * What can you do next
-  - Tutorials (and '[tutorial hell](https://www.reddit.com/r/learnprogramming/comments/qrlx5m/what_exactly_is_tutorial_hell/?utm_source=share&utm_medium=web2x&context=3)').
+  - Tutorials (and escaping '[tutorial hell](https://www.reddit.com/r/learnprogramming/comments/qrlx5m/what_exactly_is_tutorial_hell/?utm_source=share&utm_medium=web2x&context=3)').
   - Toy projects and excercises.
   - Finding your itch (a problem to solve).
   - Code practice sites ([Leetcode](https://leetcode.com/), [Codewars](https://www.codewars.com), and similar).
   - Contributing to open source projects.
   - Answering other people's questions.
+  - Excercise: what makes a good code problem?
 
 
 ### P1. Designing Programs

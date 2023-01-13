@@ -3,8 +3,16 @@
         {
             "title": "Jump Into Programming",
             "learning_points": [
-                "Developper survey: Is learning Python a good bet?",
-                "Python ecosystem: language, libraries, tools.Where to run a Python program. Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation. Jupyter notebooks vs plain code.",
+                "Python Developper Survey: Is learning Python a good bet?",
+                "Python ecosystem: language, libraries, tools.",
+                {
+                    "title": "Where to run a Python program.",
+                    "learning_points": [
+                        "Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation.",
+                        "Jupyter notebooks vs plain code.",
+                        "Codespaces and Gitpod for Github repositories."
+                    ]
+                },
                 {
                     "title": "Minimal Python syntax",
                     "learning_points": [
@@ -33,12 +41,13 @@
                 {
                     "title": "What can you do next",
                     "learning_points": [
-                        "Tutorials (and '[tutorial hell](^th)').",
+                        "Tutorials (and escaping '[tutorial hell](^th)').",
                         "Toy projects and excercises.",
                         "Finding your itch (a problem to solve).",
                         "Code practice sites ([Leetcode](^leet), [Codewars](^codewars), and similar).",
                         "Contributing to open source projects.",
-                        "Answering other people's questions."
+                        "Answering other people's questions.",
+                        "Excercise: what makes a good code problem?"
                     ]
                 }
             ],

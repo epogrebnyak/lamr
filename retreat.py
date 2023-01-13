@@ -245,9 +245,14 @@ GLOSSARY = Glossary(terms=terms)
 programming_Topics = [
     Topic("Jump Into Programming", tagline="Start learning Python syntax and usage.")
     .add_learning_points(
-        "Developper survey: Is learning Python a good bet?",
-        "Python ecosystem: language, libraries, tools."
-        "Where to run a Python program. Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation. Jupyter notebooks vs plain code.",
+        "Python Developper Survey: Is learning Python a good bet?",
+        "Python ecosystem: language, libraries, tools.",
+        Subtopic("Where to run a Python program.").add_learning_points(
+            "Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation.", 
+            "Jupyter notebooks vs plain code.",
+            "Codespaces and Gitpod for Github repositories.",
+            #"PyDiode - https://pyodide.org/en/stable/console.html"
+            ),
         Subtopic("Minimal Python syntax").add_learning_points(
             "Numbers, strings, booleans, None.",
             "Operators (assignment, arithmetic, comparison, membership).",
@@ -269,12 +274,13 @@ programming_Topics = [
         ),
         "Common pitfalls and workarounds at programming start.",
         Subtopic("What can you do next").add_learning_points(
-            "Tutorials (and '[tutorial hell](^th)').",
+            "Tutorials (and escaping '[tutorial hell](^th)').",
             "Toy projects and excercises.",
             "Finding your itch (a problem to solve).",
             "Code practice sites ([Leetcode](^leet), [Codewars](^codewars), and similar).",
             "Contributing to open source projects.",
             "Answering other people's questions.",
+            "Excercise: what makes a good code problem?"
         ),
     )
     .add_references(
