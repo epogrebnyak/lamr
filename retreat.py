@@ -254,9 +254,9 @@ programming_themes = [
             "Asking help right: 'the code doesn't work' vs an [MRE](^mre).",
             "Using code generation assistants (Copilot, ChatGPT, and similar)",
         ),
-        "Discussion: Is learning Python a good bet (looking from survey data)?",
         "Common pitfalls and workarounds in programming start.",
         "Code practice sites ([Leetcode](^leet), [Codewars](^codewars), and similar).",
+        "Discussion: looking from survey data is learning Python a good bet?",
     )
     .add_references(
         colab=URL("https://colab.research.google.com/"),

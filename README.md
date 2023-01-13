@@ -19,9 +19,9 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
   - Search and evaluate: what to expect on first Google page?
   - Asking help right: 'the code doesn't work' vs an [MRE](https://replit.com/).
   - Using code generation assistants (Copilot, ChatGPT, and similar)
-* Discussion: Is learning Python a good bet (looking from survey data)?
 * Common pitfalls and workarounds in programming start.
 * Code practice sites ([Leetcode](https://leetcode.com/), [Codewars](https://www.codewars.com), and similar).
+* Discussion: looking from survey data is learning Python a good bet?
 
 
 ### P1. Designing Programs
