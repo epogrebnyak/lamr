@@ -245,6 +245,7 @@ programming_Topics = [
             "Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation.",
             "Jupyter notebooks vs plain code.",
             "Codespaces and Gitpod for Github repositories.",
+            "PyDiode console <https://pyodide.org/en/stable/console.html>"
         ),
         Subtopic("Minimal Python syntax: values and operations.").add_learning_points(
             "Numbers and arithmetic operations.",
