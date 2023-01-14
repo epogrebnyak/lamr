@@ -245,13 +245,12 @@ programming_Topics = [
             "Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation.",
             "Jupyter notebooks vs plain code.",
             "Codespaces and Gitpod for Github repositories.",
-            "PyDiode console <https://pyodide.org/en/stable/console.html>"
+            "PyDiode console <https://pyodide.org/en/stable/console.html>",
         ),
         Subtopic("Minimal Python syntax: values and operations.").add_learning_points(
             "Numbers and arithmetic operations.",
-            "Strings and operations on strings."
-            "Comparison and boolean values.",
-            "Operators (assignment, arithmetic, comparison, membership)."
+            "Strings and operations on strings." "Comparison and boolean values.",
+            "Operators (assignment, arithmetic, comparison, membership).",
         ),
         Subtopic("Minimal Python syntax: the rest").add_learning_points(
             "Variables (naming, assignment, mutation).",
