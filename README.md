@@ -20,14 +20,19 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
   - Codespaces and Gitpod for Github repositories.
 * Minimal Python syntax
   - Numbers, strings, booleans, None.
-  - Operators (assignment, arithmetic, comparison, membership).
-  - Variables.
-  - Lists, tuples, dictionaries.
-  - Iteration with `for` loops and comprehensions.
-  - `if`/`else`
+  - Strings and operations on strings.Operators (assignment, arithmetic, comparison, membership).
+  - Variables (naming, assignment, mutation).
+  - Sequences: lists and tuples.
+  - Iteration with `for` loops.
+  - Conditional execution with `if`/`else`.
   - Functions and methods.
   - Importing modules and packages.
   - Input and output (console, command line, files and web requests).
+* More of basic Python syntax
+  - Dictionaries.
+  - List comprehensions.
+  - `while` loops.
+  - Exceptions and `try`/`except` statement.
 * Read, talk and ask:
   - Describing what your program does as input, steps and output. Writing pseudocode.
   - Reading documentation: core Python, standard library and popular packages.
@@ -37,7 +42,7 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
 * Common pitfalls and workarounds at programming start.
 * What can you do next
   - Tutorials (and escaping '[tutorial hell](https://www.reddit.com/r/learnprogramming/comments/qrlx5m/what_exactly_is_tutorial_hell/?utm_source=share&utm_medium=web2x&context=3)').
-  - Toy projects and excercises.
+  - Toy projects (open-end). Excercises (known result, eg replicate std library function).
   - Finding your itch (a problem to solve).
   - Code practice sites ([Leetcode](https://leetcode.com/), [Codewars](https://www.codewars.com), and similar).
   - Contributing to open source projects.
@@ -93,13 +98,17 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
 ### P6. More Python Features
 
 * Type annotations
-* Context managers
-* Decorators
-* Iterators and generators
-* Pattern matching
-* Walrus operator
-* Dataclasses
-* Enumerations
+* Higher-order functions, iteration and lazyness
+  - Iterators and generators. `itertools` library.
+  - `functools` library: `filter`, `map`, `reduce`
+* More flow of execution control
+  - Decorators
+  - Context managers
+  - Pattern matching
+  - Walrus assignent operator
+* Data stuctures
+  - Dataclasses
+  - Enumerations
 
 
 ### P7. Advanced Capabilities

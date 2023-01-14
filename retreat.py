@@ -57,13 +57,9 @@ class Book(Publication):
 class OpenBook(Book):
     """Book with free and open content, usually electronic."""
 
-    pass
-
 
 class PrintBook(Book):
     """Book with ISBN, usually paper."""
-
-    pass
 
 
 class Video(Publication):
@@ -99,15 +95,15 @@ def bullet(string: str, char="*", offset="") -> str:
     return offset + char + " " + string
 
 
-def to_markdown(item, ref_dict):
+def to_markdown(item: Union[str, Subtopic], ref_dict):
     if isinstance(item, str):
         s_ = substitute(item, ref_dict)
         return bullet(s_, "*", "")
     if isinstance(item, Subtopic):
 
-        def fmt(s):
-            s = substitute(s, ref_dict)
-            return bullet(s, "-", "  ")
+        def fmt(text):
+            text = substitute(text, ref_dict)
+            return bullet(text, "-", "  ")
 
         title_str = to_markdown(item.title, ref_dict)
         return "\n".join([title_str] + [fmt(s) for s in item.learning_points])
@@ -145,12 +141,10 @@ class Topic:
             title = title + "\n" + subtitle
         return title + "\n"
 
-    def _make_body_md(self) -> List[str]:
-        return [to_markdown(lp, self.references) for lp in self.learning_points]
-
     def to_markdown(self, header_level: int = 0, prefix=""):
-        lines = [self._make_title_md(header_level, prefix)] + self._make_body_md()
-        return "\n".join(lines)
+        header = [self._make_title_md(header_level, prefix)]
+        body = [to_markdown(lp, self.references) for lp in self.learning_points]
+        return "\n".join(header + body)
 
 
 class TopicList(BaseModel):
@@ -248,26 +242,31 @@ programming_Topics = [
         "Python Developper Survey: Is learning Python a good bet?",
         "Python ecosystem: language, libraries, tools.",
         Subtopic("Where to run a Python program.").add_learning_points(
-            "Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation.", 
+            "Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation.",
             "Jupyter notebooks vs plain code.",
             "Codespaces and Gitpod for Github repositories.",
-            ),
-        Subtopic("Minimal Python syntax").add_learning_points(
-            "Numbers, strings, booleans, None.",
-            "Operators (assignment, arithmetic, comparison, membership).",
-            "Variables.",
-            "Lists and tuples.",
+        ),
+        Subtopic("Minimal Python syntax: values and operations.").add_learning_points(
+            "Numbers and arithmetic operations.",
+            "Strings and operations on strings."
+            "Comparison and boolean values.",
+            "Operators (assignment, arithmetic, comparison, membership)."
+        ),
+        Subtopic("Minimal Python syntax: the rest").add_learning_points(
+            "Variables (naming, assignment, mutation).",
+            "Sequences: lists and tuples.",
             "Iteration with `for` loops.",
-            "Conditional execution with `if`/`else`",
+            "Conditional execution with `if`/`else`.",
             "Functions and methods.",
             "Importing modules and packages.",
             "Input and output (console, command line, files and web requests).",
         ),
-        Subtopic("More Python syntax").add_learning_points(
+        Subtopic("More of basic Python syntax").add_learning_points(
             "Dictionaries.",
             "List comprehensions.",
             "`while` loops.",
-            "Exceptions and `try`/`except` statement."),
+            "Exceptions and `try`/`except` statement.",
+        ),
         Subtopic("Read, talk and ask:").add_learning_points(
             "Describing what your program does as input, steps and output. "
             "Writing pseudocode.",
@@ -279,12 +278,12 @@ programming_Topics = [
         "Common pitfalls and workarounds at programming start.",
         Subtopic("What can you do next").add_learning_points(
             "Tutorials (and escaping '[tutorial hell](^th)').",
-            "Toy projects and excercises.",
+            "Toy projects (open-end). Excercises (known result, eg replicate std library function).",
             "Finding your itch (a problem to solve).",
             "Code practice sites ([Leetcode](^leet), [Codewars](^codewars), and similar).",
             "Contributing to open source projects.",
             "Answering other people's questions.",
-            "Excercise: what makes a good code problem?"
+            "Excercise: what makes a good code problem?",
         ),
     )
     .add_references(
@@ -293,7 +292,7 @@ programming_Topics = [
         ),
         colab=URL("https://colab.research.google.com/"),
         replit=URL("https://replit.com/"),
-        mre=URL("https://replit.com/"), #FIXME
+        mre=URL("https://replit.com/"),  # FIXME
         leet=URL("https://leetcode.com/"),
         codewars=URL("https://www.codewars.com"),
     ),
@@ -406,14 +405,18 @@ programming_Topics = [
         ),
     ),
     Topic("More Python Features").add_learning_points(
-        "Type annotations",
-        "Context managers",
-        "Decorators",
-        "Iterators and generators",
-        "Pattern matching",
-        "Walrus operator",
-        "Dataclasses",
-        "Enumerations",
+        Subtopic("Type annotations"),
+        Subtopic("Higher-order functions, iteration and lazyness").add_learning_points(
+            "Iterators and generators. `itertools` library.",
+            "`functools` library: `filter`, `map`, `reduce`",
+        ),
+        Subtopic("Flow of execution and behaviours").add_learning_points(
+            "Decorators",
+            "Context managers",
+            "Pattern matching",
+            "Walrus assignent operator",
+        ),
+        Subtopic("Data stuctures").add_learning_points("Dataclasses", "Enumerations"),
     ),
     Topic("Advanced Capabilities").add_learning_points(
         "Asynchronous programming and multithreading",

@@ -17,14 +17,23 @@
                     "title": "Minimal Python syntax",
                     "learning_points": [
                         "Numbers, strings, booleans, None.",
-                        "Operators (assignment, arithmetic, comparison, membership).",
-                        "Variables.",
-                        "Lists, tuples, dictionaries.",
-                        "Iteration with `for` loops and comprehensions.",
-                        "`if`/`else`",
+                        "Strings and operations on strings.Operators (assignment, arithmetic, comparison, membership).",
+                        "Variables (naming, assignment, mutation).",
+                        "Sequences: lists and tuples.",
+                        "Iteration with `for` loops.",
+                        "Conditional execution with `if`/`else`.",
                         "Functions and methods.",
                         "Importing modules and packages.",
                         "Input and output (console, command line, files and web requests)."
+                    ]
+                },
+                {
+                    "title": "More of basic Python syntax",
+                    "learning_points": [
+                        "Dictionaries.",
+                        "List comprehensions.",
+                        "`while` loops.",
+                        "Exceptions and `try`/`except` statement."
                     ]
                 },
                 {
@@ -42,7 +51,7 @@
                     "title": "What can you do next",
                     "learning_points": [
                         "Tutorials (and escaping '[tutorial hell](^th)').",
-                        "Toy projects and excercises.",
+                        "Toy projects (open-end). Excercises (known result, eg replicate std library function).",
                         "Finding your itch (a problem to solve).",
                         "Code practice sites ([Leetcode](^leet), [Codewars](^codewars), and similar).",
                         "Contributing to open source projects.",
@@ -211,14 +220,33 @@
         {
             "title": "More Python Features",
             "learning_points": [
-                "Type annotations",
-                "Context managers",
-                "Decorators",
-                "Iterators and generators",
-                "Pattern matching",
-                "Walrus operator",
-                "Dataclasses",
-                "Enumerations"
+                {
+                    "title": "Type annotations",
+                    "learning_points": []
+                },
+                {
+                    "title": "Higher-order functions, iteration and lazyness",
+                    "learning_points": [
+                        "Iterators and generators. `itertools` library.",
+                        "`functools` library: `filter`, `map`, `reduce`"
+                    ]
+                },
+                {
+                    "title": "More flow of execution control",
+                    "learning_points": [
+                        "Decorators",
+                        "Context managers",
+                        "Pattern matching",
+                        "Walrus assignent operator"
+                    ]
+                },
+                {
+                    "title": "Data stuctures",
+                    "learning_points": [
+                        "Dataclasses",
+                        "Enumerations"
+                    ]
+                }
             ],
             "references": {},
             "tagline": ""
