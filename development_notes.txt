@@ -1,17 +1,46 @@
-Source:
+Topic list
+
+Possible features:
+
+- create bibliography 
+- longread, handout
+- create artilces, reports and handouts
+- build static sites out of the docs
+- simple interactive questions (right/wrong, correct answer) - see interctive Rust manual 
+- add pedagogy structure - learning objectives/outcomes, material/activity/checks 
+- create slide decks, with exports
+- create jupyter notebooks
+- inteoperbility between these formats
+- generate or enhance content with ChatGPT or similar
+- wrap to pandoc
+- quick versioning
+
+Groups:
+
+  - learning structure
+  - export to formats and mediums
+  - feedback collection
+  - versioning by default  
+  - API integrations
+
+Source for programming themes:
+
 - https://docs.google.com/document/d/1WP7J31_EisyVtqTQ8fPDzRpqr29EWrY2datGpiUo8cs/edit
 
 Todo:
+
 - add license
 - sort glossary
 - more programming themes (eg projects)
 
 Interactivity:
+
 - newsletter
 - version policy
 - language translations
 
 Bigger changes:
+
 - Vue frontend
 - check if any references are not listed in learning learning_points
 - list all references
