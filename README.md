@@ -18,9 +18,12 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
   - Local vs online ([Google Colab](https://colab.research.google.com/), [repl.it](https://replit.com/)) installation.
   - Jupyter notebooks vs plain code.
   - Codespaces and Gitpod for Github repositories.
-* Minimal Python syntax
-  - Numbers, strings, booleans, None.
-  - Strings and operations on strings.Operators (assignment, arithmetic, comparison, membership).
+  - PyDiode console <https://pyodide.org/en/stable/console.html>
+* Minimal Python syntax: values and operations.
+  - Numbers and arithmetic operations.
+  - Strings and operations on strings.Comparison and boolean values.
+  - Operators (assignment, arithmetic, comparison, membership).
+* Minimal Python syntax: the rest
   - Variables (naming, assignment, mutation).
   - Sequences: lists and tuples.
   - Iteration with `for` loops.
@@ -101,7 +104,7 @@ if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/
 * Higher-order functions, iteration and lazyness
   - Iterators and generators. `itertools` library.
   - `functools` library: `filter`, `map`, `reduce`
-* More flow of execution control
+* Flow of execution and behaviours
   - Decorators
   - Context managers
   - Pattern matching

@@ -10,14 +10,21 @@
                     "learning_points": [
                         "Local vs online ([Google Colab](^colab), [repl.it](^replit)) installation.",
                         "Jupyter notebooks vs plain code.",
-                        "Codespaces and Gitpod for Github repositories."
+                        "Codespaces and Gitpod for Github repositories.",
+                        "PyDiode console <https://pyodide.org/en/stable/console.html>"
                     ]
                 },
                 {
-                    "title": "Minimal Python syntax",
+                    "title": "Minimal Python syntax: values and operations.",
                     "learning_points": [
-                        "Numbers, strings, booleans, None.",
-                        "Strings and operations on strings.Operators (assignment, arithmetic, comparison, membership).",
+                        "Numbers and arithmetic operations.",
+                        "Strings and operations on strings.Comparison and boolean values.",
+                        "Operators (assignment, arithmetic, comparison, membership)."
+                    ]
+                },
+                {
+                    "title": "Minimal Python syntax: the rest",
+                    "learning_points": [
                         "Variables (naming, assignment, mutation).",
                         "Sequences: lists and tuples.",
                         "Iteration with `for` loops.",
@@ -232,7 +239,7 @@
                     ]
                 },
                 {
-                    "title": "More flow of execution control",
+                    "title": "Flow of execution and behaviours",
                     "learning_points": [
                         "Decorators",
                         "Context managers",
