@@ -80,4 +80,4 @@ class Slide:
     ]
 )
 
-deck.write_markdown("slide.md")
+deck.write_markdown("slides.md")
