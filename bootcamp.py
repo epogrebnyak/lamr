@@ -53,8 +53,8 @@ class LearningPoint:
     def __str__(self):
         return self.text
 
-class Writer:
 
+class Writer:
     @classmethod
     def write_text(cls, content: str, path: str):
         pathlib.Path(path).write_text(content, encoding="utf-8")
@@ -62,8 +62,8 @@ class Writer:
     @classmethod
     def dump_json(cls, content, path: str):
         from json import dumps
-        cls.write_text(dumps(content, indent=4), path)
 
+        cls.write_text(dumps(content, indent=4), path)
 
 
 @dataclass
@@ -132,6 +132,7 @@ class Course(BaseModel, Writer):
     def write_sidebar_json(self, path: str):
         self.dump_json(self.sidebar(), path)
 
+
 LP = LearningPoint
 
 s1 = Section(
@@ -199,4 +200,3 @@ def lp(*strings):
 course = Course(title="Jump Into Programming", sections=(s1, s2))
 course.write_markdown("./vitepress/docs")
 course.write_sidebar_json("./vitepress/sidebar.json")
-
