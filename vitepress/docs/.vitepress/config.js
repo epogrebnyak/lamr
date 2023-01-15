@@ -10,6 +10,7 @@ function parseSidebar () {
 export default {   
     title: 'Jump Into Programming with Python',   
     description: 'Not just playing around.',
+    base: "/bootcamp/",
     themeConfig: {
         nav: [
           { text: 'Slides', link: '/slides' },
