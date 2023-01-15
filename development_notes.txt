@@ -1,4 +1,12 @@
-Topic list
+Add:
+- progress bar
+- first page
+- search
+- navbar
+- feedback
+- social / link to this repo
+
+Theme: 
 
 https://vscodethemes.com/e/zylve.noctis-italicized/noctis-hibernus?language=python
 
