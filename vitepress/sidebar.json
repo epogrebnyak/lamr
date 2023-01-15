@@ -1,0 +1,60 @@
+[
+    {
+        "text": "Minimal Python",
+        "items": [
+            {
+                "text": "Values and operators",
+                "link": "\\values_and_operators"
+            },
+            {
+                "text": "Variables",
+                "link": "\\variables"
+            },
+            {
+                "text": "Sequences",
+                "link": "\\sequences"
+            },
+            {
+                "text": "Control flow",
+                "link": "\\flow"
+            },
+            {
+                "text": "Functions and methods",
+                "link": "\\functions"
+            },
+            {
+                "text": "Modules and packages",
+                "link": "\\import"
+            },
+            {
+                "text": "Input and output",
+                "link": "\\io"
+            }
+        ]
+    },
+    {
+        "text": "Learn next",
+        "items": [
+            {
+                "text": "Dictionaries",
+                "link": "\\dictionaries"
+            },
+            {
+                "text": "Comprehensions",
+                "link": "\\comprehensions"
+            },
+            {
+                "text": "`while` loops",
+                "link": "\\while"
+            },
+            {
+                "text": "Exceptions",
+                "link": "\\exceptions"
+            },
+            {
+                "text": "OOP and classes",
+                "link": "\\OOP"
+            }
+        ]
+    }
+]
