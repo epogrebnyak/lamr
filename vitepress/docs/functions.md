@@ -1,4 +1,4 @@
-# Functions and methods
+# Functions
 
 
 

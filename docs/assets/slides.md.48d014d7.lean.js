@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as s,d as r}from"./app.ccdaf4cf.js";const u=JSON.parse('{"title":"Markdown for presentations","description":"","frontmatter":{},"headers":[],"relativePath":"slides.md"}'),t={name:"slides.md"},n=r("",13),o=[n];function l(p,i,d,c,h,m){return s(),e("div",null,o)}const _=a(t,[["render",l]]);export{u as __pageData,_ as default};

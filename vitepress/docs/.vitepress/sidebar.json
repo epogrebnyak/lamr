@@ -24,11 +24,15 @@
                 "link": "/sequences"
             },
             {
-                "text": "Control flow",
-                "link": "/flow"
+                "text": "Loops",
+                "link": "/loops"
             },
             {
-                "text": "Functions and methods",
+                "text": "Conditional execution",
+                "link": "/conditional_execution"
+            },
+            {
+                "text": "Functions",
                 "link": "/functions"
             },
             {

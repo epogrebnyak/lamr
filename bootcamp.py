@@ -57,7 +57,8 @@ class LearningPoint:
 class Writer:
     @classmethod
     def write_text(cls, content: str, path: str):
-        pathlib.Path(path).write_text(content, encoding="utf-8")
+        _path = pathlib.Path(path)
+        _path.write_text(content, encoding="utf-8")
 
     @classmethod
     def dump_json(cls, content, path: str):
@@ -83,7 +84,7 @@ class Topic(Writer):
         return self.filename if self.filename else self.title.lower().replace(" ", "_")
 
     def sidebar_dict(self):
-        return dict(text=self.title, link=f"\\{self._filename}")
+        return dict(text=self.title, link="/" + self._filename)
 
     def get_filename(self, extension: str):
         return self._filename + (
@@ -110,7 +111,7 @@ class Topic(Writer):
 
 @dataclass
 class Section:
-    title: str  # this is a sidebar section
+    title: str  # This will be transalted to a sidebar section
     topics: List[Topic]
 
     def sidebar_dict(self):
@@ -155,16 +156,15 @@ s1 = Section(
             learning_points=[
                 LP("Lists and tuples"),
                 LP("Strings as sequences"),
-                LP("Iteration with `for` loops"),
                 LP("Membership operator"),
             ],
         ),
         Topic(
-            "Control flow",
-            filename="flow",
-            learning_points=[LP("Loops"), LP("Conditional execution with `if`/`else`")],
-        ),
-        Topic("Functions and methods", filename="functions"),
+            "Loops",
+            learning_points=[LP("`for` loops"), 
+                   LP("`while` loops",)]),
+        Topic("Conditional execution"),        
+        Topic("Functions"),
         Topic("Modules and packages", filename="import"),
         Topic(
             "Input and output",
@@ -186,17 +186,16 @@ s2 = Section(
     [
         Topic("Dictionaries"),
         Topic("Comprehensions"),
-        Topic("`while` loops", filename="while"),
         Topic("Exceptions"),
         Topic("OOP and classes", filename="OOP"),
     ],
 )
 
+s0 = Section('Getting started', [
+    Topic('Where to run Python code', filename = 'environments')]
+)
 
-def lp(*strings):
-    return [LP(s) for s in strings]
 
-
-course = Course(title="Jump Into Programming", sections=(s1, s2))
+course = Course(title="Jump Into Programming With Python", sections=(s0, s1, s2))
 course.write_markdown("./vitepress/docs")
-course.write_sidebar_json("./vitepress/sidebar.json")
+course.write_sidebar_json("./vitepress/docs/.vitepress/sidebar.json")
