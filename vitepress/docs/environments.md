@@ -1,4 +1,4 @@
-# Where to run code
+# Where to run Python code
 
 
 

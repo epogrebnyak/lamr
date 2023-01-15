@@ -3,7 +3,7 @@
         "text": "Getting started",
         "items": [
             {
-                "text": "Where to run code",
+                "text": "Where to run Python code",
                 "link": "/environments"
             }
         ]

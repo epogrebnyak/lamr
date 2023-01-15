@@ -1,3 +1,4 @@
 *.pyc
+.vscode/
 node_modules/
 *\.vitepress\cache\*
