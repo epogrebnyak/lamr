@@ -1,12 +1,26 @@
 ## bootcamp ![](https://poll.fizzy.wtf/count?epogrebnyak.bootcamp.like=yes)
 Accessible curriculum in programming and data analysis for non-tech students.
 
-> This text is generated at [retreat.py](retreat.py) and can be downloaded as a [JSON file](programming.json). 
+Ideas and bets:
+
+1.  This text is generated at [readme.py](readme.py) and can be downloaded as a [JSON file](programming.json). 
 When writing about code, shouldn't this be code as well?
 Click [👍](https://poll.fizzy.wtf/vote?epogrebnyak.bootcamp.like=yes)
 if you like the idea, otherwise [raise an issue](https://github.com/epogrebnyak/bootcamp/issues) to tell why not.
 
+2. We've now got a JSON, right? We can add other skins and themes to our learning content
+in addition to markdown rendering:
+  - [bootcamp.py](bootcamp.py) creates a VitePress website available at 
+    [epogrebnyak.github.io/bootcamp](https://epogrebnyak.github.io/bootcamp/). 
+    It is just a sceleton, expect more soon.
+  - [slides.py](slides.py) experiments with creating a presenatation view that
+    can be converted to HTML with Marp or Slidev.
 
+3. `readme.py`, `bootcamp.py` and `slides.py` have slightly diverged 
+    data structures now as I look for something that balances ease of writing 
+    some prose in code (eg a topics list) and works well when used in data rendering
+    (eg creating a markdown file).
+    
 ## Programming
 
 ### P0. Jump Into Programming
