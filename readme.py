@@ -10,9 +10,9 @@ from retreat import (
     Subtopic,
     URL,
     OpenBook,
-    PrintBook, 
+    PrintBook,
     Link,
-    TopicList
+    TopicList,
 )
 
 

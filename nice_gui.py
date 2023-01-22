@@ -15,7 +15,7 @@ https://www.reddit.com/r/Python/comments/10d6ugv/nicegui_let_any_browser_be_the_
 
 from nicegui import ui
 
-ui.label('Hello NiceGUI!')
-ui.button('BUTTON', on_click=lambda: ui.notify('button was pressed'))
+ui.label("Hello NiceGUI!")
+ui.button("BUTTON", on_click=lambda: ui.notify("button was pressed"))
 
 ui.run()

@@ -1,6 +1,0 @@
-# Variables
-
-* Naming
-* Assignment
-* Mutation
-

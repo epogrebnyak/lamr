@@ -1,26 +1,25 @@
-# Variables
+[[topics."Variables"]]
 
-## What is a variable?
-
-> A variable is a name that is bound to a value.
-
-A variable is an identifier that is used to refer to a specific value stored in the memory of a computer.
-The variable serves as a kind of a "nickname" or an "alias" for the value.
+title = "What is a variable?"
+tldr = "A variable is a name that is bound to a value."
+content = """ A variable is an identifier that is used to refer to a specific value 
+stored in the memory of a computer.
+The variable serves as a kind of a "nickname", or an "alias", for the value.
 
 The value can be of various types, such as a number, a string, or some other object, 
 and it can be passed to various parts of the program, modified or reassigned 
-during the execution of the program.
+during the execution of the program."""
 
-### Questions and excercises
+questions = [
+  "Does the variable name always remain the same throughout the program?",
+  "Does the variable value always remain the same throughout the program?"
+]
 
-1. Does the variable name always remain the same throughout the program?
-1. Does the variable value always remain the same throughout the program?
+[[topics."Variables"]]
 
-## Variable assignment
-
-> `x=1` is a perfect variable assignment.
-
-A variable get assigned a value with `=` operator.
+title = "Variable assignment"
+tldr = "`x=1` is a perfect variable assignment."
+content = """In Python a variable get assigned a value with `=` operator. 
 The expression to the right of the = operator is evaluated first, and the result is then assigned to the variable name on the left.
 
 ```python
@@ -36,7 +35,7 @@ In programming the variable value is known after assignment and can be used in f
 ```python
 x = 1        # assignment of value of 1 to variable x
 x = x + 1    # new assignment to variable x, not an equation
-print(x)
+print(x)     # prints 2 
 ```
 
 To highlight the difference, some other programming languages use 
@@ -49,12 +48,13 @@ x := 1   // assignment of value 1 to variable x in Pascal
 ```R
 x <- 1   # assignment of value 1 to variable x in R
 ```
+"""
 
-## Changing variables
+[[topics."Variables"]]
 
-> In Python all variables are mutable.
-
-After initially assigning a value to a variable in Python you can reassign
+title = "Changing variables" 
+tldr = "In Python all variables are mutable."
+content = """After initially assigning a value to a variable in Python you can reassign 
 a new value to it.
 
 ```python 
@@ -69,9 +69,9 @@ print(favourite_food)
 A typical situation where a variable changes is some sort of a counter.
 
 ```python
-string = ("Now my favourite food is apple pie, " +
-          "but I liked mushroom soup before.")
-letter = "e"
+string = ("Now my favourite food is Apple Pie, " +
+          "but I liked Mushroom Soup before.")
+letter = "m"
 counter = 0
 for s in string:
    if s == letter: 
@@ -80,21 +80,22 @@ print("We searched for letter:", letter)
 print("In the following string:", string)
 print("The letter was found", counter, "times")
 ```
+"""
+questions = [
+  "In code example above screw the counter to wrong starting value.",
+  "Think of different and better variable names instead of `string`, `s`, `letter` and `counter` in code above.",
+  "Count number of spaces in `string` and print the result.",
+  "What other variable does seem to change other than `counter`?",
+  "Try removing `if` from code. How did the meaning of code change? What else needs to be changed in this code without `if`?",
+  "Can we adapt this code to search for any letter, regardless of lower or upper case?",
+  "Can we adapt this code to search for letter combinations? (\*)"
+]
 
-### Questions and excercises
+[[topics."Variables"]]
 
-1. In code example above screw the counter to wrong starting value.
-1. Think of different and better variable names instead of `string`, `s`, `letter` and `counter` in code above.
-1. Count number of spaces in `string` and print the result.
-1. What other variable does seem to change other than `counter`?
-1. Try removing `if` from code. How did the meaning of code change? What else needs to be changed in this code without `if`?
-1. Can we adapt this code to search for letter combinations? (*)
-
-## Constants and immutability
-
-> Variables with UPPERCASE names are assumed to be constant.
-
-**Constants.** Python does not have a concept of constants like other languages.
+title = "Constants and immutability" 
+tldr = "Variables with UPPERCASE names are assumed to be constant."
+content = """**Constants.** Python does not have a concept of constants like other languages. 
 To indicate a constant the variable name is written with uppercase letters, but this is a
 matter of convention, not a syntax rule. Python does not have a built-in mechanism 
 for enforcing this convention at interpreter level.
@@ -120,20 +121,20 @@ declared as mutable when first introduced.
 
 Mutable variables are flexible and perhaps simplier to write code with. 
 Immutable variables also have benefits, for example they cannot be changed accidentally 
-and the program behavior is more predictable.
+and the program behavior is more predictable."""
 
-## Variable naming in Python
+[[topics."Variables"]]
 
-> Language conventions and common sense guide variable naming.
-
-Variable naming is not as easy at it may first sound.
+title = "Variable naming in Python"
+tldr = "Language conventions and common sense guide variable naming."
+content = """Variable naming is not as easy at it may first sound. 
 While there are just a few formal syntax limitations on variable names,
 picking the right name that strikes a balance between brevity
 and being well-understood by people who read your code is rather difficult.
 Programmers may not agree what makes a good variable name, except for trivial 
 cases like `x` and `y` for coordinates on a two-dimensional plaine.
 
-Variable naming ideas by you.com:
+Variable naming ideas from you.com:
 
 > 1. Choosing good variable names is an important part of writing code that is easy to read and understand.
 
@@ -147,13 +148,17 @@ Variable naming ideas by you.com:
 
 > 6. Finally, it is important to be consistent with variable naming conventions across the codebase.
 
-## More suggestions
+Which of the above is the most and least difficult to adhere to? Explain why.
+"""
 
-> What ChatGPT thought to add to this section.
+[[topics."Variables"]]
 
+title = "More suggestions"
+tldr = "What ChatGPT thought about adding to this section."
+content = """
 If the lesson is intended for beginner programmers, it's probably best to keep the topic list simple and not go into more advanced topics like scope, debugging and best practices.
 
-However, here are some additional topics that might be useful to include in a lesson on variables:
+However, here are some additional topics that might be useful:
 
 - The different data types that can be stored in a variable.
 - Variables as function parameters.
@@ -161,3 +166,4 @@ However, here are some additional topics that might be useful to include in a le
 - How to debug variable-related errors in a program. Is `print()` ok for this?
 - Best practices for using variables, such as initializing variables before use, avoiding using the same variable name for different purposes, and avoiding using hard-coded values in a program.
 
+"""

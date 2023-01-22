@@ -161,9 +161,14 @@ s1 = Section(
         ),
         Topic(
             "Loops",
-            learning_points=[LP("`for` loops"), 
-                   LP("`while` loops",)]),
-        Topic("Conditional execution"),        
+            learning_points=[
+                LP("`for` loops"),
+                LP(
+                    "`while` loops",
+                ),
+            ],
+        ),
+        Topic("Conditional execution"),
         Topic("Functions"),
         Topic("Modules and packages", filename="import"),
         Topic(
@@ -191,8 +196,8 @@ s2 = Section(
     ],
 )
 
-s0 = Section('Getting started', [
-    Topic('Where to run Python code', filename = 'environments')]
+s0 = Section(
+    "Getting started", [Topic("Where to run Python code", filename="environments")]
 )
 
 
