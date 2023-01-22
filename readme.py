@@ -31,7 +31,7 @@ terms = [
 GLOSSARY = Glossary(terms=terms)
 
 # %%
-programming_Topics = [
+programming_topics = [
     Topic("Jump Into Programming", tagline="Start learning Python syntax and usage.")
     .add_learning_points(
         "Python Developper Survey: Is learning Python a good bet?",
@@ -237,7 +237,7 @@ EXTRA_REFERENCES = dict(
     ),
 )
 
-PROGRAMMING = TopicList(Topics=programming_Topics)
+PROGRAMMING = TopicList(Topics=programming_topics)
 
 README = f"""## bootcamp 
 Accessible curriculum in programming and data analysis for non-tech students.
