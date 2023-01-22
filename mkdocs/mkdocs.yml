@@ -1,0 +1,5 @@
+site_name: Jump Into Programming with Python
+theme:
+  name: material
+  palette:
+    primary: teal  
