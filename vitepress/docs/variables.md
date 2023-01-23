@@ -46,6 +46,8 @@ print(year)       # prints 1992
 To highlight the difference between variable assignment and mathematic equation, 
 some other programming languages use  `:=` (Pascal) or `<-` (R) as an assignment operator.
 
+&nbsp;
+
 ```pascal
 x := 1   // assignment of value 1 to variable x in Pascal 
 ```
@@ -103,23 +105,26 @@ print("The letter was found", counter, "times")
 > Variables with UPPERCASE names are assumed to be constant.
 
 **Constants.** Python does not have a concept of constants like other languages.
-To indicate a constant the variable name is written with uppercase letters, but this is a
-matter of convention, not a syntax rule. Python does not have a built-in mechanism 
-for enforcing this convention at interpreter level.
+To indicate a constant the variable name is written with uppercase letters.
 
-The uppercase convention aims to improve readability of the code 
-and indicates the intent of the programmer to keep the variable value unchanged. 
-However, you can reassign a value to a variable even if the variable name is written 
-in uppercase letters. 
+
+However, this is a matter of convention, not a syntax rule.
+Python does not have a built-in mechanism for enforcing this convention at interpreter level. 
+This means one can technically reassign a new value to a variable even if the variable name is written 
+in uppercase letters, even though this would not be considered a good code practice.
 
 ```python
 KM_PER_MILE = 1.6
 print("One kilometer is about",  round(1/KM_PER_MILE, 2), "miles")
 
-# ... but I want more precision!
+# ... but I want more precision.
 KM_PER_MILE = 1.60934
 print("One kilometer is about",  round(1/KM_PER_MILE, 2), "miles")
+
+# peer advice: define KM_PER_MILE just once and do not change it
 ```
+
+::: details Immutability 
 
 **Immutability.** In some other programming languages, variables are immutable by default, 
 which means that once a value is assigned to a variable, it cannot be changed. 
@@ -128,7 +133,9 @@ declared as mutable when first introduced.
 
 Mutable variables are flexible and perhaps simplier to write code with. 
 Immutable variables also have benefits, for example they cannot be changed accidentally 
-and the program behavior is more predictable.
+and he program behavior is more predictable.
+
+:::
 
 ## Variable naming in Python
 
