@@ -4,8 +4,9 @@
 
 > A variable is a name that is bound to a value.
 
-A variable is an identifier that is used to refer to a specific value stored in the memory of a computer.
-The variable serves as a kind of a "nickname" or an "alias" for the value.
+A variable is an identifier that is used to refer to a specific value
+stored in the memory of a computer.
+The variable serves as a kind of a "nickname", or an "alias", for the value.
 
 The value can be of various types, such as a number, a string, or some other object, 
 and it can be passed to various parts of the program, modified or reassigned 
@@ -18,10 +19,11 @@ during the execution of the program.
 
 ## Variable assignment
 
-> `x=1` is a perfect variable assignment.
+> `x=1` is an example of variable assignment.
 
-A variable get assigned a value with `=` operator.
-The expression to the right of the = operator is evaluated first, and the result is then assigned to the variable name on the left.
+In Python a variable get assigned a value with a `=` operator.
+The expression to the right of the `=` operator is evaluated first, 
+and the result is then assigned to the variable name on the left.
 
 ```python
 r = 2.5
@@ -34,21 +36,26 @@ In mathematics, a variable is often used to represent an unknown value that need
 In programming the variable value is known after assignment and can be used in further computations.
 
 ```python
-x = 1        # assignment of value of 1 to variable x
-x = x + 1    # new assignment to variable x, not an equation
-print(x)
+year = 1991       # assignment of value of 1991 to variable year
+year = year + 1   # new assignment to variable year, not an equation
+print(year)       # prints 1992
 ```
 
-To highlight the difference, some other programming languages use 
-`:=` (Pascal) or `<-` (R) as an assignment operator.
+::: details Assignment operator in other programming languages
+
+To highlight the difference between variable assignment and mathematic equation, 
+some other programming languages use  `:=` (Pascal) or `<-` (R) as an assignment operator.
 
 ```pascal
 x := 1   // assignment of value 1 to variable x in Pascal 
 ```
 
+&nbsp;
+
 ```R
-x <- 1   # assignment of value 1 to variable x in R
+y <- 3   # assignment of value 3 to variable y in R
 ```
+:::
 
 ## Changing variables
 
@@ -69,9 +76,9 @@ print(favourite_food)
 A typical situation where a variable changes is some sort of a counter.
 
 ```python
-string = ("Now my favourite food is apple pie, " +
-          "but I liked mushroom soup before.")
-letter = "e"
+string = ("Now my favourite food is Apple Pie, " +
+          "but I liked Mushroom Soup before.")
+letter = "m"
 counter = 0
 for s in string:
    if s == letter: 
@@ -88,7 +95,8 @@ print("The letter was found", counter, "times")
 1. Count number of spaces in `string` and print the result.
 1. What other variable does seem to change other than `counter`?
 1. Try removing `if` from code. How did the meaning of code change? What else needs to be changed in this code without `if`?
-1. Can we adapt this code to search for letter combinations? (*)
+1. Can we adapt this code to search for any letter, regardless of lower or upper case?
+1. Can we adapt this code to search for letter combinations?
 
 ## Constants and immutability
 
@@ -133,7 +141,7 @@ and being well-understood by people who read your code is rather difficult.
 Programmers may not agree what makes a good variable name, except for trivial 
 cases like `x` and `y` for coordinates on a two-dimensional plaine.
 
-Variable naming ideas by you.com:
+Variable naming ideas from you.com:
 
 > 1. Choosing good variable names is an important part of writing code that is easy to read and understand.
 
@@ -147,17 +155,5 @@ Variable naming ideas by you.com:
 
 > 6. Finally, it is important to be consistent with variable naming conventions across the codebase.
 
-## More suggestions
-
-> What ChatGPT thought to add to this section.
-
-If the lesson is intended for beginner programmers, it's probably best to keep the topic list simple and not go into more advanced topics like scope, debugging and best practices.
-
-However, here are some additional topics that might be useful to include in a lesson on variables:
-
-- The different data types that can be stored in a variable.
-- Variables as function parameters.
-- The scope of a variable (i.e. where in the code it can be accessed).
-- How to debug variable-related errors in a program. Is `print()` ok for this?
-- Best practices for using variables, such as initializing variables before use, avoiding using the same variable name for different purposes, and avoiding using hard-coded values in a program.
+Which of the above is the most and least difficult to adhere to? Explain why.
 

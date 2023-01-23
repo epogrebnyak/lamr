@@ -18,9 +18,10 @@ questions = [
 [[topics."Variables"]]
 
 title = "Variable assignment"
-tldr = "`x=1` is a perfect variable assignment."
-content = """In Python a variable get assigned a value with `=` operator. 
-The expression to the right of the = operator is evaluated first, and the result is then assigned to the variable name on the left.
+tldr = "`x=1` is an example of variable assignment."
+content = """In Python a variable get assigned a value with a `=` operator. 
+The expression to the right of the `=` operator is evaluated first, 
+and the result is then assigned to the variable name on the left.
 
 ```python
 r = 2.5
@@ -33,18 +34,21 @@ In mathematics, a variable is often used to represent an unknown value that need
 In programming the variable value is known after assignment and can be used in further computations.
 
 ```python
-x = 1        # assignment of value of 1 to variable x
-x = x + 1    # new assignment to variable x, not an equation
-print(x)     # prints 2 
+year = 1991       # assignment of value of 1991 to variable year
+year = year + 1   # new assignment to variable year, not an equation
+print(year)       # prints 1992
 ```
+
+::: details Assignment operator in other programming languages
 
 To highlight the difference between variable assignment and mathematic equation, 
 some other programming languages use  `:=` (Pascal) or `<-` (R) as an assignment operator.
 
-::: details Pascal and R examples
 ```pascal
 x := 1   // assignment of value 1 to variable x in Pascal 
 ```
+
+&nbsp;
 
 ```R
 y <- 3   # assignment of value 3 to variable y in R
