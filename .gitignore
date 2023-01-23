@@ -1,5 +1,5 @@
 *.pyc
 .vscode/
 node_modules/
-*\.vitepress\cache\*
+vitepress/docs/.vitepress/cache/
 vitepress/docs/.vitepress/dist/
