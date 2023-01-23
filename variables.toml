@@ -2,7 +2,7 @@
 
 title = "What is a variable?"
 tldr = "A variable is a name that is bound to a value."
-content = """ A variable is an identifier that is used to refer to a specific value 
+content = """A variable is an identifier that is used to refer to a specific value 
 stored in the memory of a computer.
 The variable serves as a kind of a "nickname", or an "alias", for the value.
 
@@ -38,17 +38,20 @@ x = x + 1    # new assignment to variable x, not an equation
 print(x)     # prints 2 
 ```
 
-To highlight the difference, some other programming languages use 
-`:=` (Pascal) or `<-` (R) as an assignment operator.
+To highlight the difference between variable assignment and mathematic equation, 
+some other programming languages use  `:=` (Pascal) or `<-` (R) as an assignment operator.
 
+::: details Pascal and R examples
 ```pascal
 x := 1   // assignment of value 1 to variable x in Pascal 
 ```
 
 ```R
-x <- 1   # assignment of value 1 to variable x in R
+y <- 3   # assignment of value 3 to variable y in R
 ```
+:::
 """
+
 
 [[topics."Variables"]]
 
@@ -88,7 +91,7 @@ questions = [
   "What other variable does seem to change other than `counter`?",
   "Try removing `if` from code. How did the meaning of code change? What else needs to be changed in this code without `if`?",
   "Can we adapt this code to search for any letter, regardless of lower or upper case?",
-  "Can we adapt this code to search for letter combinations? (\*)"
+  "Can we adapt this code to search for letter combinations?"
 ]
 
 [[topics."Variables"]]
@@ -151,19 +154,18 @@ Variable naming ideas from you.com:
 Which of the above is the most and least difficult to adhere to? Explain why.
 """
 
-[[topics."Variables"]]
+#[[topics."Variables"]]
 
-title = "More suggestions"
-tldr = "What ChatGPT thought about adding to this section."
-content = """
-If the lesson is intended for beginner programmers, it's probably best to keep the topic list simple and not go into more advanced topics like scope, debugging and best practices.
+#title = "More suggestions"
+#tldr = "What ChatGPT thought about adding to this section."
+#content = """
+#If the lesson is intended for beginner programmers, it's probably best to keep the topic list simple and not go into more advanced topics like scope, debugging and best practices.
 
-However, here are some additional topics that might be useful:
+#However, here are some additional topics that might be useful:
 
-- The different data types that can be stored in a variable.
-- Variables as function parameters.
-- The scope of a variable (i.e. where in the code it can be accessed).
-- How to debug variable-related errors in a program. Is `print()` ok for this?
-- Best practices for using variables, such as initializing variables before use, avoiding using the same variable name for different purposes, and avoiding using hard-coded values in a program.
-
-"""
+#- The different data types that can be stored in a variable.
+#- Variables as function parameters.
+#- The scope of a variable (i.e. where in the code it can be accessed).
+#- How to debug variable-related errors in a program. Is `print()` ok for this?
+#- Best practices for using variables, such as initializing variables before use, avoiding using the same variable name for different purposes, and avoiding using hard-coded values in a program.
+#"""

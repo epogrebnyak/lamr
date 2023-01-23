@@ -26,7 +26,7 @@ def _markdown_items(
     yield Text(lp.content)
     if lp.questions:
         _qh = questions_header
-        yield Header(_qh, header_level + 1) if continue_headers else Paragraph(_qh)
+        yield Header(_qh, header_level + 1) if continue_headers else Text(_qh)
         yield NumberedList(lp.questions)
 
 def markdown_items(lp: LearningPoint):
