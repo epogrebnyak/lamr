@@ -104,29 +104,39 @@ questions = [
 
 title = "Constants and immutability" 
 tldr = "Variables with UPPERCASE names are assumed to be constant."
-content = """**Constants.** Python does not have a concept of constants like other languages. 
+content = """Python does not have a concept of **constants** like other languages. 
 To indicate a constant the variable name is written with uppercase letters.
 
+```python
+LANGUAGE = "Python"
+print(LANGUAGE)
+```
 
-However, this is a matter of convention, not a syntax rule.
+Question: what might be a constant in your program? Explain why this value will not change. 
+
+However, this behavior it is not a syntax rule, but a matter of agreement, or a convention.
 Python does not have a built-in mechanism for enforcing this convention at interpreter level. 
 This means one can technically reassign a new value to a variable even if the variable name is written 
-in uppercase letters, even though this would not be considered a good code practice.
+in uppercase letters. (This would not be considered a good code practice.)
 
 ```python
 KM_PER_MILE = 1.6
 print("One kilometer is about",  round(1/KM_PER_MILE, 2), "miles")
 
-# ... but I want more precision.
+# ... but I want more precision!
 KM_PER_MILE = 1.60934
 print("One kilometer is about",  round(1/KM_PER_MILE, 2), "miles")
 
-# peer advice: define KM_PER_MILE just once and do not change it
+# Peer advice: define KM_PER_MILE just once and do not change it.
 ```
+
+Note that some [real code to the similar purpose of calculating distances][geopy] avoids using global constants.
+
+[geopy]: https://github.com/geopy/geopy/blob/master/geopy/units.py
 
 ::: details Immutability 
 
-**Immutability.** In some other programming languages, variables are immutable by default, 
+In some other programming languages, variables are immutable by default, 
 which means that once a value is assigned to a variable, it cannot be changed. 
 To store computation results either new variables are created or a variable has to 
 declared as mutable when first introduced. 
