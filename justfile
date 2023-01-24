@@ -5,7 +5,8 @@ dev:
    cd vitepress && yarn docs:dev
 
 publish:
-   python variables.py 
+   python variables.py
+   just prettier 
    cp docs/* vitepress/docs
    cd vitepress && yarn docs:build && cd ..
    ghp-import -nfp vitepress/docs/.vitepress/dist

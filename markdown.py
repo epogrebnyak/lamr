@@ -16,7 +16,6 @@ class Header(Markdown):
         return "#" * self.level + " " + self.text
 
 
-
 @dataclass
 class BulletList(Markdown):
     lines: List[str]
@@ -28,6 +27,7 @@ class BulletList(Markdown):
     def __str__(self):
         lines = map(self.line_item, self.lines)
         return "\n".join(lines)
+
 
 @dataclass
 class NumberedList(BulletList):
@@ -49,7 +49,6 @@ class Quote(Markdown):
 
     def __str__(self):
         return "> " + self.text
-
 
 
 @dataclass

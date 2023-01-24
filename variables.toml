@@ -7,20 +7,19 @@ Interger is a whole number like `1`, `2`, `3`, `-5`, `-20` and so on.
 They represent counts or quantities, when measured as whole units or items. 
 
 A real number includes a decimal point like `0.33` or `-100.25`.
-They can represent a result of some computation or measurement 
-that requires fractional precision. Real number are also called  
-a floating point number, or a float.
+They can represent a result of some computation or measurement that requires fractional precision. 
+Real numbers are also called a floating point numbers, or float.
 
-The computer tries its best to store a real number with 
-maximum precision, but even then float point arithmetic
-can loose some information. 
+The computer tries its best to store a real number with maximum precision,
+but even then float point arithmetic can loose some information due to rounding.
 
-Numbers can be positive or negative, and can include zero.
+Both integer and real numbers can be positive or negative, and can include zero.
 """
 questions = [
-  "Provide an example of something that is measured as an integer.",
-  "Provide an example of something that is measured as a float.",
-  "Can you think of a border case where it is not clear if the measurement should be done as an integer or a float number."
+  "Provide an example of something that is measured as an integer number.",
+  "Provide an example of something that is measured as a float number.",
+  "Can you think of a border case where it is not clear if the measurement should be done as an integer or a float number?",
+  "Integer or float: number of taxi rides per day, ride distance, distance travelled on a chessboard, elevator floor, house surface area."
 ]
 
 [[topics."Values and operators"]]
