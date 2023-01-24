@@ -1,14 +1,55 @@
+[[topics."Values and operators"]]
+
+title = "Numbers"
+tldr = "You can use integer and real numbers in Python."
+content = """
+Interger is a whole number like `1`, `2`, `3`, `-5`, `-20` and so on.
+They represent counts or quantities, when measured as whole units or items. 
+
+A real number includes a decimal point like `0.33` or `-100.25`.
+They can represent a result of some computation or measurement 
+that requires fractional precision. Real number are also called  
+a floating point number, or a float.
+
+The computer tries its best to store a real number with 
+maximum precision, but even then float point arithmetic
+can loose some information. 
+
+Numbers can be positive or negative, and can include zero.
+"""
+questions = [
+  "Provide an example of something that is measured as an integer.",
+  "Provide an example of something that is measured as a float.",
+  "Can you think of a border case where it is not clear if the measurement should be done as an integer or a float number."
+]
+
+[[topics."Values and operators"]]
+
+title = "Arithmetic operators"
+tldr = "Python can work as a simple calculator."
+content = """"""
+questions = [
+  "Does the variable name always remain the same throughout the program?",
+  "Does the variable value always remain the same throughout the program?"
+]
+
+
 [[topics."Variables"]]
 
 title = "What is a variable?"
 tldr = "A variable is a name that is bound to a value."
 content = """A variable is an identifier that is used to refer to a specific value 
 stored in the memory of a computer.
-The variable serves as a kind of a "nickname", or an "alias", for the value.
+The variable serves as a "nickname", or an "alias", for the value.
 
 The value can be of various types, such as a number, a string, or some other object, 
 and it can be passed to various parts of the program, modified or reassigned 
-during the execution of the program."""
+during the execution of the program.
+
+Concept of a variable in programming is slightly different from mathematics.
+In mathematics, a variable is often used to represent an unknown value that needs to be derived by solving an equation.
+In programming the variable value is known after assignment and can be used in further computations.
+"""
 
 questions = [
   "Does the variable name always remain the same throughout the program?",
@@ -19,24 +60,14 @@ questions = [
 
 title = "Variable assignment"
 tldr = "`x=1` is an example of variable assignment."
-content = """In Python a variable get assigned a value with a `=` operator. 
-The expression to the right of the `=` operator is evaluated first, 
+content = """In Python operator `=` is used to assign a value to a variable. 
+Expression to the right of the `=` operator is evaluated first, 
 and the result is then assigned to the variable name on the left.
 
 ```python
 r = 2.5
-area = 3.1415 * r ** r
+area = 3.1415 * r * r
 print(area)
-```
-
-**Math vs programming**. Concept of variables in programming and mathematics slightly differ.
-In mathematics, a variable is often used to represent an unknown value that needs to be derived by solving an equation.
-In programming the variable value is known after assignment and can be used in further computations.
-
-```python
-year = 1991       # assignment of value of 1991 to variable year
-year = year + 1   # new assignment to variable year, not an equation
-print(year)       # prints 1992
 ```
 
 ::: details Assignment operator in other programming languages
@@ -66,6 +97,8 @@ tldr = "In Python all variables are mutable."
 content = """After initially assigning a value to a variable in Python you can reassign 
 a new value to it.
 
+Here is an example with strings.
+
 ```python 
 favourite_food = "My favourite food is mushroom soup."
 print(favourite_food)
@@ -75,7 +108,17 @@ print(favourite_food)
 favourite_food = "Now my favourite food is apple pie."
 print(favourite_food)
 ```
-A typical situation where a variable changes is some sort of a counter.
+
+Another example that uses integers:
+
+```python
+year = 1991       # assignment of value of 1991 to variable
+year = year + 1   # new assignment to variable, not an equation
+print(year)       # prints 1992
+```
+
+A typical situation where a variable changes is a counter,
+a variable that increases by one at each step.
 
 ```python
 string = ("Now my favourite food is Apple Pie, " +
@@ -103,7 +146,7 @@ questions = [
 [[topics."Variables"]]
 
 title = "Constants and immutability" 
-tldr = "Variables with UPPERCASE names are assumed to be constant."
+tldr = "In Python variables with UPPERCASE names are assumed to remain unchanged."
 content = """Python does not have a concept of **constants** like other languages. 
 To indicate a constant the variable name is written with uppercase letters.
 
@@ -116,7 +159,7 @@ Question: what might be a constant in your program? Explain why this value will 
 
 However, this behavior it is not a syntax rule, but a matter of agreement, or a convention.
 Python does not have a built-in mechanism for enforcing this convention at interpreter level. 
-This means one can technically reassign a new value to a variable even if the variable name is written 
+This means one can reassign a new value to a variable even if the variable name is written 
 in uppercase letters. (This would not be considered a good code practice.)
 
 ```python
@@ -130,7 +173,8 @@ print("One kilometer is about",  round(1/KM_PER_MILE, 2), "miles")
 # Peer advice: define KM_PER_MILE just once and do not change it.
 ```
 
-Note that some [real code to the similar purpose of calculating distances][geopy] avoids using global constants.
+Note that some [real code to the similar purpose of calculating distances][geopy] 
+avoids using global constants.
 
 [geopy]: https://github.com/geopy/geopy/blob/master/geopy/units.py
 
@@ -141,10 +185,9 @@ which means that once a value is assigned to a variable, it cannot be changed.
 To store computation results either new variables are created or a variable has to 
 declared as mutable when first introduced. 
 
-Mutable variables are flexible and perhaps simplier to write code with. 
-Immutable variables also have benefits, for example they cannot be changed accidentally 
-and he program behavior is more predictable.
-
+Mutable variables perhaps allow to start writing quick code.
+Immutable variables have their own benefits -- for example, 
+they cannot be changed accidentally and the program behavior is more predictable. 
 ::: 
 """
 
