@@ -8,10 +8,12 @@ from rich.console import Console
 from rich.markdown import Markdown
 from pathlib import Path
 
+
 def print_md(text: str):
     console = Console()
     md = Markdown(text)
     console.print(md)
+
 
 lamr_app = Typer(
     add_completion=False,
@@ -38,8 +40,10 @@ def cat(filename: str):
     """Show code example."""
     run(filename)
 
+
 from rich.console import Console
 from rich.syntax import Syntax
+
 
 def print_code(filename: str):
     console = Console()
@@ -47,16 +51,55 @@ def print_code(filename: str):
     console.print(syntax)
 
 
+import subprocess
+from dataclasses import dataclass
+import sys
+
+
+@dataclass
+class Code:
+    filename: str
+
+    def __post_init__(self):
+        if not self.filename.endswith(".py"):
+            self.filename += ".py"
+
+    def assert_exists(self):
+        if not self.path.exists():
+            sys.exit("File not found: " + str(self.path))
+        return self
+
+    @property
+    def path(self):
+        return Path(__file__).parent / "code" / self.filename
+
+    @property
+    def listing(self):
+        return self.path.read_text()
+
+    def run(self):
+        subprocess.run(["python", self.path.absolute()])
+
+    def print(self):
+        print_code(self.path)
+
+
+@lamr_app.command()
+def code(filename: str):
+    """Show code example."""
+    Code(filename).assert_exists().print()
+
+
 @lamr_app.command()
 def run(filename: str):
     """Run code example."""
-    path = Path(__file__).parent / "code" / filename
-    print_code(path)
-    
+    Code(filename).assert_exists().run()
+
 
 @lamr_app.command()
 def resources():
     """List more learning resources."""
+
 
 @lamr_app.command()
 def show(md_file: str):
@@ -99,9 +142,11 @@ def learn(topic: str):
             sep="",
         )
 
+
 @lamr_app.command()
 def wisedom():
     """Few things to remember."""
+
 
 @lamr_app.command()
 def book():
