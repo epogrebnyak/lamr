@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "lamr"
+version = "0.0.1"
+description = "Python course for beginners fully free at your own command line."
+authors = ["Evgeny Pogrebnyak <e.pogrebnyak@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+lamr = "lamr.show:lamr_app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.9.0"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.8.0"
+isort = "^5.13.2"
+ruff = "^0.1.15"
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
