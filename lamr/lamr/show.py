@@ -2,7 +2,16 @@
 
 from random import choice
 
+from rich import print
 from typer import Typer
+from rich.console import Console
+from rich.markdown import Markdown
+from pathlib import Path
+
+def print_md(text: str):
+    console = Console()
+    md = Markdown(text)
+    console.print(md)
 
 lamr_app = Typer(
     add_completion=False,
@@ -13,9 +22,10 @@ lamr_app = Typer(
 @lamr_app.command()
 def about(contributors: bool = False):
     """What is it? Who made this? Alternatives?"""
-    print(
-        """Similar :
-    - cheatsheets and roadmaps
+    print_md(
+        """## Similar tools:
+    - cheatsheets and [roadmaps](https://roadmap.sh/)
+    - man pages
     - W3 Schools (not a CLI, but a local docker for web)    
 """
     )
@@ -28,21 +38,30 @@ def cat(filename: str):
     """Show code example."""
     run(filename)
 
+from rich.console import Console
+from rich.syntax import Syntax
+
+def print_code(filename: str):
+    console = Console()
+    syntax = Syntax.from_path(filename)
+    console.print(syntax)
+
 
 @lamr_app.command()
 def run(filename: str):
     """Run code example."""
-    print(
-        """
-from datetime import date
-print(date.today())
-""".strip()
-    )
-
+    path = Path(__file__).parent / "code" / filename
+    print_code(path)
+    
 
 @lamr_app.command()
 def resources():
     """List more learning resources."""
+
+@lamr_app.command()
+def show(md_file: str):
+    path = Path(__file__).parent / "topics" / md_file
+    print_md(path.read_text())
 
 
 @lamr_app.command()
@@ -80,7 +99,10 @@ def learn(topic: str):
             sep="",
         )
 
+@lamr_app.command()
+def wisedom():
+    """Few things to remember."""
 
 @lamr_app.command()
 def book():
-    """Read everything as an HTML page."""
+    """Create a single file."""
