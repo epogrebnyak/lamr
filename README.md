@@ -12,9 +12,6 @@ or an online course of your choice,
 but what if you wanted to study and practice Python at your own computer
 and do it on the command line?
 
-`lamr` is a package that provides this opportunity - it is a manual and
-a collection runnable code examples and resources, suitable for beginners.
-
 ## How to start
 
 You should have a working installation of Python on your computer and a terminal,
