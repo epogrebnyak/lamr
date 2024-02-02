@@ -1,6 +1,7 @@
+import subprocess
+
 import pytest
 from typer.testing import CliRunner
-import subprocess
 
 from lamr.show import lamr_app
 
@@ -9,7 +10,11 @@ commands = [
     ["about"],
     ["about", "--contributors"],
     ["code", "x"],
-    ["run", "print_date.py"],
+    ["code", "x.py"],
+    ["code", "--list"],
+    ["run", "x"],
+    ["run", "x.py"],
+    ["run", "cal.py"],
     ["learn", "all"],
     ["learn", "why-python"],
     ["resources"],
@@ -25,8 +30,7 @@ def test_it_runs_with_cli_runner(args):
 
 
 subprocess_commands = [
-    "lamr run print_date.py | python",
-    "lamr code print_date.py | python",
+    "lamr code cal.py | python",
 ]
 
 
