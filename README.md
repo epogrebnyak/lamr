@@ -18,14 +18,7 @@ a collection runnable code examples and resources, suitable for beginners.
 ## How to start
 
 You should have a working installation of Python on your computer and a terminal,
-or console, open. From there you can type:
-
-```console
->>> pip install lamr
->>> lamr start
-```
-
-To install:
+or console, open. From there you can type the following command to install `lamr`:
 
 ```console
 pip install lamr
@@ -81,7 +74,7 @@ It is organaized by topic, eg `string` or `variables`.
 
 ## Development
 
-See also notes in the [Development](development.md) section:
+Check out separate [Development](development.md) section:
 
 ```console
 >>> lamr about --dev
