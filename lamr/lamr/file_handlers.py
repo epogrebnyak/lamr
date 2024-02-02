@@ -1,3 +1,4 @@
+import ast
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -30,17 +31,17 @@ def print_code(filename: str):
 def here() -> Path:
     return Path(__file__).parent
 
+
 def get_docstring(file_contents: str):
     module = ast.parse(file_contents)
     docstring = ast.get_docstring(module)
     return docstring if docstring else ""
 
-import ast 
 
 def ls():
     for path in CodeFile("any").path.parent.iterdir():
         if path.is_file():
-            print(path.name+"\t"+get_docstring(path.read_text()))
+            print(path.name + "\t" + get_docstring(path.read_text()))
 
 
 @dataclass

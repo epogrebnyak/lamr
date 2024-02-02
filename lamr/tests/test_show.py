@@ -12,13 +12,11 @@ commands = [
     ["code", "x"],
     ["code", "x.py"],
     ["code", "--list"],
-    ["run", "x"],
-    ["run", "x.py"],
+    ["run", "cal"],
     ["run", "cal.py"],
-    ["learn", "all"],
-    ["learn", "why-python"],
-    ["resources"],
-    ["book"],
+    ["learn", "variables"],
+    #    ["resources"],
+    #    ["book"],
 ]
 
 

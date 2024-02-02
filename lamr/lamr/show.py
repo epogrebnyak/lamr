@@ -1,5 +1,6 @@
-"""Python course for beginners at your own command line."""
+"""Python course for beginners - the command line part."""
 
+import sys
 from random import choice
 from typing import Optional
 
@@ -12,18 +13,21 @@ from lamr.file_handlers import CodeFile, MarkdownFile, here, ls, print_md
 
 lamr_app = Typer(
     add_completion=False,
-    help="Python course for beginners at your own command line.",
+    help="Python course for beginners, on the command line.",
 )
 
+def from_root(filename):
+    return (here().parent / filename).read_text()
 
 @lamr_app.command()
-def about(contributors: bool = False):
-    """What is it? Who made this? Any alternatives?"""
+def about(contributors: bool = False, dev: bool=False):
+    """What is it? How do I use it? Who made this?"""
     if contributors:
         print("""Contributors: ...""")
+    elif dev:
+        print_md(from_root("development.md"))
     else:
-        readme = here().parent / "README.md"
-        print_md(readme.read_text())
+        print_md(from_root("README.md"))
 
 
 @lamr_app.command()
@@ -44,11 +48,7 @@ def run(filename: str):
     CodeFile(filename).assert_exists().run()
 
 
-@lamr_app.command()
-def resources():
-    """List more learning resources."""
-
-# TRY: console.pager() loses color maybe use scrolling by section 
+# TRY: console.pager() loses color maybe use scrolling by section
 #      add Press any key to continue...
 @lamr_app.command()
 def show(md_file: str, paginate: bool = False):
@@ -57,8 +57,7 @@ def show(md_file: str, paginate: bool = False):
 
 topic_list = [
     "what-is-a-program",
-    "where-to-run-your-code",
-    "how-to-run-your-code",
+    "run-your-code",
     "print",
     "value",
     "numbers",
@@ -78,23 +77,35 @@ topic_list = [
 tree = dict(variables=["variable-assignment.md"])
 
 
+def print_list(header: str, items: list[str]):
+    eol = "\n  "
+    print(header + ":" + eol, eol.join(items), sep="")
+
+
 @lamr_app.command()
 def learn(
     topic: Annotated[Optional[str], typer.Argument()] = None, random: bool = False
 ):
     """Learn or review a topic in Python."""
-    if topic in topic_list:
-        print(topic_list.index(topic))
+    if topic in tree.keys():
+        for md_file in tree[topic]:
+            show(md_file)
+        sys.exit(0)
     if random:
-        learn(choice(topic_list))
-    print("Available topics:\n  ", "\n  ".join(topic_list), sep="")
+        learn(choice(list(tree.keys())))  # mypy wants it this way
+    print_list("Available topics", list(tree.keys()))  # mypy wants it this way
+    print_list("Tentative topics", topic_list)
 
 
-@lamr_app.command()
-def notes():
-    """Few things to remember."""
+# @lamr_app.command()
+# def notes():
+#     """Few things to remember."""
 
 
-@lamr_app.command()
-def book():
-    """Create a single file."""
+# @lamr_app.command()
+# def book():
+#     """Create a single file."""
+
+# @lamr_app.command()
+# def resources():
+#     """List more learning resources."""
