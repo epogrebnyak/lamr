@@ -20,7 +20,7 @@ On the web you have [freecodecamp](https://www.freecodecamp.org/)
 or another online course of your choice,
 but what if you wanted to study at command line. `lamr` is a tool you can try for this. 
 
-Does knowing command line make you more productive as a programmer? Absolutely, and there is a dedicated section in `lamr` about how to get learn it. 
+Does mastering command line make you more productive as a programmer? Absolutely, and there is a dedicated section in `lamr` about it. 
 
 ## Installation
 
