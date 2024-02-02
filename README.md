@@ -3,16 +3,23 @@
 [![package](https://img.shields.io/pypi/v/lamr)](https://pypi.org/project/lamr/)
 [![pytest](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml/badge.svg)](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml)
 
-Python course for beginners, on command line.
+`lamr` is a content manager to organise and display markdown files and Python code snippets. You can think of it as a small textbook and a code collection that assists you to learn Python. 
+
+`lamr` works on command line:
+
+```
+pip install lamr
+lamr --help
+```
 
 ## Rationale
 
-For learning on the web you have [freecodecamp](https://www.freecodecamp.org/)
+On the web you have [freecodecamp](https://www.freecodecamp.org/)
 or an online course of your choice,
 but what if you wanted to study and practice Python at your own computer
 and do it on the command line?
 
-## How to start
+## Installation
 
 You should have a working installation of Python and a terminal, or console, open.
 
