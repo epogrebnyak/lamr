@@ -14,8 +14,7 @@ and do it on the command line?
 
 ## How to start
 
-You should have a working installation of Python on your computer and a terminal,
-or console, open.
+You should have a working installation of Python and a terminal, or console, open.
 
 Install `lamr`:
 
