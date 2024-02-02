@@ -17,9 +17,11 @@ You should have a working installation of Python on your computer and a terminal
 or console, open. From there you can type:
 
 ```console
->>> pip install lamr
->>> lamr start
+pip install lamr
+lamr start
 ```
+
+## Installation
 
 To install:
 
@@ -27,7 +29,7 @@ To install:
 pip install lamr
 ```
 
-To run:
+## Usage
 
 ```console
 >>> lamr --help
@@ -35,12 +37,13 @@ To run:
 │ code     Show code example.
 │ learn    Learn or review a topic.
 │ run      Run code example.
+| start    Start learning.
 
 >>> lamr learn --list
-# prints available topics to study
+# prints topics to study
 
 >>> lamr learn variables
-# prints beginner-friendly reader about variables
+# prints a reader about variables
 
 >>> lamr code --list
 cal.py  Print today's date and a calendar for current month.
@@ -64,5 +67,5 @@ Mo Tu We Th Fr Sa Su
 See also notes in the [Development](development.md) section:
 
 ```console
->>> lamr about --dev
+lamr about --dev
 ```
