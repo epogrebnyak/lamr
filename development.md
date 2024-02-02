@@ -45,7 +45,7 @@ Pytnon stack:
 - `prettier` for markdown formatting
 - `just` command line runner [instead of `make`][^1]
 
-[^1] `just` is very cool, check it out here <https://github.com/casey/just>
+[^1]: `just` is very cool, check it out here <https://github.com/casey/just>
 
 More ideas:
 
