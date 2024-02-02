@@ -48,10 +48,11 @@ def run(filename: str):
 def resources():
     """List more learning resources."""
 
-
+# TRY: console.pager() loses color maybe use scrolling by section 
+#      add Press any key to continue...
 @lamr_app.command()
-def show(md_file: str):
-    MarkdownFile(md_file).print()
+def show(md_file: str, paginate: bool = False):
+    MarkdownFile(md_file).print(paginate)
 
 
 topic_list = [

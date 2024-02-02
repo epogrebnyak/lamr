@@ -11,10 +11,14 @@ from rich.syntax import Syntax
 __all__ = ["CodeFile", "MarkdownFile", "print_md", "ls", "here"]
 
 
-def print_md(text: str):
+def print_md(text: str, use_pager=False):
     console = Console(width=80)
     md = Markdown(text)
-    console.print(md)
+    if use_pager:
+        with console.pager():
+            console.print(md)
+    else:
+        console.print(md)
 
 
 def print_code(filename: str):
@@ -26,11 +30,17 @@ def print_code(filename: str):
 def here() -> Path:
     return Path(__file__).parent
 
+def get_docstring(file_contents: str):
+    module = ast.parse(file_contents)
+    docstring = ast.get_docstring(module)
+    return docstring if docstring else ""
+
+import ast 
 
 def ls():
-    for p in CodeFile("any").path.parent.iterdir():
-        if p.is_file():
-            print(p.name)
+    for path in CodeFile("any").path.parent.iterdir():
+        if path.is_file():
+            print(path.name+"\t"+get_docstring(path.read_text()))
 
 
 @dataclass
@@ -76,5 +86,5 @@ class MarkdownFile(File):
     ext: ClassVar[str] = "md"
     folder: ClassVar[str] = "topics"
 
-    def print(self):
-        print_md(self.contents)
+    def print(self, paginate: bool):
+        print_md(self.contents, paginate)

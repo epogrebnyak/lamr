@@ -1,4 +1,4 @@
-"""Print today's date and calendar for current month."""
+"""Print today's date and a calendar for current month."""
 
 from calendar import TextCalendar
 from datetime import date

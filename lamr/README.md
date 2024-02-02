@@ -1,22 +1,23 @@
 # lamr
 
-Python course for beginners, at command line tool and on the web.
+Python course for beginners, at command line and on the web.
 
 User scenarios:
 
-- [x] `lamr learn <topic>` for Python discovery by topic
+- [x] `lamr show <md_file>` to demonstrate a markdown file
+- [ ] `lamr learn <topic>` for Python discovery by topic
 - [ ] `lamr roadmap --beginner` for planning
-- [x] `lamr code <filename> | python` for runnable code examples
-- [x] `lamr resources` for good learning resources
+- [x] `lamr run <filename>` or `lamr code <filename> | python` for runnable code examples
+- [ ] `lamr resources` for good learning resources
 - [ ] `lamr build-your-own-x` for project ideas and project scoping
-- [x] patch `lamr` itself on Github when you can
+- [x] patch `lamr` itself on Github as an excercise
 
 Content:
 
 - outline based on offline classroom course, learning outcomes by each topic
 - recylce own repeated anwsers on Reddit (what is a loop, providing 'resources', etc)
-- review questions and excercises to make you do something
-- contributors to topics welcome `lamr about --contributors`
+- review questions and excercises to make learner do something practical
+- welcome `lamr about --contributors`
 
 Implementation:
 
@@ -31,7 +32,7 @@ More ideas:
 
 Policies:
 
-- no ChatGPT content, just human writing
+- just human writing anf reference to even better texts
 - no videos unless for unique pieces
 - beginner-friendly, assumes no prior knowledge
 
