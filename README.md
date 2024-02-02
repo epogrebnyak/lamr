@@ -5,7 +5,7 @@
 
 `lamr` is a content manager to organise and display markdown files and Python code snippets.
 
-You can think of it as a terminal-based textbook with a code collection that assists you to learn both Python and using the command line. 
+You can think of it as a terminal-based textbook with a code collection that assists you to learn both Python and command line. 
 
 ## Quickstart
 
@@ -18,7 +18,9 @@ lamr --help
 
 On the web you have [freecodecamp](https://www.freecodecamp.org/)
 or another online course of your choice,
-but what if you wanted to study at command line where you can be highly productive. `lamr` is a tool you can try for this. 
+but what if you wanted to study at command line. `lamr` is a tool you can try for this. 
+
+Does knowing command line make you more productive as a programmer? Absolutely, and there is a dedicated section in `lamr` about how to get learn it. 
 
 ## Installation
 
@@ -46,7 +48,7 @@ You can use `lamr code` and `lamr run` to see the code listing or run the files.
 cal.py  Print today's date and a calendar for current month.
 x.py    A Twitter clone (maybe).
 
->>> lamr run cal
+>>> lamr run cal.py
 Today is 2024-02-02
 
    February 2024
@@ -55,10 +57,10 @@ Mo Tu We Th Fr Sa Su
  5  6  7  8  9 10 11
 12 13 14 15 16 17 18
 19 20 21 22 23 24 25
-26 27 28 29
+26 27 29
 ```
 
-`lamr code cal --no-comment` will provide you a code listing:
+`lamr code cal.py --no-comment` will provide you a code listing:
 
 ```python
 """Print today's date and a calendar for current month."""
@@ -72,7 +74,7 @@ print()  # prints empty line
 TextCalendar().prmonth(t.year, t.month)
 ```
 
-You can also run `lamr code cal` for code with comments, excercises and references.
+You can also run `lamr code cal` for full code with comments, excercises and references.
 
 ## The manual
 
