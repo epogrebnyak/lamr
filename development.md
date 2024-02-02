@@ -43,7 +43,7 @@ Pytnon stack:
 - `poetry` as package manager
 - `pytest`, `mypy`, `black`, `isort`, `ruff`
 - `prettier` for markdown formatting
-- `just` command line runner (instead of `make`)[^1]
+- `just` command line runner [instead of `make`][^1]
 
 [^1] `just` is very cool, check it out here <https://github.com/casey/just>
 
