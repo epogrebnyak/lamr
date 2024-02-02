@@ -9,7 +9,7 @@ You can think of it as terminal-based textbook with a code collection that assis
 
 ## Quickstart
 
-```
+```console
 pip install lamr
 lamr --help
 ```
@@ -17,9 +17,8 @@ lamr --help
 ## Rationale
 
 On the web you have [freecodecamp](https://www.freecodecamp.org/)
-or an online course of your choice,
-but what if you wanted to study and practice Python at your own computer
-and do it on the command line?
+or another online course of your choice,
+but what if you wanted to study at command line? `lamr` is a tool you can try for this. 
 
 ## Installation
 
@@ -39,7 +38,7 @@ lamr --help
 
 ## Code examples
 
-`lamr` provides a collection of code examples, stored as plain text files.
+`lamr` provides a collection of code examples stored as plain text files.
 You can use `lamr code` and `lamr run` to see the code listing or run the files.
 
 ```console
