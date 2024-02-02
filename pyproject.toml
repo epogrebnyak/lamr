@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lamr"
-version = "0.1.1"
+version = "0.1.4"
 description = "Python course for beginners fully free at your own command line."
 authors = ["Evgeny Pogrebnyak <e.pogrebnyak@gmail.com>"]
 license = "GNU"

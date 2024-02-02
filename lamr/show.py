@@ -23,7 +23,7 @@ def print_from_root(filename):
 
 @lamr_app.command()
 def about(contributors: bool = False, dev: bool = False):
-    """What does this program do?"""
+    """Print a README file."""
     if contributors:
         print("""Contributors: ...""")
     elif dev:

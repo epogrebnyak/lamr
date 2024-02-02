@@ -12,11 +12,12 @@ name = "Joe"
 age = 28
 dist = 7 * 1.5
 ```
+
 ## Walk through an example
 
-What does the statement `dist = 7 * 15` mean? 
+What does the statement `dist = 7 * 15` mean?
 
-Expression to the right of the `=` operator (`7 * 15`) is evaluated first 
+Expression to the right of the `=` operator (`7 * 15`) is evaluated first
 and the result of this evaluation (`105`) is attached to the variable name on the left (`dist`).
 
 When the variable name `volume` is used in your program, Python will know to substitute it for the value stored for that variable.
@@ -42,10 +43,10 @@ print(len(multiple_greetings))
 ## Assignment operator may update a variable itself
 
 Assignment in Python can be used repeatedly and may works to update the variable itself.
-What happens if you encounter the variable name on the right side of the right side of assignment? 
-Same rule applies: 
+What happens if you encounter the variable name on the right side of the right side of assignment?
+Same rule applies:
 
-> Take whatever there is on the right side of `=`, 
+> Take whatever there is on the right side of `=`,
 > evaluate it and bind to the variable name on the left.
 
 **Example 3.** On line 1 `n` was assigned value 1,

@@ -5,7 +5,7 @@
 
 Python course for beginners, at command line.
 
-To install: 
+To install:
 
 ```console
 pip install lamr
@@ -13,19 +13,22 @@ pip install lamr
 
 To run:
 
-```console 
+```console
 >>> lamr --help
-# overview of commands
+│ about    Print a README file.
+│ code     Show code example.
+│ learn    Learn or review a topic.
+│ run      Run code example.
+
+>>> lamr learn --list
+# prints available topics to study
 
 >>> lamr learn variables
-# prints a reader about variables
+# prints beginner-friendly reader about variables
 
 >>> lamr code --list
 cal.py  Print today's date and a calendar for current month.
 x.py    A Twitter clone (maybe).
-
->>> lamr code cal
-# shows cal.py code
 
 >>> lamr run cal
 Today is 2024-02-02
@@ -37,10 +40,13 @@ Mo Tu We Th Fr Sa Su
 12 13 14 15 16 17 18
 19 20 21 22 23 24 25
 26 27 28 29
+
+>>> lamr code cal
+# shows cal.py code
 ```
 
-See also notes the [Development](development.md) section:
+See also notes in the [Development](development.md) section:
 
-```
+```console
 >>> lamr about --dev
 ```
