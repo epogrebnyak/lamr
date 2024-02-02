@@ -5,7 +5,7 @@
 
 `lamr` is a content manager to organise and display markdown files and Python code snippets.
 
-You can think of it as terminal-based textbook with a code collection that assists you to learn Python. 
+You can think of it as a terminal-based textbook with a code collection that assists you to learn both Python and using the command line. 
 
 ## Quickstart
 
@@ -18,7 +18,7 @@ lamr --help
 
 On the web you have [freecodecamp](https://www.freecodecamp.org/)
 or another online course of your choice,
-but what if you wanted to study at command line? `lamr` is a tool you can try for this. 
+but what if you wanted to study at command line where you can be highly productive. `lamr` is a tool you can try for this. 
 
 ## Installation
 
