@@ -17,19 +17,19 @@ lamr_app = Typer(
 )
 
 
-def from_root(filename):
-    return (here().parent / filename).read_text()
+def print_from_root(filename):
+    return print_md((here().parent / filename).read_text())
 
 
 @lamr_app.command()
 def about(contributors: bool = False, dev: bool = False):
-    """What is it? How do I use it? Who made this?"""
+    """What does this program do?"""
     if contributors:
         print("""Contributors: ...""")
     elif dev:
-        print_md(from_root("development.md"))
+        print_from_root("development.md")
     else:
-        print_md(from_root("README.md"))
+        print_from_root("README.md")
 
 
 @lamr_app.command()
@@ -52,8 +52,8 @@ def run(filename: str):
 
 # TRY: console.pager() loses color maybe use scrolling by section
 #      add Press any key to continue...
-@lamr_app.command()
 def show(md_file: str, paginate: bool = False):
+    """Show page."""
     MarkdownFile(md_file).print(paginate)
 
 
@@ -88,7 +88,7 @@ def print_list(header: str, items: list[str]):
 def learn(
     topic: Annotated[Optional[str], typer.Argument()] = None, random: bool = False
 ):
-    """Learn or review a topic in Python."""
+    """Learn or review a topic."""
     if topic in tree.keys():
         for md_file in tree[topic]:
             show(md_file)
@@ -97,11 +97,6 @@ def learn(
         learn(choice(list(tree.keys())))  # mypy wants it this way
     print_list("Available topics", list(tree.keys()))  # mypy wants it this way
     print_list("Tentative topics", topic_list)
-
-
-# @lamr_app.command()
-# def notes():
-#     """Few things to remember."""
 
 
 # @lamr_app.command()

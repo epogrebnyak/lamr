@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "lamr"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python course for beginners fully free at your own command line."
 authors = ["Evgeny Pogrebnyak <e.pogrebnyak@gmail.com>"]
+license = "GNU"
 readme = "README.md"
+repository = "https://github.com/epogrebnyak/bootcamp"
+
 
 [tool.poetry.scripts]
 lamr = "lamr.show:lamr_app"

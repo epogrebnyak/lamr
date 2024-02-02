@@ -1,7 +1,7 @@
 # lamr
 
 [![package](https://img.shields.io/pypi/v/lamr)](https://pypi.org/project/lamr/)
-[![pytest](https://github.com/epogrebnyak/lamr/actions/workflows/python-package.yml/badge.svg)](https://github.com/epogrebnyak/lamr/actions/workflows/python-package.yml)
+[![pytest](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml/badge.svg)](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml)
 
 Python course for beginners, at command line and on the web (in the making).
 
@@ -12,8 +12,11 @@ To install:
 To run:
 
 ```console 
+>>> lamr --help
+# overview of commands
+
 >>> lamr learn variables
-# prints a reader
+# prints a reader about variables
 
 >>> lamr code --list
 cal.py  Print today's date and a calendar for current month.
@@ -34,4 +37,8 @@ Mo Tu We Th Fr Sa Su
 26 27 28 29
 ```
 
-See also [Development](development.md) section (accessible as `lamr about --dev`).
+See also notes the [Development](development.md) section:
+
+```
+lamr about --dev
+```
