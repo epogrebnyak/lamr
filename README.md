@@ -3,11 +3,13 @@
 [![package](https://img.shields.io/pypi/v/lamr)](https://pypi.org/project/lamr/)
 [![pytest](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml/badge.svg)](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml)
 
-Python course for beginners, at command line and on the web (in the making).
+Python course for beginners, at command line.
 
 To install: 
 
-```pip install lamr```
+```console
+pip install lamr
+```
 
 To run:
 
