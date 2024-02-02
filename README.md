@@ -42,5 +42,5 @@ Mo Tu We Th Fr Sa Su
 See also notes the [Development](development.md) section:
 
 ```
-lamr about --dev
+>>> lamr about --dev
 ```
