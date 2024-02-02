@@ -36,10 +36,15 @@ def about(contributors: bool = False, dev: bool = False):
 def code(
     filename: Annotated[Optional[str], typer.Argument()] = None,
     list_: Annotated[bool, typer.Option("--list")] = False,
+    comment: bool = True,
 ):
     """Show code example."""
     if filename is not None:
-        CodeFile(filename).assert_exists().print()
+        cf = CodeFile(filename).assert_exists()
+        if comment:
+            cf.print()
+        else:
+            cf.print_no_comment()    
     if filename is None or list_:
         ls()
 

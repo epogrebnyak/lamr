@@ -11,6 +11,7 @@ from rich.syntax import Syntax
 
 __all__ = ["CodeFile", "MarkdownFile", "print_md", "ls", "here"]
 
+import pygments
 
 def print_md(text: str, use_pager=False):
     console = Console(width=80)
@@ -25,6 +26,11 @@ def print_md(text: str, use_pager=False):
 def print_code(filename: str):
     console = Console(width=80)
     syntax = Syntax.from_path(filename)
+    console.print(syntax)
+
+def print_code_text(text: str):
+    console = Console(width=80)
+    syntax = Syntax(text, lexer='py')
     console.print(syntax)
 
 
@@ -74,12 +80,18 @@ class CodeFile(File):
     ext: ClassVar[str] = "py"
     folder: ClassVar[str] = "code"
 
+    @staticmethod
+    def no_comment(text: str) -> str:
+        return "\n".join([line for line in text.split("\n") if not line.startswith("#")])
+
     def run(self):
         subprocess.run(["python", self.path.absolute()])
 
     def print(self):
-        print_code(self.path)
+        print_code_text(self.contents)
 
+    def print_no_comment(self):
+        print_code_text(self.no_comment(self.contents))
 
 @dataclass
 class MarkdownFile(File):

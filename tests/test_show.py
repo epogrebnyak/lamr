@@ -11,6 +11,7 @@ commands = [
     ["about", "--contributors"],
     ["code", "x"],
     ["code", "x.py"],
+    ["code", "x", "--no-comments"],
     ["code", "--list"],
     ["run", "cal"],
     ["run", "cal.py"],
