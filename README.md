@@ -15,7 +15,9 @@ and do it on the command line?
 ## How to start
 
 You should have a working installation of Python on your computer and a terminal,
-or console, open. From there you can type the following command to install `lamr`:
+or console, open.
+
+Install `lamr`:
 
 ```console
 pip install lamr
@@ -25,16 +27,12 @@ Check it works:
 
 ```console
 lamr --help
-│ about    Print a README file.
-│ code     Show code example.
-│ learn    Learn or review a topic.
-│ run      Run code example.
 ```
 
 ## Code examples
 
 `lamr` provides a collection of code examples, stored as plain text files.
-You can use `code` and `run` commands to see the code listings or run the files.
+You can use `lamr code` and `lamr run` to see the code listing or run the files.
 
 ```console
 >>> lamr code --list
@@ -59,7 +57,7 @@ Mo Tu We Th Fr Sa Su
 ## The manual
 
 `lamr learn` is a small Python textbook aimed at beginners.
-It is organaized by topic, eg `string` or `variables`.
+It is organaized by topic such as `string` or `variables`.
 
 ```console
 >>> lamr learn --list
