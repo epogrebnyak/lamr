@@ -1,15 +1,10 @@
-list:
-   just --list
-
-dev:
-   cd vitepress && yarn docs:dev
-
-publish:
-   python variables.py
-   just prettier 
-   cp docs/* vitepress/docs
-   cd vitepress && yarn docs:build && cd ..
-   ghp-import -nfp vitepress/docs/.vitepress/dist
-
-prettier:
-   npx prettier docs --write   
+grill:
+   poetry run pytest
+   poetry run mypy lamr
+   poetry run isort lamr --float-to-top
+   poetry run black lamr
+   poetry run ruff lamr --fix
+  
+md:
+  npx prettier README.md --write
+  npx prettier lamr/topics --write

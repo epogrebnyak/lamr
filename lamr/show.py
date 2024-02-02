@@ -16,11 +16,13 @@ lamr_app = Typer(
     help="Python course for beginners, on the command line.",
 )
 
+
 def from_root(filename):
     return (here().parent / filename).read_text()
 
+
 @lamr_app.command()
-def about(contributors: bool = False, dev: bool=False):
+def about(contributors: bool = False, dev: bool = False):
     """What is it? How do I use it? Who made this?"""
     if contributors:
         print("""Contributors: ...""")
