@@ -3,9 +3,11 @@
 [![package](https://img.shields.io/pypi/v/lamr)](https://pypi.org/project/lamr/)
 [![pytest](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml/badge.svg)](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml)
 
-`lamr` is a content manager to organise and display markdown files and Python code snippets. You can think of it as a small textbook and a code collection that assists you to learn Python. 
+`lamr` is a content manager to organise and display markdown files and Python code snippets.
 
-`lamr` works on command line:
+You can think of it as terminal-based textbook with a code collection that assists you to learn Python. 
+
+## Quickstart
 
 ```
 pip install lamr
