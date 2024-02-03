@@ -5,7 +5,7 @@
 
 `lamr` is a content manager to organise and display markdown files and Python code snippets.
 
-You can think of it as a terminal-based textbook with a code collection that assists you to learn both Python and command line. 
+You can think of it as a terminal-based textbook with a code collection that assists you to learn both Python and command line.
 
 ## Quickstart
 
@@ -17,10 +17,19 @@ lamr --help
 ## Rationale
 
 On the web you have [freecodecamp](https://www.freecodecamp.org/)
-or another online course of your choice,
-but what if you wanted to study at command line. `lamr` is a tool you can try for this. 
+or another online course of your choice, but as a programmer
+you are likely to do a lot of work on command line.
 
-Does mastering command line make you more productive as a programmer? Absolutely, and there is a dedicated section in `lamr` about it. 
+What if you wanted to do parts of studies at command line from the start?
+`lamr` is a tool you can try for this.
+
+> [!TIP]
+> If you are new to command line read into [What is the Command Line][ds] in
+> Data Science at the Command Line book online and [Basics] section in
+> The Art of Command Line guide.
+
+[basics]: https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file#basics
+[ds]: https://jeroenjanssens.com/dsatcl/chapter-1-introduction#what-is-the-command-line
 
 ## Installation
 
@@ -40,7 +49,7 @@ lamr --help
 
 ## Code examples
 
-`lamr` provides a collection of code examples stored as plain text files.
+`lamr` provides a collection of Python code examples stored as plain text files.
 You can use `lamr code` and `lamr run` to see the code listing or run the files.
 
 ```console
@@ -60,7 +69,13 @@ Mo Tu We Th Fr Sa Su
 26 27 29
 ```
 
-`lamr code cal.py --no-comment` will provide you a code listing:
+### Code listing
+
+To get a code listing:
+
+```console
+lamr code cal.py
+```
 
 ```python
 """Print today's date and a calendar for current month."""
@@ -74,7 +89,11 @@ print()  # prints empty line
 TextCalendar().prmonth(t.year, t.month)
 ```
 
-You can also run `lamr code cal` for full code with comments, excercises and references.
+For a list of excercises run `lamr code` with a flag:
+
+```
+lamr code cal.py --excercises
+```
 
 ## The manual
 
