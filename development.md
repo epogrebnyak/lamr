@@ -1,5 +1,10 @@
 # Development
 
+Current issues:
+
+- put excercises in YAML frontmatter and add a flag
+- list number of topics and excercises as badges through JSON 
+
 Big goal:
 
 - Get a student learn to use command line and Python at the same time.
@@ -11,7 +16,7 @@ Side goals:
 Bets:
 
 - Get a student to learn enough to be proficient in Python, git and 
-  writing docs, so that he or she may contribute to this repo by providing 
+  writing docs, so that a student may contribute to this repo by providing 
   explainations, links, code snippets and telling about what was actually
   barrier to learn and how other learners may overcome it.
 
@@ -24,6 +29,8 @@ User scenarios:
 - [ ] `lamr resources` for good learning resources
 - [ ] `lamr build-your-own-x` for project ideas and project scoping
 - [x] patch `lamr` itself on Github as an excercise
+- [ ] `lamr book`
+- [ ] `lamr glossary`
 
 Content:
 
@@ -50,14 +57,13 @@ Pytnon stack:
 More ideas:
 
 - human language translations including Russian
-- use `lamr` as context for better ChatGPT queries 
+- use `lamr` output as context for LLM queries
 
 Policies:
 
 - beginner-friendly, assumes no prior knowledge
 - just human writing and reference to even better texts
-- no AI generated content inside
-- no videos unless for unique pieces
+- text preferred to videos as a reference
 
 Benchmarks:
 

@@ -9,7 +9,10 @@ from rich.console import Console
 from rich.markdown import Markdown
 from rich.syntax import Syntax
 
-__all__ = ["CodeFile", "MarkdownFile", "print_md", "ls", "here"]
+#import frontmatter
+import yaml
+
+__all__ = ["CodeFile", "MarkdownFile", "YamlFile", "print_md", "ls", "here"]
 
 import pygments
 
@@ -33,7 +36,6 @@ def print_code_text(text: str):
     syntax = Syntax(text, lexer='py')
     console.print(syntax)
 
-
 def here() -> Path:
     return Path(__file__).parent
 
@@ -46,7 +48,7 @@ def get_docstring(file_contents: str):
 
 def ls():
     for path in CodeFile("any").path.parent.iterdir():
-        if path.is_file():
+        if path.is_file() and str(path).endswith(".py"):
             print(path.name + "\t" + get_docstring(path.read_text()))
 
 
@@ -73,6 +75,18 @@ class File:
     def contents(self):
         return self.path.read_text()
 
+@dataclass
+class YamlFile(File):
+    filename: str
+    ext: ClassVar[str] = "yml"
+    folder: ClassVar[str] = "code"
+
+    def load(self):
+       return yaml.safe_load(self.contents)
+
+    @property     
+    def excercises(self):
+        return self.load()["excercises"] # reinveting pydantic here   
 
 @dataclass
 class CodeFile(File):
@@ -93,6 +107,9 @@ class CodeFile(File):
     def print_no_comment(self):
         print_code_text(self.no_comment(self.contents))
 
+    def get_yaml(self):
+        return YamlFile(self.filename.replace(".py", ".yml"))
+
 @dataclass
 class MarkdownFile(File):
     filename: str
@@ -101,3 +118,7 @@ class MarkdownFile(File):
 
     def print(self, paginate: bool):
         print_md(self.contents, paginate)
+
+    @property
+    def post(self):
+        return frontmatter.load(self.path)

@@ -1,4 +1,4 @@
-"""Python course for beginners - the command line part."""
+"""Python course on the command line."""
 
 import sys
 from random import choice
@@ -13,7 +13,7 @@ from lamr.file_handlers import CodeFile, MarkdownFile, here, ls, print_md
 
 lamr_app = Typer(
     add_completion=False,
-    help="Python course for beginners, on the command line.",
+    help="Python course on the command line.",
 )
 
 
@@ -36,15 +36,18 @@ def about(contributors: bool = False, dev: bool = False):
 def code(
     filename: Annotated[Optional[str], typer.Argument()] = None,
     list_: Annotated[bool, typer.Option("--list")] = False,
-    comment: bool = True,
+    excercises: bool = False,
 ):
     """Show code example."""
     if filename is not None:
         cf = CodeFile(filename).assert_exists()
-        if comment:
-            cf.print()
-        else:
-            cf.print_no_comment()    
+        cf.print()
+        if excercises:
+            yf = cf.get_yaml()
+            if yf.path.exists():
+                print("Excercises:")    
+                for i,  e in enumerate(yf.excercises):
+                    print(str(i+1)+".", e)
     if filename is None or list_:
         ls()
 

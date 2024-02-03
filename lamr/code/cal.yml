@@ -1,0 +1,11 @@
+excercises:
+- Print calendar for the next month.
+- Change the first day the week in calendar to Sunday.
+- "Implement `print_month(year: int, month: int)` function to print calendar."
+- "Change output format for today's date."
+- Print the date of your birthday.
+- Find out what day of the week your actual birthday was.
+
+references:
+- https://docs.python.org/3/library/datetime.html#available-types
+- https://docs.python.org/3/library/calendar.html#calendar.TextCalendar

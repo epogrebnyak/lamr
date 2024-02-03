@@ -11,8 +11,9 @@ commands = [
     ["about", "--contributors"],
     ["code", "x"],
     ["code", "x.py"],
-    ["code", "x", "--no-comment"],
     ["code", "--list"],
+    ["code", "cal", "--excercises"],
+    ["code", "cal.py", "--excercises"],
     ["run", "cal"],
     ["run", "cal.py"],
     ["learn", "variables"],
@@ -37,3 +38,7 @@ subprocess_commands = [
 def test_it_runs_with_subprocess(args):
     result = subprocess.getstatusoutput(args)
     assert result[0] == 0
+
+def test_yaml_load():
+    from lamr.file_handlers import YamlFile
+    assert len(YamlFile("cal").load()['excercises']) == 6
