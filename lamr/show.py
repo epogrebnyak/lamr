@@ -45,9 +45,9 @@ def code(
         if excercises:
             yf = cf.get_yaml()
             if yf.path.exists():
-                print("Excercises:")    
-                for i,  e in enumerate(yf.excercises):
-                    print(str(i+1)+".", e)
+                print("Excercises:")
+                for i, e in enumerate(yf.excercises):
+                    print(str(i + 1) + ".", e)
     if filename is None or list_:
         ls()
 
@@ -59,14 +59,15 @@ def run(filename: str):
 
 
 # TRY: console.pager() loses color maybe use scrolling by section
-#      add Press any key to continue...
+#      with "Press any key to continue..." after each section
 def show(md_file: str, paginate: bool = False):
     """Show page."""
     MarkdownFile(md_file).print(paginate)
 
 
 topic_list = [
-    "what-is-a-program",
+    "programming",
+    "editors",
     "run-your-code",
     "print",
     "value",
@@ -94,7 +95,9 @@ def print_list(header: str, items: list[str]):
 
 @lamr_app.command()
 def learn(
-    topic: Annotated[Optional[str], typer.Argument()] = None, random: bool = False
+    topic: Annotated[Optional[str], typer.Argument()] = None,
+    random: bool = False,
+    tentative: bool = False,
 ):
     """Learn or review a topic."""
     if topic in tree.keys():
@@ -104,13 +107,5 @@ def learn(
     if random:
         learn(choice(list(tree.keys())))  # mypy wants it this way
     print_list("Available topics", list(tree.keys()))  # mypy wants it this way
-    print_list("Tentative topics", topic_list)
-
-
-# @lamr_app.command()
-# def book():
-#     """Create a single file."""
-
-# @lamr_app.command()
-# def resources():
-#     """List more learning resources."""
+    if tentative:
+        print_list("Tentative list of topics", topic_list)

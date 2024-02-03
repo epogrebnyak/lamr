@@ -5,19 +5,20 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import ClassVar
 
+import yaml
 from rich.console import Console
 from rich.markdown import Markdown
 from rich.syntax import Syntax
 
-#import frontmatter
-import yaml
+__all__ = ["CodeFile", "MarkdownFile", "print_md", "ls", "here"]
 
-__all__ = ["CodeFile", "MarkdownFile", "YamlFile", "print_md", "ls", "here"]
 
-import pygments
-
-def print_md(text: str, use_pager=False):
+def print_md(text: str, header: str = "", use_pager=False):
     console = Console(width=80)
+    if header:
+        header = header.title()
+
+        text = f"# {header}\n\n" + text
     md = Markdown(text)
     if use_pager:
         with console.pager():
@@ -31,10 +32,12 @@ def print_code(filename: str):
     syntax = Syntax.from_path(filename)
     console.print(syntax)
 
+
 def print_code_text(text: str):
     console = Console(width=80)
-    syntax = Syntax(text, lexer='py')
+    syntax = Syntax(text, lexer="py")
     console.print(syntax)
+
 
 def here() -> Path:
     return Path(__file__).parent
@@ -55,12 +58,7 @@ def ls():
 @dataclass
 class File:
     filename: str
-    ext: ClassVar[str]
     folder: ClassVar[str]
-
-    def __post_init__(self):
-        if not self.filename.endswith(self.ext):
-            self.filename += "." + self.ext
 
     def assert_exists(self):
         if not self.path.exists():
@@ -75,28 +73,30 @@ class File:
     def contents(self):
         return self.path.read_text()
 
+
 @dataclass
 class YamlFile(File):
     filename: str
-    ext: ClassVar[str] = "yml"
     folder: ClassVar[str] = "code"
 
     def load(self):
-       return yaml.safe_load(self.contents)
+        return yaml.safe_load(self.contents)
 
-    @property     
+    @property
     def excercises(self):
-        return self.load()["excercises"] # reinveting pydantic here   
+        return self.load()["excercises"]  # reinveting pydantic here
+
 
 @dataclass
 class CodeFile(File):
     filename: str
-    ext: ClassVar[str] = "py"
     folder: ClassVar[str] = "code"
 
     @staticmethod
     def no_comment(text: str) -> str:
-        return "\n".join([line for line in text.split("\n") if not line.startswith("#")])
+        return "\n".join(
+            [line for line in text.split("\n") if not line.startswith("#")]
+        )
 
     def run(self):
         subprocess.run(["python", self.path.absolute()])
@@ -110,6 +110,7 @@ class CodeFile(File):
     def get_yaml(self):
         return YamlFile(self.filename.replace(".py", ".yml"))
 
+
 @dataclass
 class MarkdownFile(File):
     filename: str
@@ -117,8 +118,10 @@ class MarkdownFile(File):
     folder: ClassVar[str] = "topics"
 
     def print(self, paginate: bool):
-        print_md(self.contents, paginate)
+        print_md(self.post.content, self.post.get("title", ""), paginate)
 
     @property
     def post(self):
+        import frontmatter  # type: ignore
+
         return frontmatter.load(self.path)

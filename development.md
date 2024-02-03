@@ -2,8 +2,9 @@
 
 Current issues:
 
-- put excercises in YAML frontmatter and add a flag
-- list number of topics and excercises as badges through JSON 
+- [ ] put excercises in YAML file and add a flag
+- [ ] list number of topics and excercises as badges through JSON 
+- [ ] fallback to `beaupy` for selection within a topic
 
 Big goal:
 

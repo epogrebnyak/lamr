@@ -9,16 +9,12 @@ commands = [
     ["--help"],
     ["about"],
     ["about", "--contributors"],
-    ["code", "x"],
-    ["code", "x.py"],
     ["code", "--list"],
-    ["code", "cal", "--excercises"],
+    ["code", "x.py"],
     ["code", "cal.py", "--excercises"],
-    ["run", "cal"],
+    ["run", "x.py"],
     ["run", "cal.py"],
     ["learn", "variables"],
-    #    ["resources"],
-    #    ["book"],
 ]
 
 
@@ -39,6 +35,19 @@ def test_it_runs_with_subprocess(args):
     result = subprocess.getstatusoutput(args)
     assert result[0] == 0
 
+
 def test_yaml_load():
-    from lamr.file_handlers import YamlFile
-    assert len(YamlFile("cal").load()['excercises']) == 6
+    from lamr.file_handlers import CodeFile
+
+    assert len(CodeFile("cal.py").get_yaml().load()["excercises"]) == 6
+
+
+def test_front_matter(tmp_path):
+    from pathlib import Path
+    import frontmatter
+
+    p = Path(tmp_path) / "a.txt"
+    p.write_text("---\na: b\n---\nThis is text.")
+    post = frontmatter.load(p)
+    assert post["a"] == "b"
+    assert post.content == "This is text."
