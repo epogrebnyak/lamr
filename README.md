@@ -5,7 +5,7 @@
 
 `lamr` is a content manager to organise and display markdown files and Python code snippets.
 
-You can think of it as a terminal-based textbook with a code collection and exercises that assist you to learn both Python and command line.
+You can think of it as a terminal-based textbook with a code collection and exercises that assist you to learn both Python and the command line.
 
 ## Quickstart
 
@@ -16,10 +16,11 @@ lamr --help
 
 In current version (0.1.6) the following commands should work:
 
-```
+```console
 lamr learn variables
 lamr code --list
 lamr code cal.py --excercises
+lamr code cal.py | python
 lamr run cal.py
 lamr about
 ```
@@ -109,9 +110,9 @@ print()  # prints empty line
 TextCalendar().prmonth(t.year, t.month)
 ```
 
-For a list of excercises run `lamr code` with a flag:
+For a list of follow-up excercises run `lamr code` with a flag:
 
-```
+```console
 lamr code cal.py --excercises
 ```
 
@@ -121,7 +122,7 @@ lamr code cal.py --excercises
 It is organaized by topic such as `string` or `variables`.
 
 ```console
->>> lamr learn --list
+>>> lamr learn
 # prints available topics to study
 
 >>> lamr learn variables

@@ -95,9 +95,9 @@ def print_list(header: str, items: list[str]):
 
 @lamr_app.command()
 def learn(
-    topic: Annotated[Optional[str], typer.Argument()] = None,
+    topic: Annotated[Optional[str], typer.Argument()] = None,    
     random: bool = False,
-    tentative: bool = False,
+    tentative_topics: bool = False,
 ):
     """Learn or review a topic."""
     if topic in tree.keys():
@@ -107,5 +107,5 @@ def learn(
     if random:
         learn(choice(list(tree.keys())))  # mypy wants it this way
     print_list("Available topics", list(tree.keys()))  # mypy wants it this way
-    if tentative:
+    if tentative_topics:
         print_list("Tentative list of topics", topic_list)
