@@ -60,7 +60,7 @@ n = n + 3
 print(n)
 ```
 
-**Excercise.** Consider `total_dist` variable that shows the distance 
+**Excercise.** Consider `total_dist` variable that shows the distance
 walked by a person in a week. Demonstrate how it can accumulate values.
 
 ## Assignment operator in other programming languages

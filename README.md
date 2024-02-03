@@ -14,7 +14,7 @@ pip install lamr
 lamr --help
 ```
 
-In current version (0.1.7) the following commands should work: 
+In current version (0.1.6) the following commands should work:
 
 ```
 lamr learn variables
@@ -29,21 +29,20 @@ lamr about
 On the web you have [freecodecamp](https://www.freecodecamp.org/)
 or another online course of your choice, but as a programmer
 you are likely to do a lot of work on command line.
-
-What if you wanted an early start with command line and do a part of your studies there?
+What if you wanted an early start with command line while learning Python?
 `lamr` is a tool you can try for this.
 
 > [!TIP]
-> If you are new to command line read into 
+> If you are new to command line read into
 > [What is the Command Line][ds] in "Data Science at the Command Line" book
 > and [Basics] section in "The Art of Command Line" guide.
 
 [basics]: https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file#basics
 [ds]: https://jeroenjanssens.com/dsatcl/chapter-1-introduction#what-is-the-command-line
 
-Unlike many online courses `lamr` is open-source software written in Python. 
-You can explore its own code and propose changes or enhancements 
-by [writing an issue](https://github.com/epogrebnyak/bootcamp/issues) 
+Unlike many online courses `lamr` is open-source software written in Python.
+You can explore its own code and propose changes or enhancements
+by [writing an issue](https://github.com/epogrebnyak/bootcamp/issues)
 and submitting a pull request.
 This way you can practice how to work collaboratively on a Python project
 and share something you know with others.
