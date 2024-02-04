@@ -6,8 +6,8 @@
 
 `lamr` is a content manager to organise and display markdown files and run Python code snippets.
 
-It is a programming manual with code and exercises for you to start doing
-small and accessible Python projects.
+It is a programming manual with code and exercises to get you started
+with small Python projects with high return on your time invested.
 
 ## Quickstart
 
@@ -16,21 +16,42 @@ pip install lamr
 lamr --help
 ```
 
-In current version you have to following excercises and manuals available.
+In current version there are the following excercises and manuals available.
 
 ### The calendar utility
 
 ```console
-lamr show cal.py --all
-lamr run cal.py
+>>> lamr show cal.py --all
+...
+>>> lamr run cal.py
+Today is 2024-02-04
+
+   February 2024
+Mo Tu We Th Fr Sa Su
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 29
 ```
+
+````
 
 ### Make an ASCII art logo
 
 ```console
-lamr show logo.py --all
-lamr run logo.py
-```
+>>> lamr show logo.py --all
+>>> lamr run logo.py
+Sample font: slant
+Sample text: Python 3
+ASCII art:
+    ____             __     __                           _____
+   / __ \   __  __  / /_   / /_   ____    ____          |__  /
+  / /_/ /  / / / / / __/  / __ \ / __ \  / __ \          /_ <
+ / ____/  / /_/ / / /_   / / / // /_/ / / / / /        ___/ /
+/_/       \__, /  \__/  /_/ /_/ \____/ /_/ /_/        /____/
+         /____/
+````
 
 ### Learn about variable assignment: `=`, `:=` or `<-`?
 
@@ -61,7 +82,7 @@ and submitting a pull request.
 This way you can practice how to work collaboratively on a Python project
 and share something you know with others.
 
-> [!TIP] 
+> [!TIP]
 > This tutorial [suggests you can get started using GitHub in less than an hour][git].
 > Sometimes it takes months and even years of practice, but totally useful.
 
@@ -96,15 +117,6 @@ text.py Manipulate a string.
 x.py    A Twitter clone (maybe).
 
 >>> lamr run cal.py
-Today is 2024-02-04
-
-   February 2024
-Mo Tu We Th Fr Sa Su
-          1  2  3  4
- 5  6  7  8  9 10 11
-12 13 14 15 16 17 18
-19 20 21 22 23 24 25
-26 27 29
 ```
 
 ### Code listing

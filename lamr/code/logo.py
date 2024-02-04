@@ -12,7 +12,7 @@ font = choice(ASCII_FONTS)
 text = "Python 3"
 print("\nSample font:", font)
 print("Sample text:", text)
-result = text2art("Python 3", font=font, space=1)
+result = text2art("Python 3", font=font, space=0)
 print("ASCII art:")
 print(result)
 print("Characters printed:", len(result))
