@@ -38,11 +38,6 @@ lamr run logo.py
 lamr learn variables
 ```
 
-Cool parts
-
-lamr show cal.py --excercises --references
-lamr show logo.py --all
-
 ## Motivation
 
 On the web you have [freecodecamp](https://www.freecodecamp.org/)
