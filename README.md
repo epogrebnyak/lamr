@@ -35,8 +35,6 @@ Mo Tu We Th Fr Sa Su
 26 27 29
 ```
 
-````
-
 ### Make an ASCII art logo
 
 ```console
