@@ -22,7 +22,6 @@ In current version there are the following excercises and manuals available.
 
 ```console
 >>> lamr show cal.py --all
-...
 >>> lamr run cal.py
 Today is 2024-02-04
 
@@ -49,7 +48,7 @@ ASCII art:
  / ____/  / /_/ / / /_   / / / // /_/ / / / / /        ___/ /
 /_/       \__, /  \__/  /_/ /_/ \____/ /_/ /_/        /____/
          /____/
-````
+```
 
 ### Learn about variable assignment: `=`, `:=` or `<-`?
 
@@ -113,8 +112,6 @@ cal.py  Print today's date and a calendar for current month.
 logo.py Turn a string into ASCII art using a font style.
 text.py Manipulate a string.
 x.py    A Twitter clone (maybe).
-
->>> lamr run cal.py
 ```
 
 ### Code listing
@@ -154,9 +151,6 @@ It is organaized by topic such as `string` or `variables`.
 ```console
 >>> lamr learn
 # prints available topics to study
-
->>> lamr learn variables
-# prints beginner-friendly reader about variables
 ```
 
 ## Development
