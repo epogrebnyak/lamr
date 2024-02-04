@@ -60,13 +60,14 @@ What if you wanted an early start with command line while learning Python?
 
 Unlike many online courses `lamr` is an open-source Python package.
 You can explore its own code and propose changes or enhancements
-by [writing an issue](https://github.com/epogrebnyak/bootcamp/issues)
+by [writing an issue on Github](https://github.com/epogrebnyak/bootcamp/issues)
 and submitting a pull request.
 This way you can practice how to work collaboratively on a Python project
 and share something you know with others.
 
-> [!TIP] > [This tutorial][git] suggests you can get started using GitHub in less than an hour.
-> Sometimes it takes months and years of practice, but totally useful.
+> [!TIP]
+> [This tutorial][git] suggests you can get started using GitHub in less than an hour.
+> Sometimes it takes months and even years of practice, but totally useful.
 
 [git]: https://github.com/skills/introduction-to-github
 
