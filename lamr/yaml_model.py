@@ -19,4 +19,4 @@ class CodeMeta(BaseModel):
     @classmethod
     def from_yaml(cls, path: str):
         dict_ = safe_load(Path(path).read_text())
-        return cls.parse_obj(dict_)
+        return cls.model_validate(dict_)
