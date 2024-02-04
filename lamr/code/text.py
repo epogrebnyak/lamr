@@ -1,4 +1,4 @@
-"""Few things you can do to a string."""
+"""Manipulate a string."""
 
 text = """You can print a multiline string in Python:
  ____  ____        ____   __   

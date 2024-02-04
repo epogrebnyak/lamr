@@ -52,7 +52,7 @@ def bold(text) -> Markdown:
 
 
 @lamr_app.command()
-def code(
+def show(
     filename: Annotated[Optional[str], typer.Argument()] = None,
     list_: Annotated[bool, typer.Option("--list")] = False,
     questions: bool = False,
@@ -88,8 +88,8 @@ def run(filename: str):
 
 # TRY: console.pager() loses color maybe use scrolling by section
 #      with "Press any key to continue..." after each section
-def show(md_file: str, paginate: bool = False):
-    """Show page."""
+def to_screen(md_file: str, paginate: bool = False):
+    """Show page from file."""
     MarkdownFile(md_file).print(paginate)
 
 
@@ -130,7 +130,7 @@ def learn(
     """Learn or review a topic."""
     if topic in tree.keys():
         for md_file in tree[topic]:
-            show(md_file)
+            to_screen(md_file)
         sys.exit(0)
     if random:
         learn(choice(list(tree.keys())))  # mypy wants it this way

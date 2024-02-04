@@ -3,9 +3,10 @@
 [![package](https://img.shields.io/pypi/v/lamr)](https://pypi.org/project/lamr/)
 [![pytest](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml/badge.svg)](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml)
 
-`lamr` is a content manager to organise and display markdown files and Python code snippets.
+`lamr` is a content manager to organise and display markdown files and run Python code snippets.
 
-You can think of it as a terminal-based programming manual with a code collection and exercises that assist you to learn both Python and the command line.
+It is a programming manual with code and exercises
+that assist you to learn Python and the command line.
 
 ## Quickstart
 
@@ -14,23 +15,38 @@ pip install lamr
 lamr --help
 ```
 
-In current version you can use the following commands:
+In current version you have to following excercises and manuals available.
+
+### The calendar utility
 
 ```console
-lamr code --list
-lamr code cal.py --excercises --references
+lamr show cal.py --all
 lamr run cal.py
-lamr code logo.py --all
-lamr run logo.py
-lamr learn variables
-lamr about
 ```
+
+### Make an ASCII art logo
+
+```console
+lamr show logo.py --all
+lamr run logo.py
+```
+
+### Learn about variable assignment: `=`, `:=` or `<-`?
+
+```console
+lamr learn variables
+```
+
+Cool parts
+
+lamr show cal.py --excercises --references
+lamr show logo.py --all
 
 ## Motivation
 
 On the web you have [freecodecamp](https://www.freecodecamp.org/)
 or another online course of your choice, but as a programmer
-you are likely to do a lot of work on command line.
+you are likely to deal with command line.
 What if you wanted an early start with command line while learning Python?
 `lamr` is a tool you can try for this.
 
@@ -42,12 +58,17 @@ What if you wanted an early start with command line while learning Python?
 [basics]: https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file#basics
 [ds]: https://jeroenjanssens.com/dsatcl/chapter-1-introduction#what-is-the-command-line
 
-Unlike many online courses `lamr` is open-source software written in Python.
+Unlike many online courses `lamr` is an open-source Python package.
 You can explore its own code and propose changes or enhancements
 by [writing an issue](https://github.com/epogrebnyak/bootcamp/issues)
 and submitting a pull request.
 This way you can practice how to work collaboratively on a Python project
 and share something you know with others.
+
+> [!TIP] > [This tutorial][git] suggests you can get started using GitHub in less than an hour.
+> Sometimes it takes months and years of practice, but totally useful.
+
+[git]: https://github.com/skills/introduction-to-github
 
 ## Installation
 
@@ -65,22 +86,20 @@ Check it works:
 lamr --help
 ```
 
-You should get an output similar to this:
-
-![screenshot](https://private-user-images.githubusercontent.com/9265326/302034409-15e2c2dc-811a-4bf6-aab6-389934d827cb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY5NjI2ODMsIm5iZiI6MTcwNjk2MjM4MywicGF0aCI6Ii85MjY1MzI2LzMwMjAzNDQwOS0xNWUyYzJkYy04MTFhLTRiZjYtYWFiNi0zODk5MzRkODI3Y2IucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MDIwMyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDAyMDNUMTIxMzAzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NDJjZTkxODJlMTlhNDE5OWU3ODNhYzkyMDI3NTk4M2ExNjRiMmQzZmE3MWZhYjllOThhOGE1Nzc1MGFkMzhiOCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.cAYeOLC5Cw8syl924KAfU3RZKj6rt6vJ59mpYEzakiE)
-
 ## Code examples
 
 `lamr` provides a collection of Python code examples stored as plain text files.
-You can use `lamr code` and `lamr run` to see the code listing or run the files.
+You can use `lamr show` and `lamr run` to see the code listing or run the files.
 
 ```console
->>> lamr code --list
+>>> lamr show --list
 cal.py  Print today's date and a calendar for current month.
+logo.py Turn a string into ASCII art using a font style.
+text.py Manipulate a string.
 x.py    A Twitter clone (maybe).
 
 >>> lamr run cal.py
-Today is 2024-02-03
+Today is 2024-02-04
 
    February 2024
 Mo Tu We Th Fr Sa Su
@@ -111,10 +130,13 @@ print()  # prints empty line
 TextCalendar().prmonth(t.year, t.month)
 ```
 
-For a list of follow-up excercises run `lamr code` with a flag:
+For a list of follow-up questions, excercises and usefil references
+run `lamr code` with one or more flags:
 
 ```console
-lamr code cal.py --excercises
+lamr code logo.py --questions --references
+lamr code logo.py --excercises
+lamr code logo.py --all
 ```
 
 ## The manual
