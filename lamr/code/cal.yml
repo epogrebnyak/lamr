@@ -1,3 +1,6 @@
+#motivation: |
+#  `cal`
+
 excercises:
 - Print calendar for the next month.
 - Change the first day the week in calendar to Sunday.
@@ -7,5 +10,7 @@ excercises:
 - Find out what day of the week your actual birthday was.
 
 references:
-- https://docs.python.org/3/library/datetime.html#available-types
-- https://docs.python.org/3/library/calendar.html#calendar.TextCalendar
+- title: Documentation for `datetime`.
+  url: https://docs.python.org/3/library/datetime.html#available-types
+- title: Documentation for `calendar.TextCalendar`.
+  url: https://docs.python.org/3/library/calendar.html#calendar.TextCalendar

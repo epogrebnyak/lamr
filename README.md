@@ -5,7 +5,7 @@
 
 `lamr` is a content manager to organise and display markdown files and Python code snippets.
 
-You can think of it as a terminal-based textbook with a code collection and exercises that assist you to learn both Python and the command line.
+You can think of it as a terminal-based programming manual with a code collection and exercises that assist you to learn both Python and the command line.
 
 ## Quickstart
 
@@ -14,14 +14,15 @@ pip install lamr
 lamr --help
 ```
 
-In current version (0.1.6) the following commands should work:
+In current version you can use the following commands:
 
 ```console
-lamr learn variables
 lamr code --list
-lamr code cal.py --excercises
-lamr code cal.py | python
+lamr code cal.py --excercises --references
 lamr run cal.py
+lamr code logo.py --all
+lamr run logo.py
+lamr learn variables
 lamr about
 ```
 

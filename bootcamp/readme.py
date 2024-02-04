@@ -1,20 +1,20 @@
 import pathlib
+
 from retreat import (
-    Term,
-    Glossary,
-    Topic,
-    Article,
-    Repo,
-    Video,
-    Manual,
-    Subtopic,
     URL,
+    Article,
+    Glossary,
+    Link,
+    Manual,
     OpenBook,
     PrintBook,
-    Link,
+    Repo,
+    Subtopic,
+    Term,
+    Topic,
     TopicList,
+    Video,
 )
-
 
 terms = [
     Term(

@@ -12,7 +12,8 @@ commands = [
     ["code", "--list"],
     ["code", "x.py"],
     ["code", "cal.py", "--excercises"],
-    ["run", "x.py"],
+    ["code", "logo.py", "--all"],
+    ["run", "x.py"],    
     ["run", "cal.py"],
     ["learn", "variables"],
 ]
@@ -39,11 +40,12 @@ def test_it_runs_with_subprocess(args):
 def test_yaml_load():
     from lamr.file_handlers import CodeFile
 
-    assert len(CodeFile("cal.py").get_yaml().load()["excercises"]) == 6
+    assert len(CodeFile("cal.py").meta.excercises) == 6
 
 
 def test_front_matter(tmp_path):
     from pathlib import Path
+
     import frontmatter
 
     p = Path(tmp_path) / "a.txt"

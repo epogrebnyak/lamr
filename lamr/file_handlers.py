@@ -3,12 +3,13 @@ import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import ClassVar
 
 import yaml
 from rich.console import Console
 from rich.markdown import Markdown
 from rich.syntax import Syntax
+
+from lamr.yaml_model import CodeMeta
 
 __all__ = ["CodeFile", "MarkdownFile", "print_md", "ls", "here"]
 
@@ -58,7 +59,7 @@ def ls():
 @dataclass
 class File:
     filename: str
-    folder: ClassVar[str]
+    folder: str
 
     def assert_exists(self):
         if not self.path.exists():
@@ -70,52 +71,51 @@ class File:
         return here() / self.folder / self.filename
 
     @property
-    def contents(self):
+    def text(self):
         return self.path.read_text()
 
 
 @dataclass
 class YamlFile(File):
     filename: str
-    folder: ClassVar[str] = "code"
-
-    def load(self):
-        return yaml.safe_load(self.contents)
+    folder: str = "code"
 
     @property
-    def excercises(self):
-        return self.load()["excercises"]  # reinveting pydantic here
+    def contents(self):
+        return yaml.safe_load(self.text)
+
+    @property
+    def meta(self):
+        return CodeMeta.from_yaml(self.path)
 
 
 @dataclass
 class CodeFile(File):
     filename: str
-    folder: ClassVar[str] = "code"
-
-    @staticmethod
-    def no_comment(text: str) -> str:
-        return "\n".join(
-            [line for line in text.split("\n") if not line.startswith("#")]
-        )
+    folder: str = "code"
 
     def run(self):
         subprocess.run(["python", self.path.absolute()])
 
     def print(self):
-        print_code_text(self.contents)
+        print_code_text(self.text)
 
-    def print_no_comment(self):
-        print_code_text(self.no_comment(self.contents))
-
-    def get_yaml(self):
+    @property
+    def yaml_file(self) -> YamlFile:
         return YamlFile(self.filename.replace(".py", ".yml"))
+
+    @property
+    def meta(self) -> CodeMeta:
+        if self.yaml_file.path.exists():
+            return self.yaml_file.meta
+        else:
+            return CodeMeta()
 
 
 @dataclass
 class MarkdownFile(File):
     filename: str
-    ext: ClassVar[str] = "md"
-    folder: ClassVar[str] = "topics"
+    folder: str = "topics"
 
     def print(self, paginate: bool):
         print_md(self.post.content, self.post.get("title", ""), paginate)

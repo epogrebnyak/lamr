@@ -1,5 +1,6 @@
-import pytest
 import re
+
+import pytest
 
 # from retreat import substitute, REGEX_UPTICK, REGEX_AT, Link, Manual
 

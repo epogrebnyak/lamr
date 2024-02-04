@@ -1,9 +1,10 @@
 # pylint: disable=missing-class-docstring, missing-function-docstring
 
+from pathlib import Path
 from typing import List
+
 from pydantic import BaseModel
 from pydantic.dataclasses import dataclass
-from pathlib import Path
 
 
 @dataclass

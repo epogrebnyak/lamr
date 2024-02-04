@@ -4,8 +4,8 @@
 
 # %%
 import pathlib
-from typing import Dict, List, Union
 import re
+from typing import Dict, List, Union
 
 from pydantic import BaseModel, Field
 from pydantic.dataclasses import dataclass

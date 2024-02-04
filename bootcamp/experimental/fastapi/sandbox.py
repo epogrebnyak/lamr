@@ -1,11 +1,9 @@
-from pydantic.dataclasses import dataclass
-from typing import Optional
-
-from sqlmodel import Field, SQLModel, create_engine, Session, select
-
-
 import base64
 import hashlib
+from typing import Optional
+
+from sqlmodel import Field, Session, SQLModel, create_engine, select
+
 
 # from https://github.com/vancanhuit/url-shortener/blob/master/src/app/service.py
 def create_short_link(original_url: str, timestamp: float):

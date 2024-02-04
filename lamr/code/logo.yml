@@ -1,0 +1,29 @@
+questions:
+- What is ASCII? What is ASCII art? How could you use it?
+- What does `text2art()` function do? What arguments does `text2art()` accept? What is their meaning?
+- Each time you run the program the text font changes. Why?
+- What is the meaning of the word 'font' in this program? 
+- Which of the fonts styles displayed you liked? Why are they appealing?
+- If you created you new font style for ASCII art what would it be? 
+
+excercises:
+- Print a set of ASCII symbols to console.
+- Print a text in `n` random styles. Set `n` to various numbers (for example 2, 3, or 5).
+- | 
+  Think how you can implement the following user scenario in a Python program. 
+      - Ask a user for input - what text to put on a logo.
+      - Pick a few font styles that you think are most impressive.
+      - Print a logo using these styles.
+      - Ask which logo user likes, print the logo that the user selected.
+      - If the user is unhappy continue with more logos.
+- Write a program for the first few or all of the steps of the above scenario.
+
+references:
+- title: How do I get a list of all the ASCII characters using Python?
+  url: https://stackoverflow.com/a/5891469/1758363
+- title: Wiki about ASCII art.
+  url: https://en.wikipedia.org/wiki/ASCII_art
+- title: ASCII Generator.
+  url: https://ascii-generator.site/t/
+- title: Dive into `art` package code (with caution, the code is a bit old-fashioned).
+  url: https://github.com/sepandhaghighi/art/blob/abfc138110e04f44ce489556e8ed5cf14dee671f/art/art.py#L480

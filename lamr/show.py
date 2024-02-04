@@ -6,6 +6,7 @@ from typing import Optional
 
 import typer
 from rich import print
+from rich.markdown import Markdown
 from typer import Typer
 from typing_extensions import Annotated
 
@@ -32,22 +33,49 @@ def about(contributors: bool = False, dev: bool = False):
         print_from_root("README.md")
 
 
+def list_as_markdown(items) -> Markdown:
+    strings = []
+    for i, item in enumerate(items):
+        strings.append(str(i + 1) + ". " + item)
+    return Markdown("\n".join(strings))
+
+
+def references_as_markdown(references) -> Markdown:
+    strings = []
+    for i, ref in enumerate(references):
+        strings.append(str(i + 1) + ". " + f"{ref.title} URL: <{ref.url}>")
+    return Markdown("\n".join(strings))
+
+
+def bold(text) -> Markdown:
+    return Markdown("**" + text.capitalize() + "**")
+
+
 @lamr_app.command()
 def code(
     filename: Annotated[Optional[str], typer.Argument()] = None,
     list_: Annotated[bool, typer.Option("--list")] = False,
+    questions: bool = False,
     excercises: bool = False,
+    references: bool = False,
+    all_: Annotated[bool, typer.Option("--all")] = False,
 ):
-    """Show code example."""
+    """Show code example (with questions, excercises or references)."""
     if filename is not None:
-        cf = CodeFile(filename).assert_exists()
-        cf.print()
-        if excercises:
-            yf = cf.get_yaml()
-            if yf.path.exists():
-                print("Excercises:")
-                for i, e in enumerate(yf.excercises):
-                    print(str(i + 1) + ".", e)
+        code_file = CodeFile(filename).assert_exists()
+        code_file.print()
+        meta = code_file.meta
+        if meta.questions and (questions or all_):
+            print(bold("Review questions"))
+            print(list_as_markdown(meta.questions))
+            print()
+        if meta.excercises and (excercises or all_):
+            print(bold("Excercises"))
+            print(list_as_markdown(meta.excercises))
+            print()
+        if meta.references and (references or all_):
+            print(bold("References"))
+            print(references_as_markdown(meta.references))
     if filename is None or list_:
         ls()
 
@@ -95,7 +123,7 @@ def print_list(header: str, items: list[str]):
 
 @lamr_app.command()
 def learn(
-    topic: Annotated[Optional[str], typer.Argument()] = None,    
+    topic: Annotated[Optional[str], typer.Argument()] = None,
     random: bool = False,
     tentative_topics: bool = False,
 ):

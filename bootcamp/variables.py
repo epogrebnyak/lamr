@@ -2,9 +2,9 @@
 
 # pylint: disable=missing-class-docstring, missing-function-docstring
 from typing import Dict, List
+
 from pydantic import Field
 from pydantic.dataclasses import dataclass
-
 from retreat import Reference
 
 
@@ -17,7 +17,7 @@ class LearningPoint:
     references: Dict[str, Reference] = Field(default_factory=dict)
 
 
-from markdown import Header, Text, NumberedList, Quote
+from markdown import Header, NumberedList, Quote, Text
 
 
 def _markdown_items(
