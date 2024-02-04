@@ -7,7 +7,7 @@
 `lamr` is a content manager to organise and display markdown files and run Python code snippets.
 
 It is a programming manual with code and exercises to get you started
-with small Python projects with high return on your time invested.
+with small yet useful Python projects.
 
 ## Quickstart
 
