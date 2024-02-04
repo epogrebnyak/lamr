@@ -2,6 +2,7 @@
 
 [![package](https://img.shields.io/pypi/v/lamr)](https://pypi.org/project/lamr/)
 [![pytest](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml/badge.svg)](https://github.com/epogrebnyak/bootcamp/actions/workflows/python-package.yml)
+[![replit](https://img.shields.io/badge/replit-lamr-blue)](https://replit.com/@epogrebnyak/learnlamr?v=1)
 
 `lamr` is a content manager to organise and display markdown files and run Python code snippets.
 
@@ -65,8 +66,7 @@ and submitting a pull request.
 This way you can practice how to work collaboratively on a Python project
 and share something you know with others.
 
-> [!TIP]
-> [This tutorial][git] suggests you can get started using GitHub in less than an hour.
+> [!TIP] > [This tutorial][git] suggests you can get started using GitHub in less than an hour.
 > Sometimes it takes months and even years of practice, but totally useful.
 
 [git]: https://github.com/skills/introduction-to-github
