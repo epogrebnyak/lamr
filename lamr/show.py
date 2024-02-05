@@ -113,7 +113,7 @@ topic_list = [
     "types",
 ]
 
-tree = dict(variables=["variable-assignment.md"])
+tree = dict(variables=["variable-assignment.md", "variable-naming.md"])
 
 
 def print_list(header: str, items: list[str]):

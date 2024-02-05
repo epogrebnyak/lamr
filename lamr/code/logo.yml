@@ -8,6 +8,11 @@ questions:
 
 excercises:
 - Print a set of ASCII symbols to console.
+- |
+  Consult with https://github.com/sepandhaghighi/art/blob/master/FontList.ipynb 
+  Pick a font name and use it in your program.   
+- How many charaters does the logo you selected have? How many lines?  
+- See what `print("Available fonts:", ", ".join(ASCII_FONTS))` does.
 - Print a text in `n` random styles. Set `n` to various numbers (for example 2, 3, or 5).
 - | 
   Think how you can implement the following user scenario in a Python program. 

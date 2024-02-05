@@ -14,7 +14,7 @@ commands = [
     ["show", "cal.py", "--excercises", "--references"],
     ["show", "cal.py", "--all"],
     ["show", "logo.py", "--all"],
-    ["run", "x.py"],    
+    ["run", "x.py"],
     ["run", "cal.py"],
     ["run", "logo.py"],
     ["learn", "variables"],
