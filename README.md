@@ -77,8 +77,8 @@ This way you can practice how to work collaboratively on a Python project
 and share something you know with others.
 
 > [!TIP]
-> This tutorial [suggests you can get started using GitHub in less than an hour][git].
-> Sometimes it takes months and even years of practice, but totally useful.
+> This tutorial [aims to get you started using GitHub][git], and includes
+> repositories, branches, commits, issues and pull requests as well as writing a README.
 
 [git]: https://github.com/skills/introduction-to-github
 
