@@ -113,8 +113,9 @@ topic_list = [
     "types",
 ]
 
-tree = dict(variables=["variable-assignment.md", "variable-naming.md"])
-
+tree = dict(programming = ["programming.md"],
+            variables=["variable_assignment.md", "variable_naming.md"],
+            datascience=["data_science_projects.md"])
 
 def print_list(header: str, items: list[str]):
     eol = "\n  "

@@ -60,8 +60,22 @@ n = n + 3
 print(n)
 ```
 
+**Example 3.** Changing strings:
+
+```python 
+favourite_food = "My favourite food is mushroom soup."
+print(favourite_food)
+
+# Later in the same program - the variable changes.   
+
+favourite_food = "Now my favourite food is apple pie."
+print(favourite_food)
+```
+
+<!--
 **Excercise.** Consider `total_dist` variable that shows the distance
 walked by a person in a week. Demonstrate how it can accumulate values.
+-->
 
 ## Assignment operator in other programming languages
 
