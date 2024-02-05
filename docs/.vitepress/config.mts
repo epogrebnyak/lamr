@@ -8,9 +8,9 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'README', link: '/readme' },
-      { text: 'Manual', link: '/manual' },
-      { text: 'Code', link: '/code' }
+      { text: 'Start', link: '/readme/' },
+      { text: 'Code', link: '/code' },
+      { text: 'Manual', link: '/manual' }
     ],
 
     sidebar: [
@@ -22,11 +22,24 @@ export default defineConfig({
         ]        
       },
       {
-        text: 'More',
+        text: 'Beginner course',
+        items: [
+          { text: 'Project README', link: '/readme' },
+        ]        
+      },
+      {
+        text: 'Advanced topics',
+        items: [
+          { text: 'Project README', link: '/readme' },
+        ]        
+      },
+      {
+        text: 'Code examples',
         items: [
           { text: 'Project README', link: '/readme' },
         ]        
       }
+
 
     ],
 

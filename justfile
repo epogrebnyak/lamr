@@ -8,3 +8,6 @@ grill:
 md:
   npx prettier README.md --write
   npx prettier lamr/topics --write
+
+docs:
+  cp README.md docs/readme/index.md  
