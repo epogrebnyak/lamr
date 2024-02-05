@@ -4,13 +4,21 @@ import sys
 from random import choice
 from typing import Optional
 
-import typer
 import rich
+import typer
 from rich.markdown import Markdown
 from typer import Typer
 from typing_extensions import Annotated
 
-from lamr.file_handlers import CodeFile, MarkdownFile, here, ls, print_md
+from lamr.file_handlers import (
+    CodeFile,
+    MarkdownFile,
+    apparently_no_docstring,
+    get_docstring,
+    here,
+    ls,
+    print_md,
+)
 
 lamr_app = Typer(
     add_completion=False,
@@ -74,9 +82,6 @@ def code(
 
 def h2(s):
     return "## " + s
-
-
-from lamr.file_handlers import get_docstring, apparently_no_docstring
 
 
 def markdownify(code_file, questions, excercises, references, all_):
@@ -199,8 +204,8 @@ publisher_app = typer.Typer(
 )
 
 
-@publisher_app.command()
-def code(folder: str):
+@publisher_app.command(name="code")
+def publish_code(folder: str):
     """Publish code files."""
     # This should do same as below, but for all .py files:
     # `lamr code cal.py --markdown --all > docs/code/cal.py.md`
@@ -208,7 +213,7 @@ def code(folder: str):
     print("I did nothing yet.")
 
 
-@publisher_app.command()
-def manual(folder: str):
+@publisher_app.command(name="manual")
+def publish_manuals(folder: str):
     """Publish markdown files."""
     print("I did nothing yet.")

@@ -1,3 +1,6 @@
+---
+title: ASCII art logo
+---
 Turn a string into ASCII art using a font style.
 
 ```python

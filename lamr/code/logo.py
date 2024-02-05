@@ -8,6 +8,6 @@ font = choice(ASCII_FONTS)
 slogan = "Python 3"
 result = text2art(slogan, font=font, space=0)
 print("Sample font:", font)
-print("Sample text:", text)
+print("Sample text:", slogan)
 print("ASCII art:")
 print(result)
