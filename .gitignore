@@ -1,5 +1,5 @@
 lamr/topics/.vitepress/dist
-lamr/topics/.vitepress/cache
+lamr/topics/.vitepress/cache/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

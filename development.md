@@ -2,9 +2,10 @@
 
 Current issues:
 
-- [ ] put excercises in YAML file and add a flag
+- [x] put excercises in YAML file and add a flag
 - [ ] list number of topics and excercises as badges through JSON 
 - [ ] fallback to `beaupy` for selection within a topic
+- [ ] add link to https://www.reddit.com/r/python_with_lamr/
 
 Big goal:
 
@@ -23,7 +24,6 @@ Bets:
 
 User scenarios:
 
-- [x] `lamr show <md_file>` to demonstrate a markdown file
 - [x] `lamr learn <topic>` for Python discovery by topic
 - [ ] `lamr roadmap --beginner` for planning
 - [x] `lamr code --list` and `lamr run <filename>` for runnable code examples
@@ -70,4 +70,5 @@ Benchmarks:
 
 - rustlings
 - roadmap.sh
+- <https://cheat.sh/>
 - <https://github.com/cheat/cheat/>
