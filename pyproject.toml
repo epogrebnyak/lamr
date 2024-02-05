@@ -10,6 +10,7 @@ repository = "https://github.com/epogrebnyak/bootcamp"
 
 [tool.poetry.scripts]
 lamr = "lamr.show:lamr_app"
+lamr-publish = "lamr.show:publisher_app"
 
 [tool.poetry.dependencies]
 python = "^3.10"

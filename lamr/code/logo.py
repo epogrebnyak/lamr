@@ -5,9 +5,9 @@ from random import choice
 from art import ASCII_FONTS, text2art  # type: ignore
 
 font = choice(ASCII_FONTS)
-text = "Python 3"
+slogan = "Python 3"
+result = text2art(slogan, font=font, space=0)
 print("Sample font:", font)
 print("Sample text:", text)
-result = text2art("Python 3", font=font, space=0)
 print("ASCII art:")
 print(result)

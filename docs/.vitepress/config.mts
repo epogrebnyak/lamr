@@ -17,13 +17,6 @@ export default defineConfig({
 
     sidebar: [
       // {
-      //   text: 'Examples',
-      //   items: [
-      //     { text: 'Markdown Examples', link: '/markdown-examples' },
-      //     { text: 'Runtime API Examples', link: '/api-examples' }
-      //   ]
-      // },
-      // {
       //   text: 'Beginner course',
       //   items: [
       //     { text: 'Project README', link: '/readme' },
@@ -43,8 +36,17 @@ export default defineConfig({
           { text: "Motivation", link: "/readme/motivation" },
           { text: "Code snippets", link: "/readme/code" },
           { text: "Programming manual", link: "/readme/manual" },
-        ],
-      },
+        ]  
+        },     
+        {
+        text: 'Code examples',
+        items: [
+          { text: 'Calendar', link: '/code/cal.py' },
+          { text: 'ASCII art logo', link: '/code/logo.py' },
+              // { text: 'Markdown Examples', link: '/markdown-examples' },
+              // { text: 'Runtime API Examples', link: '/api-examples' }
+            ]
+        }
     ],
 
     socialLinks: [

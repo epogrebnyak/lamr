@@ -50,6 +50,10 @@ def get_docstring(file_contents: str):
     return docstring if docstring else ""
 
 
+def apparently_no_docstring(file_contents: str):
+    return "\n".join(file_contents.split("\n")[2:])
+
+
 def ls():
     for path in CodeFile("any").path.parent.iterdir():
         if path.is_file() and str(path).endswith(".py"):

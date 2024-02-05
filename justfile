@@ -11,9 +11,11 @@ md:
   npx prettier docs/* --write
 
 docs:
+  poetry run lamr-publish code docs/code
+  poetry run lamr-publish manual docs/manual
   npm run docs:dev  
 
-docs-publish:
+ghp:
   npx vitepress build docs
   poetry run ghp-import -np docs/.vitepress/dist
 

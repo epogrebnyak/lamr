@@ -6,6 +6,7 @@ Current issues:
 - [ ] list number of topics and excercises as badges through JSON 
 - [ ] fallback to `beaupy` for selection within a topic
 - [ ] add link to https://www.reddit.com/r/python_with_lamr/
+- [x] `lamr code cal.py --markdown --all > docs/code/cal.py.md` 
 
 Big goal:
 

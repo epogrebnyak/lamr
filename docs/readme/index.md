@@ -1,9 +1,9 @@
 # About
 
-`lamr` is a content manager to organise and display markdown files and run Python code snippets.
+`lamr` is a content manager to organise and display markdown files and run Python code snippets:
 
-It is a programming manual that also provides code for starting small Python projects,
-together with review questions, exercises and references for each project.
+- `lamr code` command provides code listing for small Python projects, together with review questions, exercises and references for each project;
+- `lamr manual` summarises programming concepts and provides links to useful resources.
 
 ## Quickstart
 
@@ -11,8 +11,6 @@ together with review questions, exercises and references for each project.
 pip install lamr
 lamr --help
 ```
-
-`lamr code` and `lamr manual` are key commands for you to use.
 
 ## The calendar utility
 
