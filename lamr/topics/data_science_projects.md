@@ -1,5 +1,6 @@
 # Data Science Projects
 
-# Earth Science
+## Earth Science - Hydrology
 
-- [Hydrology - watershed delineation by Matthew Heberger](https://github.com/mheberger/delineator)
+- Heberger, Matthew. Global Watersheds Web App. URL: <https://mghydro.com/watersheds/>.
+  Source (watershed delineation script): <https://github.com/mheberger/delineator>
