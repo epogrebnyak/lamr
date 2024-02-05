@@ -141,3 +141,12 @@ def manual(
     print_list("Available topics", list(tree.keys()))  # mypy wants it this way
     if tentative_topics:
         print_list("Tentative list of topics", topic_list)
+
+@lamr_app.command()
+def learn(
+    topic: Annotated[Optional[str], typer.Argument()] = None,
+    random: bool = False,
+    tentative_topics: bool = False,
+):
+    """Same as `manual` command."""
+    manual(topic, random, tentative_topics) 

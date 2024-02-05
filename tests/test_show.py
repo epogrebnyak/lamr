@@ -18,6 +18,7 @@ commands = [
     ["run", "cal.py"],
     ["run", "logo.py"],
     ["manual", "variables"],
+    ["learn", "programming"],
 ]
 
 

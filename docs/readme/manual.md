@@ -14,3 +14,11 @@ Print a topic:
 ```console
 >>> lamr manual variables
 ```
+
+`lamr learn` is an alias for `lamr manual` command,
+they do the same thing:
+
+```console
+>>> lamr manual programming
+>>> lamr learn programming
+```
