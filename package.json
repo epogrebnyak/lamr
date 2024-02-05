@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev lamr/topics",
+    "docs:build": "vitepress build lamr/topics",
+    "docs:preview": "vitepress preview lamr/topics"
+  }
+}
