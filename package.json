@@ -1,7 +1,10 @@
 {
   "scripts": {
-    "docs:dev": "vitepress dev lamr/topics",
-    "docs:build": "vitepress build lamr/topics",
-    "docs:preview": "vitepress preview lamr/topics"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.41"
   }
 }
