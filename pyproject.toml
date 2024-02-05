@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lamr"
-version = "0.2.1"
+version = "0.2.2"
 description = "Python course for beginners fully free at your own command line."
 authors = ["Evgeny Pogrebnyak <e.pogrebnyak@gmail.com>"]
 license = "GNU"
@@ -22,6 +22,7 @@ types-pygments = "^2.17.0.20240106"
 types-pyyaml = "^6.0.12.12"
 python-frontmatter = "^1.1.0"
 pydantic = "^2.6.0"
+ghp-import = "^2.1.0"
 
 
 [tool.poetry.group.dev.dependencies]

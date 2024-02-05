@@ -52,7 +52,7 @@ def bold(text) -> Markdown:
 
 
 @lamr_app.command()
-def show(
+def code(
     filename: Annotated[Optional[str], typer.Argument()] = None,
     list_: Annotated[bool, typer.Option("--list")] = False,
     questions: bool = False,
@@ -60,7 +60,7 @@ def show(
     references: bool = False,
     all_: Annotated[bool, typer.Option("--all")] = False,
 ):
-    """Show code example (with questions, excercises or references)."""
+    """Show code example with follow-up questions, excercises or references."""
     if filename is not None:
         code_file = CodeFile(filename).assert_exists()
         code_file.print()
@@ -113,9 +113,12 @@ topic_list = [
     "types",
 ]
 
-tree = dict(programming = ["programming.md"],
-            variables=["variable_assignment.md", "variable_naming.md"],
-            datascience=["data_science_projects.md"])
+tree = dict(
+    programming=["programming.md"],
+    variables=["variable_assignment.md", "variable_naming.md"],
+    datascience=["data_science_projects.md"],
+)
+
 
 def print_list(header: str, items: list[str]):
     eol = "\n  "
@@ -123,7 +126,7 @@ def print_list(header: str, items: list[str]):
 
 
 @lamr_app.command()
-def learn(
+def manual(
     topic: Annotated[Optional[str], typer.Argument()] = None,
     random: bool = False,
     tentative_topics: bool = False,
@@ -134,7 +137,7 @@ def learn(
             to_screen(md_file)
         sys.exit(0)
     if random:
-        learn(choice(list(tree.keys())))  # mypy wants it this way
+        manual(choice(list(tree.keys())))  # mypy wants it this way
     print_list("Available topics", list(tree.keys()))  # mypy wants it this way
     if tentative_topics:
         print_list("Tentative list of topics", topic_list)

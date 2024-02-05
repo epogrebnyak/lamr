@@ -1,50 +1,54 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "lamr",
-  description: "Code, exercises and resources to get you started with Python projects",
+  description:
+    "Code, exercises and resources to get you started with Python projects",
+  base: "/lamr/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Start', link: '/readme/' },
-      { text: 'Code', link: '/code' },
-      { text: 'Manual', link: '/manual' }
+      { text: "Home", link: "/" },
+      { text: "Start", link: "/readme/" },
+      // { text: "Code", link: "/code" },
+      // { text: "Manual", link: "/manual" },
     ],
 
     sidebar: [
+      // {
+      //   text: 'Examples',
+      //   items: [
+      //     { text: 'Markdown Examples', link: '/markdown-examples' },
+      //     { text: 'Runtime API Examples', link: '/api-examples' }
+      //   ]
+      // },
+      // {
+      //   text: 'Beginner course',
+      //   items: [
+      //     { text: 'Project README', link: '/readme' },
+      //   ]
+      // },
+      // {
+      //   text: 'Advanced topics',
+      //   items: [
+      //     { text: 'Project README', link: '/readme' },
+      //   ]
+      // },
       {
-        text: 'Examples',
+        text: "Using lamr package",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]        
+          { text: "Quickstart", link: "/readme/" },
+          { text: "How to install", link: "/readme/how-to-install" },
+          { text: "Motivation", link: "/readme/motivation" },
+          { text: "Code snippets", link: "/readme/code" },
+          { text: "Programming manual", link: "/readme/manual" },
+        ],
       },
-      {
-        text: 'Beginner course',
-        items: [
-          { text: 'Project README', link: '/readme' },
-        ]        
-      },
-      {
-        text: 'Advanced topics',
-        items: [
-          { text: 'Project README', link: '/readme' },
-        ]        
-      },
-      {
-        text: 'Code examples',
-        items: [
-          { text: 'Project README', link: '/readme' },
-        ]        
-      }
-
-
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/epogrebnyak/lamr' }
-    ]
-  }
-})
+      { icon: "github", link: "https://github.com/epogrebnyak/lamr" },
+    ],
+  },
+});

@@ -8,6 +8,15 @@ grill:
 md:
   npx prettier README.md --write
   npx prettier lamr/topics --write
+  npx prettier docs/* --write
 
 docs:
-  cp README.md docs/readme/index.md  
+  npm run docs:dev  
+
+docs-publish:
+  npx vitepress build docs
+  poetry run ghp-import -np docs/.vitepress/dist
+
+publish:
+  poetry publish --build
+  

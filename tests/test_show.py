@@ -9,15 +9,15 @@ commands = [
     ["--help"],
     ["about"],
     ["about", "--contributors"],
-    ["show", "--list"],
-    ["show", "x.py"],
-    ["show", "cal.py", "--excercises", "--references"],
-    ["show", "cal.py", "--all"],
-    ["show", "logo.py", "--all"],
+    ["code", "--list"],
+    ["code", "x.py"],
+    ["code", "cal.py", "--excercises", "--references"],
+    ["code", "cal.py", "--all"],
+    ["code", "logo.py", "--all"],
     ["run", "x.py"],
     ["run", "cal.py"],
     ["run", "logo.py"],
-    ["learn", "variables"],
+    ["manual", "variables"],
 ]
 
 
