@@ -146,11 +146,12 @@ lamr code logo.py --all
 ## The manual
 
 `lamr learn` is a small Python textbook aimed at beginners.
-It is organaized by topic such as `string` or `variables`.
+It is organaized by topic such as `programming` or `variables`.
+
+Print available topics:
 
 ```console
 >>> lamr learn
-# prints available topics to study
 ```
 
 ## Development
