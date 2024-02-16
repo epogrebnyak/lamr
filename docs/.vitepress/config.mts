@@ -37,9 +37,16 @@ export default defineConfig({
           { text: "Code snippets", link: "/readme/code" },
           { text: "Programming manual", link: "/readme/manual" },
         ]  
-        },     
+        },  
         {
-        text: 'Code examples',
+          text: 'Study topics',
+          items: [
+            { text: 'Basic programming', link: '/topics/programming.md' },
+            { text: 'Turing machine', link: '/topics/turing.md' },
+              ]
+        },
+        {
+        text: 'Code projects',
         items: [
           { text: 'Calendar', link: '/code/cal.py' },
           { text: 'ASCII art logo', link: '/code/logo.py' },
