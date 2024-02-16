@@ -1,12 +1,45 @@
 # Development
 
+## Contributing
+
+```
+git clone https://github.com/epogrebnyak/lamr.git
+cd lamr
+poetry install
+npm add -D vitepress
+```
+
+## Notes
+
+Content:
+
+- data science cookiecutter
+- OOP philosophy + bragilevsky
+- python packaging poetry+pyenv+rye/uv
+- scientific starter textbooks
+- ml textbooks
+- the clock in rustpython
+- projects-pumped repo (links to projects advanced)
+
 Current issues:
 
-- [x] put excercises in YAML file and add a flag
+- [ ] two folders now contain markdown
+- [ ] may want to add icons
+- [ ] need json to manage topics
+- [ ] https://polar.sh/epogrebnyak
+- [ ] awesome font collection (which ssg?)
+- [ ] something like `npm install` for the project
+
+Previous issues:
+
 - [ ] list number of topics and excercises as badges through JSON 
 - [ ] fallback to `beaupy` for selection within a topic
 - [ ] add link to https://www.reddit.com/r/python_with_lamr/
+
+Done:
+
 - [x] `lamr code cal.py --markdown --all > docs/code/cal.py.md` 
+- [x] put excercises in YAML file and add a flag
 
 Big goal:
 
@@ -15,6 +48,7 @@ Big goal:
 Side goals:
 
 - Organise my prior teaching notes, notebooks, repos and reddit/SO rumblings. 
+- run `vitepress` + `rich` bunble
 
 Bets:
 

@@ -41,7 +41,7 @@ export default defineConfig({
         {
           text: 'Study topics',
           items: [
-            { text: 'Basic programming', link: '/topics/programming.md' },
+            { text: 'What is programming?', link: '/topics/programming.md' },
             { text: 'Turing machine', link: '/topics/turing.md' },
               ]
         },
