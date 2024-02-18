@@ -18,7 +18,6 @@ def print_md(text: str, header: str = "", use_pager=False):
     console = Console(width=80)
     if header:
         header = header.title()
-
         text = f"# {header}\n\n" + text
     md = Markdown(text)
     if use_pager:

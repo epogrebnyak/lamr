@@ -1,0 +1,41 @@
+motivation: |
+  Handling dates maybe as simple as a string in YYYY-MM-DD format (`"2024-02-18"`) 
+  and as complex as astronomic time in [astro.time](https://docs.astropy.org/en/stable/time/)
+  package. 
+  
+  Be prepared to do simple date and and time calculations 
+  and take a deeper dive into [timezones](https://docs.python.org/3.9/library/zoneinfo.html)
+  when needed. 
+
+excercises:
+- Print the date of your birthday.
+- Find out what day of the week your actual birthday was.
+- How many days left till your birhtday this year? 
+- What is your age in day, months, or weeks?
+- What is it now in Buenos Aires?
+- List time zones for your country. If there is more than one, what is the maximum difference between them?
+- Which neibouring country capital has biggest time diference?
+- What year is it now? Is this a leap year? How many days does current year have?
+- If a payment has to be paid monthly or each 30 days for 2 years from today, what are the payment dates?
+- Change output format for today's date using `strftime` formatting.
+
+references:
+- title: Documentation for `datetime` in Python standard library.
+  url: https://docs.python.org/3/library/datetime.html#available-types
+- title: "Arrow: Better dates & times for Python (library)"
+  url: https://arrow.readthedocs.io/en/latest/
+- title: Python `strftime` Cheatsheet
+  url: https://strftime.org/
+- title: Timestamp - Pandas replacement for python `datetime.datetime` object.
+  url: https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html#pandas.Timestamp
+- title: Date and time falsehoods
+  url: https://github.com/kdeldycke/awesome-falsehood?tab=readme-ov-file#dates-and-time
+- title: Dates in finance (quantlib)
+  url: https://quantlib-python-docs.readthedocs.io/en/latest/dates.html 
+- title: ISDA day count conventions
+  url: https://github.com/miradulo/isda_daycounters  
+- title: Martian time in Hare by Byron Torres
+  url: https://harelang.org/blog/2022-08-01-martian-time-in-hare/
+
+# Excel dates.
+# aeturell
