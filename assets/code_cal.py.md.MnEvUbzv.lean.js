@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as s,V as t}from"./chunks/framework.xIdpYtwv.js";const E=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"code/cal.py.md","filePath":"code/cal.py.md"}'),i={name:"code/cal.py.md"},n=t("",7),l=[n];function r(h,o,p,d,c,k){return s(),e("div",null,l)}const m=a(i,[["render",r]]);export{E as __pageData,m as default};

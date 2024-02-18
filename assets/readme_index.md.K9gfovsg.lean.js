@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as e,V as i}from"./chunks/framework.xIdpYtwv.js";const m=JSON.parse('{"title":"About","description":"","frontmatter":{},"headers":[],"relativePath":"readme/index.md","filePath":"readme/index.md"}'),n={name:"readme/index.md"},t=i("",9),l=[t];function o(p,r,c,_,h,d){return e(),s("div",null,l)}const g=a(n,[["render",o]]);export{m as __pageData,g as default};
